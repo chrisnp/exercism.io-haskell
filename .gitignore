@@ -6,3 +6,5 @@
 stack.yaml
 *.cabal
 /../*.cabal
+/.vscode/
+/.vscode/*
