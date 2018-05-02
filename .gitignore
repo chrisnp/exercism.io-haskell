@@ -1,0 +1,7 @@
+/.stack-work/
+/.stack-work/*
+/../.stack-work/*
+/../stack.yaml
+stack.yaml
+leap.cabal
+/../leap.cabal
