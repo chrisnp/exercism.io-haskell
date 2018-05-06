@@ -3,10 +3,8 @@ module Grains (square, total) where
 import Data.Maybe
 
 square :: Integer -> Maybe Integer
-square n
-    | 1 <= n && n <= 64 = Just $ (2 ^ (n-1))
-    | otherwise         = Nothing
+square n = if 1 <= n && n <= 64 then Just $ (2 ^ (n-1)) else Nothing
 
 total :: Integer
-total = sum $ mapMaybe square [1..64]
+total = 2^64 - 1
         
