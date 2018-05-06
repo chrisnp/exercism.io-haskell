@@ -1,0 +1,33 @@
+
+square
+  square 1 FAILED [1]
+
+Failures:
+
+  test\Tests.hs:18: 
+  1) square square 1
+       uncaught exception: ErrorCall (You need to implement this function.
+       CallStack (from HasCallStack):
+         error, called at src\Grains.hs:4:12 in grains-1.1.0.4-61LviJxXXm24YxBgqfW7kg:Grains)
+
+Randomized with seed 294956360
+
+Finished in 0.0020 seconds
+1 example, 1 failure
+
+square
+  square 1
+  square 2
+  square 3
+  square 4
+  square 16
+  square 32
+  square 64
+  square negative
+  square 0
+  square bigger than 64
+total
+  total grains
+
+Finished in 0.0005 seconds
+11 examples, 0 failures
