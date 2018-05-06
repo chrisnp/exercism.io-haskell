@@ -1,0 +1,26 @@
+
+squareOfSums
+  square of sum 1
+  square of sum 5
+  square of sum 100
+sumOfSquares
+  sum of squares 1
+  sum of squares 5
+  sum of squares 100
+differenceOfSquares
+  difference of squares 1
+  difference of squares 5
+  difference of squares 100
+Integral tests
+  squareOfSums
+    squareOfSums (6 :: Int)
+    squareOfSums (7 :: Integer)
+  sumOfSquares
+    sumOfSquares (8 :: Int)
+    sumOfSquares (9 :: Integer)
+  difference
+    difference (11 :: Int)
+    difference (12 :: Integer)
+
+Finished in 0.0025 seconds
+15 examples, 0 failures
