@@ -1,0 +1,11 @@
+
+abbreviate
+  basic
+  lowercase words
+  camelcase
+  punctuation
+  all caps word
+  punctuation without whitespace
+
+Finished in 0.0000 seconds
+6 examples, 0 failures
