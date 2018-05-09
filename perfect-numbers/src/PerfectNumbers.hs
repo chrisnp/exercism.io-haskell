@@ -23,4 +23,4 @@ factors n =
 aliquotSum :: Int -> Int
 aliquotSum n 
     | n == 1    = 0
-    | otherwise = sum ( factors n )
+    | otherwise = foldl (+) 0 (factors n)
