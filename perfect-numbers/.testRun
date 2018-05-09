@@ -1,0 +1,18 @@
+
+classify
+  Smallest perfect number is classified correctly
+  Medium perfect number is classified correctly
+  Large perfect number is classified correctly
+  Smallest abundant number is classified correctly
+  Medium abundant number is classified correctly
+  Large abundant number is classified correctly
+  Smallest prime deficient number is classified correctly
+  Smallest non-prime deficient number is classified correctly
+  Medium deficient number is classified correctly
+  Large deficient number is classified correctly
+  Edge case (no factors other than itself) is classified correctly
+  Zero is rejected (not a natural number)
+  Negative integer is rejected (not a natural number)
+
+Finished in 0.8753 seconds
+13 examples, 0 failures
