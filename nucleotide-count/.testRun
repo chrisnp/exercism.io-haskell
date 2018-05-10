@@ -1,0 +1,10 @@
+
+nucleotideCounts
+  empty dna strand has no nucleotides
+  can count one nucleotide in single-character input
+  repetitive-sequence-has-only-guanosine
+  counts all nucleotides
+  validates strand
+
+Finished in 0.0010 seconds
+5 examples, 0 failures
