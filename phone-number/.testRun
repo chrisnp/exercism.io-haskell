@@ -1,0 +1,19 @@
+
+number
+  cleans the number
+  cleans numbers with dots
+  cleans numbers with multiple spaces
+  invalid when 9 digits
+  invalid when 11 digits does not start with a 1
+  valid when 11 digits and starting with 1
+  valid when 11 digits and starting with 1 even with punctuation
+  invalid when more than 11 digits
+  invalid with letters
+  invalid with punctuations
+  invalid if area code starts with 0
+  invalid if area code starts with 1
+  invalid if exchange code starts with 0
+  invalid if exchange code starts with 1
+
+Finished in 0.0005 seconds
+14 examples, 0 failures
