@@ -13,16 +13,7 @@ isbn
   too long isbn
   check digit of X should not be used for 0
   empty isbn
-  input is 9 characters FAILED [1]
-
-Failures:
-
-  test\Tests.hs:18: 
-  1) isbn input is 9 characters
-       expected: False
-        but got: True
-
-Randomized with seed 1026287206
+  input is 9 characters
 
 Finished in 0.0000 seconds
-14 examples, 1 failure
+14 examples, 0 failures
