@@ -21,9 +21,9 @@ isbn s = valid (filter (/='-') s)
     where
         isbnSum xs = fmap sum $ sequence $ map isbnVal (zip [0..] xs)
         valid  xs = case isbnSum xs of
-            Just total -> total `mod` 11 == 0
+            Just n  -> n `mod` 11 == 0
             Nothing -> False
-        isbnVale (9, 'X')      = Just 10
+        isbnVal (9, 'X')      = Just 10
         isbnVal (index, digit)
             | isNumber digit   = Just $ (digitToInt digit) * (10 - index)
             | otherwise        = Nothing
