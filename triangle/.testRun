@@ -1,0 +1,19 @@
+
+triangleType
+  equilateral triangle has all sides equal
+  larger equilateral triangle
+  isosceles triangle with last two sides equal
+  isosceles triangle with first two sides equal
+  isosceles triangle with first and last sides equal
+  isosceles triangle with unequal side larger than equal sides
+  scalene triangle has no equal sides
+  2a == b+c looks like equilateral, but isn't always
+  larger scalene triangle
+  scalene triangle with sides in descending order
+  small scalene triangle with floating point values
+  a triangle violating the triangle inequality is illegal
+  two sides equal, but still violates triangle inequality
+  triangles with all sides zero are illegal
+
+Finished in 0.0000 seconds
+14 examples, 0 failures
