@@ -1,0 +1,20 @@
+
+scoreLetter
+  'a'
+  'Z'
+  '?'
+scoreWord
+  lowercase letter
+  uppercase letter
+  valuable letter
+  short word
+  short, valuable word
+  medium word
+  medium, valuable word
+  long, mixed-case word
+  english-like word
+  empty input
+  entire alphabet available
+
+Finished in 0.0000 seconds
+14 examples, 0 failures
