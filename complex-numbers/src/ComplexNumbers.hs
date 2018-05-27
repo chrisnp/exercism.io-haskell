@@ -16,7 +16,7 @@ import Prelude hiding (div, abs)
 data Complex a = Complex a a deriving(Eq, Show)
 
 complex :: (a, a) -> Complex a
-complex (real, imag) = Complex real imag 
+complex = uncurry Complex 
 
 -- unary operators -------------------------------------------------------------
 conjugate :: Num a => Complex a -> Complex a
