@@ -1,11 +1,15 @@
 module SecretHandshake (handshake) where
 
-import Data.Bits (testBit)
+import Data.Bits (bit, (.&.))
+
+actions :: [String]
+actions = ["wink", "double blink", "close your eyes", "jump"]
 
 handshake :: Int -> [String]
-handshake n = reverseWhen (testBit 4) $ map word $ filter (testBit n) [0..3]
-        where 
-            reverseWhen 
-                | True x    = reverse x
-                | otherwise = x
+handshake n 
+    | bit 4 .&. n == 0 = events
+    | otherwise        = reverse events
+    where
+        events = [actions !! i | i <- [0..3], bit i .&. n /= 0]
+
             
