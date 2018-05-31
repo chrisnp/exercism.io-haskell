@@ -7,26 +7,26 @@ splitEvery _ [] = []
 splitEvery n xs = as : splitEvery n bs 
   where (as,bs) = splitAt n xs
 
+codons :: [String]
+codons =  ["AUG","UUU","UUC","UUA","UUG","UCU","UCC","UCA","UCG", "UAU","UAC","UGU","UGC","UGG","UAA","UAG","UGA"]
+
+validRnaSeq :: String -> Bool
+validRnaSeq seq = length seq `mod` 3 == 0 && all (`elem`codons) (splitEvery 3 seq)
+
 amino :: String -> String
-amino a
-    | a == "AUG"                            = "Methionine"
-    | a == "UGG"                            = "Tryptophan"
-    | a `elem` ["UUU", "UUC"]               = "Phenylalanine"
-    | a `elem` ["UUA", "UUG"]               = "Leucine"
-    | a `elem` ["UAU", "UAC"]               = "Tyrosine"
-    | a `elem` ["UGU", "UGC"]               = "Cysteine"
-    | a `elem` ["UCU", "UCC", "UCA", "UCG"] = "Serine"
-    | a `elem` ["UAA", "UAG", "UGA"]        = "STOP"
+amino c
+    | c == "AUG"                            = "Methionine"
+    | c == "UGG"                            = "Tryptophan"
+    | c `elem` ["UUU", "UUC"]               = "Phenylalanine"
+    | c `elem` ["UUA", "UUG"]               = "Leucine"
+    | c `elem` ["UAU", "UAC"]               = "Tyrosine"
+    | c `elem` ["UGU", "UGC"]               = "Cysteine"
+    | c `elem` ["UCU", "UCC", "UCA", "UCG"] = "Serine"
+    -- | c `elem` ["UAA", "UAG", "UGA"]        = "STOP"
     | otherwise                             = ""
 
 proteins :: String -> Maybe [String]
-proteins "" = Just []
-proteins (n1:n2:n3:xs) = case amino [n1, n2, n3] of
-    "STOP" -> Just []
-    p      -> case proteins xs of
-                  Nothing  -> Nothing
-                  Just s   -> Just (p:s)
-proteins _ = Nothing
-
-
+proteins rna 
+    | validRnaSeq rna = Just (takeWhile (/= "") (map amino (splitEvery 3 rna)))
+    | otherwise       = Nothing
  
