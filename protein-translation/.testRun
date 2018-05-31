@@ -1,0 +1,28 @@
+
+proteins
+  Methionine RNA sequence
+  Phenylalanine RNA sequence 1
+  Phenylalanine RNA sequence 2
+  Leucine RNA sequence 1
+  Leucine RNA sequence 2
+  Serine RNA sequence 1
+  Serine RNA sequence 2
+  Serine RNA sequence 3
+  Serine RNA sequence 4
+  Tyrosine RNA sequence 1
+  Tyrosine RNA sequence 2
+  Cysteine RNA sequence 1
+  Cysteine RNA sequence 2
+  Tryptophan RNA sequence
+  STOP codon RNA sequence 1
+  STOP codon RNA sequence 2
+  STOP codon RNA sequence 3
+  Translate RNA strand into correct protein list
+  Translation stops if STOP codon at beginning of sequence
+  Translation stops if STOP codon at end of two-codon sequence
+  Translation stops if STOP codon at end of three-codon sequence
+  Translation stops if STOP codon in middle of three-codon sequence
+  Translation stops if STOP codon in middle of six-codon sequence
+
+Finished in 0.0030 seconds
+23 examples, 0 failures
