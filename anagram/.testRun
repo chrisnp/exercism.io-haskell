@@ -1,0 +1,17 @@
+
+anagramsFor
+  no matches
+  detects two anagrams
+  does not detect anagram subsets
+  detects anagram
+  detects three anagrams
+  does not detect non-anagrams with identical checksum
+  detects anagrams case-insensitively
+  detects anagrams using case-insensitive subject
+  detects anagrams using case-insensitive possible matches
+  does not detect a anagram if the original word is repeated
+  anagrams must use all letters exactly once
+  capital word is not own anagram
+
+Finished in 0.0010 seconds
+12 examples, 0 failures
