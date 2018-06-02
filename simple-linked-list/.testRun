@@ -1,0 +1,15 @@
+
+constructor
+toList
+fromList
+reverseLinkedList
+roundtrip
+has an unconstrained type variable
+arbitrary reverseLinkedList
+arbitrary (fromList . toList)
+arbitrary (toList . fromList)
+arbitrary (reverseLinkedList . reverseLinkedList)
+arbitrary datum
+
+Finished in 0.0700 seconds
+11 examples, 0 failures
