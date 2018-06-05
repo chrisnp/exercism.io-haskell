@@ -1,0 +1,40 @@
+
+length
+  of empty list
+  of non-empty list
+  of large list
+reverse
+  of empty list
+  of non-empty list
+map
+  of empty list
+  of non-empty list
+filter
+  of empty list
+  of normal list
+foldl'
+  of empty list
+  of non-empty list
+  of huge list
+  with non-commutative function
+  is not just foldr . flip
+  is accumulator-strict (use seq or BangPatterns)
+foldr
+  of empty list
+  of non-empty list
+  with non-commutative function
+  as id
+  as append
+++
+  of empty lists
+  of empty and non-empty lists
+  of non-empty and empty lists
+  of non-empty lists
+  of large lists
+concat
+  of no lists
+  of list of lists
+  of large list of small lists
+
+Finished in 1.2224 seconds
+28 examples, 0 failures
