@@ -31,7 +31,6 @@ map f xs = foldr (\x zs -> f x:zs) [] xs
 
 filter :: (a -> Bool) -> [a] -> [a]
 filter p xs = foldr (\x zs -> if p x then x:zs else zs ) [] xs
-    -- where yes x zs = if p x then x:zs else zs 
 
 (++) :: [a] -> [a] -> [a]
 xs ++ ys = foldr (:) ys xs
