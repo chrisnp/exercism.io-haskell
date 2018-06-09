@@ -5,5 +5,5 @@
 stack.yaml
 *.cabal
 /../*.cabal
-/.vscode/
-/.vscode/*
+.vscode/
+.vscode/*
