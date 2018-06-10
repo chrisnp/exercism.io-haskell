@@ -1,0 +1,26 @@
+
+rebase
+  single bit one to decimal
+  binary to single decimal
+  single decimal to binary
+  binary to multiple decimal
+  decimal to binary
+  trinary to hexadecimal
+  hexadecimal to trinary
+  15-bit integer
+  empty list
+  single zero
+  multiple zeros
+  leading zeros
+  input base is one
+  input base is zero
+  input base is negative
+  negative digit
+  invalid positive digit
+  output base is one
+  output base is zero
+  output base is negative
+  both bases are negative
+
+Finished in 0.0010 seconds
+21 examples, 0 failures
