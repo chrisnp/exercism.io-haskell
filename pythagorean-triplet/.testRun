@@ -1,0 +1,17 @@
+
+isPythagorean
+  3 4 5
+  3 5 4
+  4 3 5
+  4 5 3
+  5 3 4
+  5 4 3
+  3 3 3
+  5 6 7
+pythagoreanTriplets
+  1 10
+  11 20
+  56 95
+
+Finished in 0.0040 seconds
+11 examples, 0 failures
