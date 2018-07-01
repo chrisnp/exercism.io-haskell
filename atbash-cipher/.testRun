@@ -1,0 +1,37 @@
+
+encode
+  encode yes
+  encode no
+  encode OMG
+  encode spaces
+  encode mindblowingly FAILED [1]
+
+Failures:
+
+  test\Tests.hs:17: 
+  1) encode encode mindblowingly
+       expected: "nrmwy oldrm tob"
+        but got: "nrmwyoldrmtob"
+
+Randomized with seed 1360564756
+
+Finished in 0.0035 seconds
+5 examples, 1 failure
+
+encode
+  encode yes
+  encode no
+  encode OMG
+  encode spaces
+  encode mindblowingly
+  encode numbers
+  encode deep thought
+  encode all the letters
+decode
+  decode exercism
+  decode a sentence
+  decode numbers
+  decode all the letters
+
+Finished in 0.0010 seconds
+12 examples, 0 failures
