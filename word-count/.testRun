@@ -1,0 +1,15 @@
+
+wordCount
+  count one word
+  count one of each word
+  multiple occurrences of a word
+  handles cramped lists
+  handles expanded lists
+  ignore punctuation
+  include numbers
+  normalize case
+  with apostrophes
+  with quotations
+
+Finished in 0.0020 seconds
+10 examples, 0 failures
