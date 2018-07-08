@@ -10,42 +10,35 @@ module BST
     , toList
     ) where
 
-import Data.List ( foldl )
-
-data BST a = Empty | BST { left  :: Maybe (BST a), 
-                           value :: Maybe a,
-                           right :: Maybe (BST a)
-                         } deriving (Eq, Show)
+data BST a = Empty | BST (BST a) a (BST a) deriving (Eq, Show)
 
 bstLeft :: BST a -> Maybe (BST a)
-bstLeft tree = Just left tree
+bstLeft Empty = Nothing
+bstLeft (BST left _ _)  = Just left
 
 bstRight :: BST a -> Maybe (BST a)
-bstRight tree = Just right tree
+bstRight Empty = Nothing
+bstRight (BST _ _ right)  = Just right
 
 bstValue :: BST a -> Maybe a
-bstValue tree = Just value tree
+bstValue Empty = Nothing
+bstValue (BST _ val _)  = Just val
 
 empty :: BST a
 empty = Empty
 
 fromList :: Ord a => [a] -> BST a
-fromList []     = Empty
-fromList (x:xs) = foldl (flip insert) (singleton x) xs
+fromList xs  = (foldr insert Empty . reverse) xs
 
 insert :: Ord a => a -> BST a -> BST a
-insert x Empty = BST Empty x Empty
-insert x tree  
-        | x <= (value tree) = BST (insert x (bstLeft tree)) (bstValue tree) (bstRight tree)
-        | otherwise         = BST (bstLeft tree) (value tree) (insert x (bstRight tree)) 
+insert x Empty = singleton x
+insert x (BST left val right) 
+        | x <= val  = BST (insert x left) val right
+        | otherwise = BST left val (insert x right)
 
 singleton :: a -> BST a
-singleton x = BST Nothing x Nothing
+singleton x = BST Empty x Empty
 
-toList :: BST a -> [Maybe a]
-toList tree = 
-    let 
-        leftList = Maybe [] toList (bstLeft tree)
-        rightList = Maybe [] toList (bstRight tree)
-    in 
-        leftList ++ [(bstValue tree)] ++ rightList
+toList :: BST a -> [a]
+toList Empty                = []
+toList (BST left val right) = (toList left) ++ [val] ++ (toList right)
