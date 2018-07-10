@@ -1,0 +1,15 @@
+
+valid
+  single digit strings can not be valid
+  a single zero is invalid
+  a simple valid SIN that remains valid if reversed
+  a simple valid SIN that becomes invalid if reversed
+  a valid Canadian SIN
+  invalid Canadian SIN
+  invalid credit card
+  single zero with space is invalid
+  more than a single zero is valid
+  input digit 9 is correctly converted to output digit 9
+
+Finished in 0.0005 seconds
+10 examples, 0 failures
