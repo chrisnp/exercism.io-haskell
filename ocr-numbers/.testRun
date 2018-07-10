@@ -1,0 +1,20 @@
+
+convert
+  Recognizes 0
+  Recognizes 1
+  Unreadable but correctly sized inputs return ?
+  Recognizes 110101100
+  Garbled numbers in a string are replaced with ?
+  Recognizes 2
+  Recognizes 3
+  Recognizes 4
+  Recognizes 5
+  Recognizes 6
+  Recognizes 7
+  Recognizes 8
+  Recognizes 9
+  Recognizes string of decimal numbers
+  Numbers separated by empty lines are recognized. Lines are joined by commas.
+
+Finished in 0.0030 seconds
+15 examples, 0 failures
