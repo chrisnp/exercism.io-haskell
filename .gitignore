@@ -7,3 +7,5 @@ stack.yaml
 /../*.cabal
 .vscode/
 .vscode/*
+/.solution.json
+/../.solution.json
