@@ -1,0 +1,11 @@
+
+name should match expected pattern
+name is persistent
+different robots have different names
+new name should match expected pattern
+new name is persistent
+new name is different from old name
+resetting a robot affects only one robot
+
+Finished in 0.0015 seconds
+7 examples, 0 failures
