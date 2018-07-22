@@ -2,9 +2,9 @@ module RotationalCipher (rotate) where
 
 convert :: Int -> Char -> Char
 convert key char 
-    | i `elem` [65..90]  = toEnum $ (i + key - 65) `mod` 26 + 65 :: Char
-    | i `elem` [97..122] = toEnum $ (i + key - 97) `mod` 26 + 97 :: Char
-    | otherwise          = char
+    | 65 <= i && i <= 90  = toEnum $ (i + key - fromEnum 'A') `mod` 26 + fromEnum 'A' :: Char
+    | 97 <= i && i <= 122 = toEnum $ (i + key - fromEnum 'a') `mod` 26 + fromEnum 'a' :: Char
+    | otherwise           = char
     where i = fromEnum char
 
 
