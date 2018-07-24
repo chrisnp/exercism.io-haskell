@@ -10,8 +10,16 @@ module BST
     , toList
     ) where
 
+import Data.Foldable ( foldl', toList )
+
+
 data BST a = Empty | BST (BST a) a (BST a) deriving (Eq, Show)
 
+instance Foldable BST where
+    foldMap f Empty = mempty
+    foldMap f (BST left val right) = foldMap f left `mappend` f val `mappend` foldMap f right
+
+    
 bstLeft :: BST a -> Maybe (BST a)
 bstLeft Empty = Nothing
 bstLeft (BST left _ _)  = Just left
@@ -28,7 +36,7 @@ empty :: BST a
 empty = Empty
 
 fromList :: Ord a => [a] -> BST a
-fromList xs  = (foldr insert Empty . reverse) xs
+fromList xs = foldl' (flip insert) empty xs
 
 insert :: Ord a => a -> BST a -> BST a
 insert x Empty = singleton x
@@ -39,6 +47,8 @@ insert x (BST left val right)
 singleton :: a -> BST a
 singleton x = BST Empty x Empty
 
-toList :: BST a -> [a]
-toList Empty                = []
-toList (BST left val right) = (toList left) ++ [val] ++ (toList right)
+-- We do not need this any more, as the toList from Foldable is used 
+-- after defining the Foldable Monoid instance above
+-- toList :: BST a -> [a]
+-- toList Empty                = []
+-- toList (BST left val right) = (toList left) ++ [val] ++ (toList right)
