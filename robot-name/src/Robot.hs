@@ -1,25 +1,22 @@
 module Robot (Robot, mkRobot, resetName, robotName) where
 
-import Data.IORef
-import System.Random
+import Control.Concurrent.STM 
+import Control.Monad 
+import System.Random 
 
-type Robot = IORef String
+newtype Robot = Robot (TVar String)
 
 mkRobot :: IO Robot
-mkRobot = do
-    name <- generateName
-    newIORef name
+mkRobot = liftM Robot (generateName >>= atomically . newTVar)
 
 generateName :: IO String
-generateName = do
-    gen <- newStdGen
-    let name = take 2 (randomRs ('A','Z') gen) ++ take 3 (randomRs ('0','9') gen)
-    return name
+generateName = mapM randomRIO [letr, letr, num, num, num] 
+    where
+        letr = ('A', 'Z')
+        num  = ('0', '9')
 
 resetName :: Robot -> IO ()
-resetName robot = do
-    name <- generateName
-    writeIORef robot name
+resetName (Robot robot) = generateName >>= atomically . writeTVar robot 
 
 robotName :: Robot -> IO String
-robotName robot = readIORef robot
+robotName (Robot robot) = atomically (readTVar robot)
