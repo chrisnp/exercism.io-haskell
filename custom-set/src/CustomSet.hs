@@ -15,7 +15,7 @@ module CustomSet
   ) where
 
 import Prelude hiding (null)
-import qualified Data.List as DL
+import qualified Data.List as List
 import Data.List ( (\\), sort, nub, elem )
 
 data CustomSet a = CustomSet { elems :: [a] } deriving (Eq)
@@ -24,7 +24,7 @@ instance (Show a, Ord a) => Show (CustomSet a) where
   show set = "fromList " ++ show (elems set)
 
 delete :: (Eq a) => a -> CustomSet a -> CustomSet a
-delete x set = CustomSet $ DL.delete x $ elems set
+delete x set = (CustomSet . List.delete x . elems) set
 
 difference :: (Eq a) => CustomSet a -> CustomSet a -> CustomSet a
 difference setA setB = CustomSet $ (toList setA) \\ (toList setB)
@@ -39,7 +39,7 @@ insert :: (Ord a) => a -> CustomSet a -> CustomSet a
 insert x set = (fromList . (:) x . elems) set
 
 intersection :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> CustomSet a
-intersection setA setB = fromList $ (elems setA) `DL.intersect` (elems setB)
+intersection setA setB = fromList $ (elems setA) `List.intersect` (elems setB)
 
 isDisjointFrom :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> Bool
 isDisjointFrom setA setB = empty == intersection setA setB 

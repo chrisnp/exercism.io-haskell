@@ -1,0 +1,65 @@
+
+standard tests
+  null
+    sets with no elements are empty
+    sets with elements are not empty
+  member
+    nothing is contained in an empty set
+    when the element is in the set
+    when the element is not in the set
+  isSubsetOf
+    empty set is a subset of another empty set
+    empty set is a subset of non-empty set
+    non-empty set is not a subset of empty set
+    set is a subset of set with exact same elements
+    set is a subset of larger set with same elements
+    set is not a subset of set that does not contain its elements
+  isDisjointFrom
+    the empty set is disjoint with itself
+    empty set is disjoint with non-empty set
+    non-empty set is disjoint with empty set
+    sets are not disjoint if they share an element
+    sets are disjoint if they share no elements
+  Eq
+    empty sets are equal
+    empty set is not equal to non-empty set
+    non-empty set is not equal to empty set
+    sets with the same elements are equal
+    sets with different elements are not equal
+    set is not equal to larger set with same elements
+  insert
+    add to empty set
+    add to non-empty set
+    adding an existing element does not change the set
+  intersection
+    intersection of two empty sets is an empty set
+    intersection of an empty set and non-empty set is an empty set
+    intersection of a non-empty set and an empty set is an empty set
+    intersection of two sets with no shared elements is an empty set
+    intersection of two sets with shared elements is a set of the shared elements
+  difference
+    difference of two empty sets is an empty set
+    difference of empty set and non-empty set is an empty set
+    difference of a non-empty set and an empty set is the non-empty set
+    difference of two non-empty sets is a set of elements that are only in the first set
+  union
+    union of empty sets is an empty set
+    union of an empty set and non-empty set is the non-empty set
+    union of a non-empty set and empty set is the non-empty set
+    union of non-empty sets contains all unique elements
+track-specific tests
+  delete
+    delete existing element
+  size
+    size of an empty set is zero
+    size is the number of elements
+    size doesn't count repetition in `fromList`
+    size does count inserted element
+    size doesn't count element removed by `delete`
+  toList
+    an empty set has an empty list of elements
+    a set has the list of its elements
+    a set doesn't keep repeated elements
+
+Finished in 0.0010 seconds
+47 examples, 0 failures
