@@ -1,0 +1,75 @@
+
+palindromes from single digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from double digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from triple digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from four digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from five digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+
+Finished in 10604.8784 seconds
+20 examples, 0 failures
+
+palindrome-products-0.1.0.2: Test suite test passed
+Completed 2 action(s).
+
+
+palindromes from single digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from double digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from triple digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+palindromes from four digit factors
+  smallesPalindrome
+    value
+    factors
+  largestPalindrome
+    value
+    factors
+
+Finished in 381.1156 seconds
+16 examples, 0 failures
