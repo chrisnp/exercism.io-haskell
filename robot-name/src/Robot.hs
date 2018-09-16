@@ -3,18 +3,29 @@ module Robot (Robot, mkRobot, resetName, robotName) where
 import Control.Concurrent.STM 
 import Control.Monad 
 import System.Random 
+import System.IO.Unsafe
+import Data.IORef
+import qualified Data.Set as S
 
 newtype Robot = Robot (TVar String)
 
-mkRobot :: IO Robot
-mkRobot = liftM Robot (generateName >>= atomically . newTVar)
+namesList :: IORef (S.Set String)
+namesList = unsafePerformIO $ newIORef S.empty
 
 generateName :: IO String
-generateName = mapM randomRIO [letr, letr, num, num, num] 
-    where
-        letr = ('A', 'Z')
-        num  = ('0', '9')
+generateName = do
+    let letr = ('A', 'Z')
+    let num  = ('0', '9')
+    name <- mapM randomRIO [letr, letr, num, num, num] 
+    exists <- atomicModifyIORef' namesList $ 
+                \names -> if S.member name names 
+                    then (names, True)
+                    else (S.insert name names, False)
+    if exists then generateName else return name
 
+mkRobot :: IO Robot
+mkRobot = liftM Robot (generateName >>= atomically . newTVar)
+    
 resetName :: Robot -> IO ()
 resetName (Robot robot) = generateName >>= atomically . writeTVar robot 
 

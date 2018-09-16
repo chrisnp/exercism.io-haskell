@@ -8,6 +8,8 @@ library:
   exposed-modules: Robot
   source-dirs: src
   dependencies:
+  - containers
+  - extra
   - random
   - stm
   # - foo       # List here the packages you
