@@ -1,0 +1,8 @@
+
+initial balance is 0
+incrementing and checking balance
+incrementing balance from other processes then checking it from test process
+closed banks hold no balance
+
+Finished in 0.0010 seconds
+4 examples, 0 failures
