@@ -15,4 +15,4 @@ collatz :: Integer -> Maybe Integer
 collatz 1 = Just 0
 collatz num 
     | num > 1   = Just $ toInteger $ length (collatzSteps num) - 1
-    | otherwise = Nothing 
+    | otherwise = Nothing
