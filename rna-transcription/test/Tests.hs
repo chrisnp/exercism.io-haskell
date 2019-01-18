@@ -14,46 +14,42 @@ specs = describe "toRNA" $ for_ cases test
   where
     test Case{..} = it description $ toRNA dna `shouldBe` expected
 
-data Case = Case { description :: String
-                 , dna         :: String
-                 , expected    :: Either Char String
+data Case = Case { description ::       String
+                 , dna         ::       String
+                 , expected    :: Maybe String
                  }
 
 cases :: [Case]
-cases = [ Case { description = "Empty RNA sequence"
-               , dna         = ""
-               , expected    = Right ""
-               }
-        , Case { description = "RNA complement of cytosine is guanine"
-               , dna         = "C"
-               , expected    = Right "G"
+cases = [ Case { description = "RNA complement of cytosine is guanine"
+               , dna         =      "C"
+               , expected    = Just "G"
                }
         , Case { description = "RNA complement of guanine is cytosine"
-               , dna         = "G"
-               , expected    = Right "C"
+               , dna         =      "G"
+               , expected    = Just "C"
                }
         , Case { description = "RNA complement of thymine is adenine"
-               , dna         = "T"
-               , expected    = Right "A"
+               , dna         =      "T"
+               , expected    = Just "A"
                }
         , Case { description = "RNA complement of adenine is uracil"
-               , dna         = "A"
-               , expected    = Right "U"
+               , dna         =      "A"
+               , expected    = Just "U"
                }
         , Case { description = "RNA complement"
-               , dna         = "ACGTGGTCTTAA"
-               , expected    = Right "UGCACCAGAAUU"
+               , dna         =      "ACGTGGTCTTAA"
+               , expected    = Just "UGCACCAGAAUU"
                }
         , Case { description = "correctly handles invalid input (RNA instead of DNA)"
                , dna         = "U"
-               , expected    = Left 'U'
+               , expected    = Nothing
                }
         , Case { description = "correctly handles completely invalid DNA input"
                , dna         = "XXX"
-               , expected    = Left 'X'
+               , expected    = Nothing
                }
         , Case { description = "correctly handles partially invalid DNA input"
                , dna         = "ACGTXXXCTTAA"
-               , expected    = Left 'X'
+               , expected    = Nothing
                }
         ]
