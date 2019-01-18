@@ -9,4 +9,3 @@ toRNA xs = traverse dnaToRna xs
         dnaToRna 'T' = Just 'A'
         dnaToRna 'A' = Just 'U'
         dnaToRna  _  = Nothing
-
