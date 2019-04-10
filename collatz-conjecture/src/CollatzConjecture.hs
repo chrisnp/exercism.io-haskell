@@ -4,11 +4,8 @@ module CollatzConjecture (collatz) where
 collatzSteps :: Integer -> [Integer]
 collatzSteps 1 = [1]
 collatzSteps num 
-    | even num  = num : collatzSteps ( divBy2 num ) 
-    | otherwise = num : collatzSteps ( times3plus1 num )
-    where
-        divBy2 n = n `div` 2
-        times3plus1 n = ( 3 * n ) + 1
+    | even num  = num : collatzSteps ( num `quot` 2 ) 
+    | otherwise = num : collatzSteps ( ( 3 * num ) + 1 )
 
 
 collatz :: Integer -> Maybe Integer
