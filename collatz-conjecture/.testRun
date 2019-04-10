@@ -35,3 +35,16 @@ Finished in 0.0005 seconds
 6 examples, 0 failures
 
 
+
+collatz
+  zero steps for one
+  divide if even
+  even and odd steps
+  large number of even and odd steps
+  zero is an error
+  negative value is an error
+
+Finished in 0.0413 seconds
+6 examples, 0 failures
+
+
