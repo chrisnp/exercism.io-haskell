@@ -1,11 +1,10 @@
 module DNA (toRNA) where
 
-toRNA :: String -> Maybe String
--- toRNA [] = Nothing
-toRNA xs = traverse dnaToRna xs
+toRNA :: String -> Either Char String
+toRNA = mapM fromDNA
     where
-        dnaToRna 'G' = Just 'C'
-        dnaToRna 'C' = Just 'G'
-        dnaToRna 'T' = Just 'A'
-        dnaToRna 'A' = Just 'U'
-        dnaToRna _ = Nothing
+        fromDNA 'G' = Right 'C'
+        fromDNA 'C' = Right 'G'
+        fromDNA 'T' = Right 'A'
+        fromDNA 'A' = Right 'U'
+        fromDNA  x  = Left x
