@@ -1,0 +1,27 @@
+
+modifier
+  computes the modifier for 18 to be  4
+  computes the modifier for 17 to be  3
+  computes the modifier for 16 to be  3
+  computes the modifier for 15 to be  2
+  computes the modifier for 14 to be  2
+  computes the modifier for 13 to be  1
+  computes the modifier for 12 to be  1
+  computes the modifier for 11 to be  0
+  computes the modifier for 10 to be  0
+  computes the modifier for  9 to be -1
+  computes the modifier for  8 to be -1
+  computes the modifier for  7 to be -2
+  computes the modifier for  6 to be -2
+  computes the modifier for  5 to be -3
+  computes the modifier for  4 to be -3
+  computes the modifier for  3 to be -4
+ability
+  generates values within range
+    +++ OK, passed 100 tests.
+character
+  generates valid characters
+    +++ OK, passed 100 tests.
+
+Finished in 0.0049 seconds
+18 examples, 0 failures
