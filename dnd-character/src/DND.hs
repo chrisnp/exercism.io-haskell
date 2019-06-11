@@ -22,17 +22,18 @@ modifier :: Int -> Int
 modifier = flip div 2 . subtract 10
 
 ability :: Gen Int
-ability = fmap (sum . drop 1 . sort) (vectorOf 4 $ choose (1, 6))
+ability = (sum . drop 1 . sort) <$> (vectorOf 4 $ choose (1, 6))
 
 character :: Gen Character
 character = do
-    constitution <- ability 
+    constn <- ability
+    let hitpts = 10 + (modifier constn)
     Character <$> ability 
               <*> ability 
-              <*> (pure constitution)
+              <*> (pure constn)
               <*> ability 
               <*> ability 
               <*> ability 
-              <*> (pure $ 10 + (modifier constitution))
+              <*> (pure hitpts)
               
             
