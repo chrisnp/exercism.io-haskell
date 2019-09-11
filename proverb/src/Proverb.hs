@@ -9,7 +9,7 @@ premise :: String -> String -> String
 premise = printf "For want of a %s the %s was lost."
 
 conclusion :: String -> String
-conclusio = printf "And all for the want of a %s."
+conclusion = printf "And all for the want of a %s."
 
 recite :: [String] -> String
 recite [] = ""
