@@ -6,5 +6,5 @@ stack.yaml
 *.cabal
 /../*.cabal
 .vscode/
-.vscode/*
+.ionide/
 cleanup.*
