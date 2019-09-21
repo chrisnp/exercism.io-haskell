@@ -3,6 +3,7 @@ module Proverb(recite) where
 import Text.Printf
 import Data.List
 
+
 pairs :: [a] -> [(a, a)]
 pairs [] = []
 pairs xs = zip xs (tail xs)
