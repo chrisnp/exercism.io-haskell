@@ -7,6 +7,7 @@ import System.IO.Unsafe
 import Data.IORef
 import qualified Data.Set as S
 
+
 newtype Robot = Robot (TVar String)
 
 namesList :: IORef (S.Set String)
