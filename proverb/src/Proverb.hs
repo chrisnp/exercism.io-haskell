@@ -3,9 +3,9 @@ module Proverb(recite) where
 import Text.Printf
 import Data.List
 
--- pairs :: [a] -> [(a, a)]
--- pairs [] = []
--- pairs xs = zip xs (tail xs)
+pairs :: [a] -> [(a, a)]
+pairs [] = []
+pairs xs = zip xs (tail xs)
 
 premise :: String -> String -> String
 premise (x, y) = printf "For want of a %s the %s was lost." x y
@@ -17,5 +17,5 @@ recite :: [String] -> String
 recite [] = ""
 recite xs = verses ++ epilogue
     where
-        verses = unlines . map premise $ (zip xs (tail xs))
+        verses = unlines . map premise $ pairs xs
         epilogue = conclusion $ head xs
