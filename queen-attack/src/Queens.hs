@@ -24,9 +24,10 @@ boardString :: Maybe (Int, Int) -> Maybe (Int, Int) -> String
 boardString white black = insert 'B' black $ insert 'W' white $ board
 
 canAttack :: (Int, Int) -> (Int, Int) -> Bool
-canAttack queenA queenB = diagonal || straight
+canAttack queenA queenB = dfile * drank == 0 || 
+                          dfile `div` drank == 1
     where 
         (ax, ay) = queenA
-        (bx, by) = queenB
-        diagonal = abs (ax - bx) == abs (ay - by)
-        straight = ax == bx || ay == by 
+        (bx, by) = queenB 
+        dfile = abs (ax - bx)
+        drank = abs (ay - by)
