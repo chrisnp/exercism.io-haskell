@@ -15,3 +15,23 @@ canAttack
 
 Finished in 0.0030 seconds
 11 examples, 0 failures
+
+
+
+
+boardString
+  empty board
+  board with just white queen
+  board with just black queen
+  board
+canAttack
+  can not attack
+  can attack on same rank
+  can attack on same file
+  can attack on first diagonal
+  can attack on second diagonal
+  can attack on third diagonal
+  can attack on fourth diagonal
+
+Finished in 0.0017 seconds
+11 examples, 0 failures
