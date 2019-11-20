@@ -1,4 +1,3 @@
-
 nth
   first prime
   second prime
@@ -7,4 +6,15 @@ nth
   there is no zeroth prime
 
 Finished in 0.2621 seconds
+5 examples, 0 failures
+
+
+nth
+  first prime
+  second prime
+  sixth prime
+  big prime
+  there is no zeroth prime
+
+Finished in 0.1160 seconds
 5 examples, 0 failures

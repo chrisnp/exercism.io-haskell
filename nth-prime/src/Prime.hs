@@ -8,6 +8,8 @@ nth n
 primes :: [Integer]
 primes = 
     let 
-        isPrime p = all ((/=) 0 . mod p) $ takeWhile (\n -> n * n <= p) primes
+        isPrime p = all ((/=) 0 . mod p) 
+                    $ takeWhile (\n -> n * n <= p) 
+                    primes
     in
         2 : filter isPrime [3, 5..]
