@@ -5,9 +5,10 @@ import Data.Char
 chunkify :: Int -> String -> String
 chunkify n text = 
     let 
-        (l, ls) = splitAt n text
+        (chunk, rest) = splitAt n text
     in 
-        if null ls then l else l ++ " " ++ chunkify n ls
+        if null rest then chunk 
+        else chunk ++ " " ++ chunkify n rest
 
 atbash :: Char -> Char
 atbash x
@@ -15,7 +16,9 @@ atbash x
     | otherwise = x
 
 decode :: String -> String
-decode cipherText = (map atbash . filter (\ ch -> isAlpha ch || isDigit ch)) cipherText
+decode cipherText = (map atbash . filter (\ ch -> 
+                                    isAlpha ch || isDigit ch)) 
+                    cipherText
 
 encode :: String -> String
 encode plainText = 

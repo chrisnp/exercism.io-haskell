@@ -35,3 +35,26 @@ decode
 
 Finished in 0.0010 seconds
 12 examples, 0 failures
+
+
+
+
+encode
+  encode yes
+  encode no
+  encode OMG
+  encode spaces
+  encode mindblowingly
+  encode numbers
+  encode deep thought
+  encode all the letters
+decode
+  decode exercism
+  decode a sentence
+  decode numbers
+  decode all the letters
+  decode with too many spaces
+  decode with no spaces
+
+Finished in 0.0004 seconds
+14 examples, 0 failures
