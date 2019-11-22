@@ -18,10 +18,12 @@ import Prelude hiding (null)
 import qualified Data.List as List
 import Data.List ( (\\), sort, nub, elem )
 
-data CustomSet a = CustomSet { elems :: [a] } deriving (Eq)
+data CustomSet a = CustomSet { elems :: [a] } 
+                   deriving (Eq)
 
 instance (Show a, Ord a) => Show (CustomSet a) where 
-  show set = "fromList " ++ show (elems set)
+         show set = "fromList " ++ show (elems set)
+
 
 delete :: (Eq a) => a -> CustomSet a -> CustomSet a
 delete x set = (CustomSet . List.delete x . elems) set
