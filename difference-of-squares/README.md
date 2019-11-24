@@ -12,11 +12,15 @@ Hence the difference between the square of the sum of the first
 ten natural numbers and the sum of the squares of the first ten
 natural numbers is 3025 - 385 = 2640.
 
+You are not expected to discover an efficient solution to this yourself from
+first principles; research is allowed, indeed, encouraged. Finding the best
+algorithm for the problem is a key skill in software engineering.
+
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
