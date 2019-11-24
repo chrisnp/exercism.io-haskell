@@ -8,3 +8,15 @@ accumulate non-strict
 
 Finished in 0.0000 seconds
 6 examples, 0 failures
+
+
+
+empty accumulation
+accumulate squares
+accumulate upcases
+accumulate reversed strings
+accumulate recursively
+accumulate non-strict
+
+Finished in 0.0004 seconds
+6 examples, 0 failures
