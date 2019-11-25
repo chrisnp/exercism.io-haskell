@@ -9,3 +9,20 @@ abbreviate
 
 Finished in 0.0000 seconds
 6 examples, 0 failures
+
+
+
+abbreviate
+  basic
+  lowercase words
+  camelcase
+  punctuation
+  all caps word
+  punctuation without whitespace
+  very long abbreviation
+  consecutive delimiters
+  apostrophes
+  underscore emphasis
+
+Finished in 0.0004 seconds
+10 examples, 0 failures
