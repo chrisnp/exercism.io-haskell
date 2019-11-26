@@ -13,7 +13,7 @@ moaning about how stupid we could possibly be.)
 
 ### The goal
 
-We're going to extract some scrabble scores from a legacy system.
+We're going to extract some Scrabble scores from a legacy system.
 
 The old system stored a list of letters per score:
 
@@ -25,7 +25,7 @@ The old system stored a list of letters per score:
 - 8 points: "J", "X",
 - 10 points: "Q", "Z",
 
-The shiny new scrabble system instead stores the score per letter, which
+The shiny new Scrabble system instead stores the score per letter, which
 makes it much faster and easier to calculate the score for a word. It
 also stores the letters in lower-case regardless of the case of the
 input letters:
@@ -46,11 +46,32 @@ variety of languages, each with its own unique scoring table. For
 example, an "E" is scored at 2 in the Māori-language version of the
 game while being scored at 4 in the Hawaiian-language version.
 
+## Hints
+
+This exercise works with textual data. For historical reasons, Haskell's
+`String` type is synonymous with `[Char]`, a list of characters. For more
+efficient handling of textual data, the `Text` type can be used.
+
+As an optional extension to this exercise, you can
+
+- Read about [string types](https://haskell-lang.org/tutorial/string-types) in Haskell.
+- Add `- text` to your list of dependencies in package.yaml.
+- Import `Data.Text` in [the following way](https://hackernoon.com/4-steps-to-a-better-imports-list-in-haskell-43a3d868273c):
+
+        import qualified Data.Text as T
+        import           Data.Text (Text)
+
+- You can now write e.g. `transform :: Map Int Text -> Map Char Int` and refer to `Data.Text` combinators as e.g. `T.toLower`.
+- Look up the documentation for [`Data.Text`](https://hackage.haskell.org/package/text/docs/Data-Text.html).
+
+This part is entirely optional.
+
+
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
