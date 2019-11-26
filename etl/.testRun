@@ -7,3 +7,26 @@ transform
 
 Finished in 0.0000 seconds
 4 examples, 0 failures
+
+
+
+transform
+  single letter
+  single score with multiple letters
+  multiple scores with multiple letters
+  multiple scores with differing numbers of letters
+
+Finished in 0.0005 seconds
+4 examples, 0 failures
+
+
+
+
+transform
+  single letter
+  single score with multiple letters
+  multiple scores with multiple letters
+  multiple scores with differing numbers of letters
+
+Finished in 0.0003 seconds
+4 examples, 0 failures
