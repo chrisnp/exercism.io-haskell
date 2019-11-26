@@ -18,3 +18,20 @@ distance
 
 Finished in 0.0010 seconds
 15 examples, 0 failures
+
+
+
+
+distance
+  empty strands
+  single letter identical strands
+  single letter different strands
+  long identical strands
+  long different strands
+  disallow first strand longer
+  disallow second strand longer
+  disallow left empty strand
+  disallow right empty strand
+
+Finished in 0.0005 seconds
+9 examples, 0 failures
