@@ -12,13 +12,13 @@ data Planet = Mercury
 ageOn :: Planet -> Float -> Float
 ageOn planet seconds = 
     let
-        year = 31557600 
+        earthYear = 31557600 
     in case planet of
-        Mercury -> seconds / year / 0.2408467
-        Venus -> seconds / year / 0.61519726
-        Mars -> seconds / year / 1.8808158
-        Jupiter -> seconds / year / 11.862615
-        Saturn -> seconds / year / 29.447498
-        Uranus -> seconds / year / 84.016846
-        Neptune -> seconds / year / 164.79132
-        Earth -> seconds / year
+        Mercury -> seconds / earthYear / 0.2408467
+        Venus   -> seconds / earthYear / 0.61519726
+        Earth   -> seconds / earthYear
+        Mars    -> seconds / earthYear / 1.8808158
+        Jupiter -> seconds / earthYear / 11.862615
+        Saturn  -> seconds / earthYear / 29.447498
+        Uranus  -> seconds / earthYear / 84.016846
+        Neptune -> seconds / earthYear / 164.79132   
