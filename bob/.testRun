@@ -1,0 +1,32 @@
+>stack test
+
+
+responseFor
+  stating something
+  shouting
+  shouting gibberish
+  asking a question
+  asking a numeric question
+  asking gibberish
+  talking forcefully
+  using acronyms in regular speech
+  forceful question
+  shouting numbers
+  only numbers
+  question with only numbers
+  shouting with special characters
+  shouting with no exclamation mark
+  statement containing question mark
+  non-letters with question
+  prattling on
+  silence
+  prolonged silence
+  alternate silence
+  multiple line question
+  starting with whitespace
+  ending with whitespace
+  other whitespace
+  non-question ending with whitespace
+
+Finished in 0.0007 seconds
+25 examples, 0 failures
