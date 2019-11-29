@@ -36,6 +36,3 @@ responseFor xs
             silent   = isSilent xs
             shout    = isShouting xs
             question = isQuestion xs
-
-
-
