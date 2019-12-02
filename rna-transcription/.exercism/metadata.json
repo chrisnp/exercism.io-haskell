@@ -1,9 +1,9 @@
 {
-    "track":"haskell",
-    "exercise":"rna-transcription",
-    "id":"07fce4dce63e43afbe97116b4ff0e823",
-    "url":"https://exercism.io/tracks/haskell/exercises/rna-transcription/solutions/07fce4dce63e43afbe97116b4ff0e823",
-    "handle":"heptalophos",
-    "is_requester":true,
-    "auto_approve":false
+  "track": "haskell",
+  "exercise": "rna-transcription",
+  "id": "07fce4dce63e43afbe97116b4ff0e823",
+  "url": "https://exercism.io/tracks/haskell/exercises/rna-transcription/solutions/07fce4dce63e43afbe97116b4ff0e823",
+  "handle": "heptalophos",
+  "is_requester": true,
+  "auto_approve": false
 }
