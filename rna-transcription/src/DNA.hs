@@ -1,10 +1,11 @@
 module DNA (toRNA) where
 
 toRNA :: String -> Either Char String
-toRNA = mapM fromDNA
+-- toRNA [] = Nothing
+toRNA xs = traverse rnaComplement xs
     where
-        fromDNA 'G' = Right 'C'
-        fromDNA 'C' = Right 'G'
-        fromDNA 'T' = Right 'A'
-        fromDNA 'A' = Right 'U'
-        fromDNA  x  = Left x
+        rnaComplement 'G' = Right 'C'
+        rnaComplement 'C' = Right 'G'
+        rnaComplement 'T' = Right 'A'
+        rnaComplement 'A' = Right 'U'
+        rnaComplement  n  = Left n
