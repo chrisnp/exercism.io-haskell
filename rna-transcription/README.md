@@ -18,7 +18,6 @@ each nucleotide with its complement:
 * `T` -> `A`
 * `A` -> `U`
 
-
 ## Getting Started
 
 For installation and learning resources, refer to the
