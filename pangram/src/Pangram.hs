@@ -1,7 +1,14 @@
 module Pangram (isPangram) where
 
-import Data.Char (toLower, isLetter)
-import Data.List
+import Data.Char ( toLower )
+import Data.List ( nub, sort )
 
 isPangram :: String -> Bool
-isPangram text = length ( group . sort . map toLower . filter isLetter $ text ) == 26
+isPangram text = 
+  let 
+    gram :: String -> String
+    gram = filt . nub . sort . map toLower
+      where 
+        filt = filter (`elem` ['a'..'z'])
+  in 
+    ['a'..'z'] == gram text
