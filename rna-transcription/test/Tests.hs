@@ -6,6 +6,7 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import DNA (toRNA)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
