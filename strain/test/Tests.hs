@@ -5,6 +5,7 @@ import Data.List (isPrefixOf)
 
 import Strain (discard, keep)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
