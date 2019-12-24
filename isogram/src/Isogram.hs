@@ -4,6 +4,8 @@ import Data.List (nub)
 import Data.Char (isAlpha, toLower)
 
 isIsogram :: String -> Bool
-isIsogram str = normal == nub normal
-    where
+isIsogram str =
+    let
         normal = map toLower . filter isAlpha $ str
+    in 
+        normal == nub normal
