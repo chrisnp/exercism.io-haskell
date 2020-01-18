@@ -6,6 +6,7 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Base (Error(..), rebase)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
