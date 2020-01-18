@@ -5,7 +5,9 @@ import Data.Tuple    (swap)
 import Control.Monad (foldM)
 
 
-data Error a = InvalidInputBase | InvalidOutputBase | InvalidDigit a deriving (Show, Eq)
+data Error a = InvalidInputBase 
+               | InvalidOutputBase 
+               | InvalidDigit a deriving (Show, Eq)
 
 validDigit :: (Ord a, Num a) => a -> a -> Bool
 validDigit base d = d >= 0 && d < base
