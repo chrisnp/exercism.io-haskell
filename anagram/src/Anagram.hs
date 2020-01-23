@@ -8,9 +8,9 @@ anagramsFor xs xss =
     filter (anagramOf xs) xss
 
 anagramOf :: String -> String -> Bool
-anagramOf a b 
-    | lower a /= lower b && sorted a == sorted b = True
-    | otherwise = False   
-    where
+anagramOf a b =
+    let 
         lower = map toLower
         sorted = sort . lower    
+    in
+        lower a /= lower b && sorted a == sorted b        

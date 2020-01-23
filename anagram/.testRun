@@ -1,3 +1,4 @@
+>stack test
 
 anagramsFor
   no matches
@@ -18,7 +19,7 @@ Finished in 0.0010 seconds
 
 
 
-> stack test
+>stack test
 
 anagramsFor
   no matches
@@ -35,4 +36,25 @@ anagramsFor
   words are not anagrams of themselves (case-insensitive)
 
 Finished in 0.0006 seconds
+12 examples, 0 failures
+
+
+
+>stack test
+
+anagramsFor
+  no matches
+  detects two anagrams
+  does not detect anagram subsets
+  detects anagram
+  detects three anagrams
+  does not detect non-anagrams with identical checksum
+  detects anagrams case-insensitively
+  detects anagrams using case-insensitive subject
+  detects anagrams using case-insensitive possible matches
+  does not detect a anagram if the original word is repeated
+  anagrams must use all letters exactly once
+  words are not anagrams of themselves (case-insensitive)
+
+Finished in 0.0154 seconds
 12 examples, 0 failures

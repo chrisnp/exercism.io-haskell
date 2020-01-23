@@ -5,3 +5,14 @@ song
 
 Finished in 0.0050 seconds
 2 examples, 0 failures
+
+
+
+>stack test
+
+song
+  matches lines
+  matches full song
+
+Finished in 0.0065 seconds
+2 examples, 0 failures
