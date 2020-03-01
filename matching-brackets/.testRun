@@ -1,0 +1,22 @@
+
+arePaired
+  paired square brackets
+  empty string
+  unpaired brackets
+  wrong ordered brackets
+  wrong closing brackets
+  paired with whitespace
+  partially paired brackets
+  simple nested brackets
+  several paired brackets
+  paired and nested brackets
+  unopened closing brackets
+  unpaired and nested brackets
+  paired and wrong nested brackets
+  paired and incomplete brackets
+  too many closing brackets
+  math expression
+  complex latex expression
+
+Finished in 0.0008 seconds
+17 examples, 0 failures
