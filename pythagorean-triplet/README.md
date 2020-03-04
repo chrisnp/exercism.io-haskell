@@ -7,21 +7,27 @@ which,
 a**2 + b**2 = c**2
 ```
 
+and such that,
+
+```text
+a < b < c
+```
+
 For example,
 
 ```text
 3**2 + 4**2 = 9 + 16 = 25 = 5**2.
 ```
 
-There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+Given an input integer N, find all Pythagorean triplets for which `a + b + c = N`.
 
-Find the product a * b * c.
+For example, with N = 1000, there is exactly one Pythagorean triplet for which `a + b + c = 1000`: `{200, 375, 425}`.
 
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
