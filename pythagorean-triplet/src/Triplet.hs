@@ -1,16 +1,37 @@
-module Triplet (isPythagorean, mkTriplet, pythagoreanTriplets) where
+module Triplet (tripletsWithSum) where
 
-import Data.List ( sort )
+import Data.List (sortBy)
 
-data PythagoreanTriplet = PythagoreanTriplet {a::Int, b::Int, c::Int} deriving (Show, Eq)
 
-isPythagorean :: PythagoreanTriplet -> Bool
-isPythagorean triplet = ((a triplet) ^ (2::Integer)) + ((b triplet) ^ (2::Integer)) == (c triplet) ^ (2::Integer)
+isPythagorean :: (Integral a) => (a, a, a) -> Bool
+isPythagorean (x, y, z) = 
+    let 
+        squared =
+            map (^ 2) $ sortBy (\a b -> compare b a) [x, y, z]
+    in 
+        sum squared == 2 * (head squared)
 
-mkTriplet :: Int -> Int -> Int -> PythagoreanTriplet
-mkTriplet a b c = PythagoreanTriplet (head sorted) (sorted !! 1) (sorted !! 2)
-    where sorted = sort [a, b, c]
 
-pythagoreanTriplets :: Int -> Int -> [PythagoreanTriplet]
-pythagoreanTriplets minFactor maxFactor = filter isPythagorean triplets
-    where triplets =  [mkTriplet a b c | a <- [minFactor .. maxFactor], b <- [a .. maxFactor], c <- [b .. maxFactor]]
+mkTriplet :: (Integral a) => a -> a -> a -> (a, a, a)
+mkTriplet = (,,)
+
+
+pythagoreanTriplets :: (Integral a) => a -> a -> [(a, a, a)]
+pythagoreanTriplets minFactor maxFactor = 
+    let 
+        triplets =  [mkTriplet a b c | 
+                    a <- [minFactor .. maxFactor], 
+                    b <- [a .. maxFactor], 
+                    c <- [b .. maxFactor]]
+    in 
+        filter isPythagorean triplets
+
+
+tripletsWithSum :: (Integral a) =>  a -> [(a, a, a)]
+tripletsWithSum s = 
+    [(a, b, c) | a <- [1..div s 3],
+                 b <- [a + 1..2 * (div s 3)],
+                 c <- [s - a - b],
+                 a < b, 
+                 b < c,
+                 isPythagorean (a, b, c)]
