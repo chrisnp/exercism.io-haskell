@@ -1,3 +1,4 @@
+>stack test 
 
 isPythagorean
   3 4 5
@@ -15,3 +16,19 @@ pythagoreanTriplets
 
 Finished in 0.0040 seconds
 11 examples, 0 failures
+
+
+
+>stack test 
+
+pythagoreanTriplets
+  triplets whose sum is 12
+  triplets whose sum is 108
+  triplets whose sum is 1000
+  no matching triplets for 1001
+  returns all matching triplets
+  several matching triplets
+  triplets for large number
+
+Finished in 3.8128 seconds
+7 examples, 0 failures
