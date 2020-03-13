@@ -48,3 +48,19 @@ Finished in 0.0413 seconds
 6 examples, 0 failures
 
 
+
+
+
+>stack test
+
+
+collatz
+  zero steps for one
+  divide if even
+  even and odd steps
+  large number of even and odd steps
+  zero is an error
+  negative value is an error
+
+Finished in 0.0006 seconds
+6 examples, 0 failures
