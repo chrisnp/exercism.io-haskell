@@ -4,8 +4,9 @@ import Data.Map (Map, fromListWith)
 import Data.List (group)
 
 data Nucleotide = A | C | G | T deriving (Eq, Ord, Show)
+type NucMap = Map Nucleotide Int
 
-nucleotideCounts :: String -> Either String (Map Nucleotide Int)
+nucleotideCounts :: String -> Either String NucMap
 nucleotideCounts xs 
         | any (invalid) xs = 
             Left  $ "invalid nucleotides"
@@ -13,7 +14,9 @@ nucleotideCounts xs
             Right $ fromListWith (+) $ empty ++ counts xs
         where
             counts = 
-                map (\x -> (head x, length x)) . group . map nucl
+                map (\x -> (head x, length x)) 
+                . group 
+                . map nucl
             invalid x = 
                 not $ x `elem` "ACGT" 
             empty = 

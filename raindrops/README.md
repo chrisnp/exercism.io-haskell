@@ -1,27 +1,61 @@
 # Raindrops
 
-Convert a number to a string, the contents of which depend on the number's factors.
+Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if a one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
 
-- If the number has 3 as a factor, output 'Pling'.
-- If the number has 5 as a factor, output 'Plang'.
-- If the number has 7 as a factor, output 'Plong'.
-- If the number does not have 3, 5, or 7 as a factor,
-  just pass the number's digits straight through.
+The rules of `raindrops` are that if a given number:
+
+- has 3 as a factor, add 'Pling' to the result.
+- has 5 as a factor, add 'Plang' to the result.
+- has 7 as a factor, add 'Plong' to the result.
+- _does not_ have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
 
 ## Examples
 
-- 28's factors are 1, 2, 4, **7**, 14, 28.
-  - In raindrop-speak, this would be a simple "Plong".
-- 30's factors are 1, 2, **3**, **5**, 6, 10, 15, 30.
-  - In raindrop-speak, this would be a "PlingPlang".
-- 34 has four factors: 1, 2, 17, and 34.
-  - In raindrop-speak, this would be "34".
+- 28 has 7 as a factor, but not 3 or 5, so the result would be "Plong".
+- 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
+- 34 is not factored by 3, 5, or 7, so the result would be "34".
+
+## Hints
+
+You need to implement the `convert` function that returns number converted to
+raindrop sound. You can use the provided signature if you are unsure
+about the types, but don't let it restrict your creativity:
+
+```haskell
+convert :: Int -> String
+```
+
+This exercise works with textual data. For historical reasons, Haskell's
+`String` type is synonymous with `[Char]`, a list of characters. For more
+efficient handling of textual data, the `Text` type can be used.
+
+As an optional extension to this exercise, you can
+
+- Read about [string types](https://haskell-lang.org/tutorial/string-types) in Haskell.
+- Add `- text` to your list of dependencies in package.yaml.
+- Import `Data.Text` in [the following way](https://hackernoon.com/4-steps-to-a-better-imports-list-in-haskell-43a3d868273c):
+
+```haskell
+import qualified Data.Text as T
+import           Data.Text (Text)
+```
+
+- You can now write e.g. `convert :: Int -> Text` and refer to `Data.Text` combinators as e.g. `T.pack`.
+- Look up the documentation for [`Data.Text`](https://hackage.haskell.org/package/text/docs/Data-Text.html),
+- You can then replace all occurrences of `String` with `Text` in Raindrops.hs:
+
+```haskell
+convert :: Int -> Text
+```
+
+This part is entirely optional.
+
 
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
@@ -72,7 +106,7 @@ one, head over there and create an issue.  We'll do our best to help you!
 
 ## Source
 
-A variation on a famous interview question intended to weed out potential candidates. [http://jumpstartlab.com](http://jumpstartlab.com)
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

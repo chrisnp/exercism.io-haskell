@@ -21,3 +21,18 @@ nucleotideCounts
 
 Finished in 0.0012 seconds
 5 examples, 0 failures
+
+
+
+>stack test
+
+
+nucleotideCounts
+  empty dna strand has no nucleotides
+  can count one nucleotide in single-character input
+  repetitive-sequence-has-only-guanosine
+  counts all nucleotides
+  validates strand
+
+Finished in 0.0006 seconds
+5 examples, 0 failures
