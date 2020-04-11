@@ -72,7 +72,6 @@ but it is up to you to define the functions and create a meaningful data type,
 newtype or type synonym.
 
 
-
 ## Getting Started
 
 For installation and learning resources, refer to the
@@ -130,4 +129,5 @@ one, head over there and create an issue.  We'll do our best to help you!
 Josh Cheek [https://twitter.com/josh_cheek](https://twitter.com/josh_cheek)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+It's possible to submit an incomplete solution so you can see how others 
+have completed the exercise.

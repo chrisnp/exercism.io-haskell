@@ -10,3 +10,5 @@ stack.yaml
 cleanup.*
 stack.yaml.lock
 /../stack.yaml.lock
+.fake
+.ionide
