@@ -16,3 +16,38 @@ allergies
 
 Finished in 0.0000 seconds
 12 examples, 0 failures
+
+
+
+>stack test
+
+isAllergicTo
+  no allergies means not allergic
+  is allergic to eggs
+  allergic to eggs in addition to other stuff
+  allergic to strawberries but not peanuts
+  accepts single allergens
+    +++ OK, passed 100 tests.
+  rejects mismatching allergens
+    +++ OK, passed 100 tests.
+  accepts multiple allergens
+    +++ OK, passed 100 tests.
+  rejects multiple mismatching allergens
+    +++ OK, passed 100 tests.
+allergies
+  no allergies at all
+  allergic to just eggs
+  allergic to just peanuts
+  allergic to just strawberries
+  allergic to eggs and peanuts
+  allergic to more than eggs but not peanuts
+  allergic to lots of stuff
+  allergic to everything
+  ignore non allergen score parts
+  accepts single allergens
+    +++ OK, passed 100 tests.
+  accepts multiple allergens
+    +++ OK, passed 100 tests.
+
+Finished in 0.0225 seconds
+19 examples, 0 failures
