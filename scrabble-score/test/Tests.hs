@@ -7,6 +7,7 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Scrabble (scoreLetter, scoreWord)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
