@@ -9,7 +9,9 @@ module BankAccount
 import Control.Concurrent
 import Control.DeepSeq
 
-data BankAccount = BankAccount { _balance :: MVar (Maybe Integer) }
+data BankAccount = BankAccount { 
+    _balance :: MVar (Maybe Integer) 
+    }
 
 closeAccount :: BankAccount -> IO ()
 closeAccount account = do
