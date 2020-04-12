@@ -1,4 +1,5 @@
-module Scrabble (scoreLetter, scoreWord) where
+module Scrabble (scoreLetter, 
+                 scoreWord) where
 
 import Data.Char
 
@@ -11,10 +12,13 @@ scoreLetter letter
     | letterVal ['F', 'H', 'V', 'W', 'Y'] = 4
     | letterVal ['K']                     = 5
     | letterVal ['J', 'X']                = 8
-    | letterVal ['Q', 'Z']                =10
+    | letterVal ['Q', 'Z']                = 10
     | otherwise                           = 0
-    where letterVal ofLetters = (toUpper letter) `elem` ofLetters
+    where 
+        letterVal ofLetters = 
+                (toUpper letter) `elem` ofLetters
 
 
 scoreWord :: String -> Integer
-scoreWord word = sum $ map scoreLetter word
+scoreWord word = 
+    sum $ map scoreLetter word

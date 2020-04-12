@@ -6,3 +6,16 @@ closed banks hold no balance
 
 Finished in 0.0010 seconds
 4 examples, 0 failures
+
+
+
+>stack test
+
+checks that a new account is initialized to 0
+sequentially increments an account then checks the balance
+concurrently increments an account then checks the balance
+concurrently increments an account AND checks the balance
+checks that a closed account holds nothing
+
+Finished in 0.0017 seconds
+5 examples, 0 failures
