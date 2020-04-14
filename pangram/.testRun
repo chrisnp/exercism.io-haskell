@@ -15,3 +15,24 @@ isPangram
 
 Finished in 0.0007 seconds
 12 examples, 0 failures
+
+
+
+>stack test
+
+isPangram
+  with empty sentence
+  with perfect lower case
+  with only lower case
+  with missing character 'x'
+  with missing character 'h'
+  with underscores
+  with numbers
+  with missing letters replaced by numbers
+  with mixed case and punctuation
+  with mixed case
+  with missing character and non-ascii letters
+  with additional non-ascii letters
+
+Finished in 0.0033 seconds
+12 examples, 0 failures

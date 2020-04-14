@@ -4,11 +4,11 @@ import Data.Char ( toLower )
 import Data.List ( nub, sort )
 
 isPangram :: String -> Bool
-isPangram text = 
+isPangram = 
   let 
     gram :: String -> String
     gram = filt . nub . sort . map toLower
       where 
         filt = filter (`elem` ['a'..'z'])
   in 
-    ['a'..'z'] == gram text
+    flip ((==) . gram) ['a'..'z']

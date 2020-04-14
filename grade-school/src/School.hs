@@ -1,4 +1,8 @@
-module School (School, add, empty, grade, sorted) where
+module School (School, 
+               add, 
+               empty, 
+               grade, 
+               sorted) where
 
 import Data.Maybe (fromMaybe)
 import Data.List (sortBy, sort)
@@ -11,30 +15,43 @@ empty = []
 
 
 add :: Int -> String -> School -> School
-add gradeNum student school = case find gradeNum school of 
-    Nothing       -> (gradeNum, [student]) : school
-    Just students -> (gradeNum, student:students) : remove gradeNum school
+add gradeNum student school = 
+    case find gradeNum school of 
+        Nothing -> 
+            (gradeNum, [student]) : school
+        Just students -> 
+            (gradeNum, student:students) : remove gradeNum school
 
 
 remove :: Int -> School -> School
-remove _ [] = empty
+remove _ [] = 
+    empty
 remove y (x:xs) 
-    | y == fst x = xs
-    | otherwise  = x : remove y xs
+    | y == fst x = 
+        xs
+    | otherwise  = 
+        x : remove y xs
 
 
 find :: Int -> School -> Maybe [String]
-find x [] = Nothing
+find _ [] = 
+    Nothing
 find x ((y1, y2):ys) 
-    | x == y1   = Just $ sort y2
-    | otherwise = find x ys  
+    | x == y1 = 
+        Just $ sort y2
+    | otherwise = 
+        find x ys  
 
 
 grade :: Int -> School -> [String]
-grade gradeNum school = fromMaybe [] (find gradeNum school)  
+grade gradeNum school = 
+    fromMaybe [] (find gradeNum school)  
 
 
 sorted :: School -> [(Int, [String])]
-sorted = sortBy (\ x y -> compare (fst x) (fst y)) . students
-    where students [] = []
-          students ((x1, x2):xs) = (x1, sort x2) : students xs
+sorted = 
+    sortBy (\ x y -> compare (fst x) (fst y)) . students
+    where students [] = 
+                []
+          students ((x1, x2):xs) = 
+                (x1, sort x2) : students xs
