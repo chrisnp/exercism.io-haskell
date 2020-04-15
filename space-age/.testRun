@@ -10,3 +10,20 @@ ageOn
 
 Finished in 0.0004 seconds
 8 examples, 0 failures
+
+
+
+>stack test
+
+ageOn
+  Earth
+  Mercury
+  Venus
+  Mars
+  Jupiter
+  Saturn
+  Uranus
+  Neptune
+
+Finished in 0.0013 seconds
+8 examples, 0 failures
