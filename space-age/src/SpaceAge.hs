@@ -1,4 +1,6 @@
-module SpaceAge (Planet(..), ageOn) where
+module SpaceAge (Planet(..), 
+                 ageOn) where
+
 
 data Planet = Mercury
             | Venus
@@ -9,16 +11,22 @@ data Planet = Mercury
             | Uranus
             | Neptune
 
+orbitalPeriod :: Planet -> Float
+orbitalPeriod planet =
+    let 
+        earthYear = 31557600
+    in 
+        case planet of 
+            Mercury -> 0.24084670 * earthYear
+            Venus   -> 0.61519726 * earthYear
+            Earth   -> 1.00000000 * earthYear
+            Mars    -> 1.88081580 * earthYear
+            Jupiter -> 11.8626150 * earthYear
+            Saturn  -> 29.4474980 * earthYear
+            Uranus  -> 84.0168460 * earthYear
+            Neptune -> 164.791320 * earthYear
+
 ageOn :: Planet -> Float -> Float
-ageOn planet seconds = 
-    let
-        earthYear = 31557600 
-    in case planet of
-        Mercury -> seconds / earthYear / 0.2408467
-        Venus   -> seconds / earthYear / 0.61519726
-        Earth   -> seconds / earthYear
-        Mars    -> seconds / earthYear / 1.8808158
-        Jupiter -> seconds / earthYear / 11.862615
-        Saturn  -> seconds / earthYear / 29.447498
-        Uranus  -> seconds / earthYear / 84.016846
-        Neptune -> seconds / earthYear / 164.79132   
+ageOn planet =
+    flip (/) (orbitalPeriod planet) 
+     

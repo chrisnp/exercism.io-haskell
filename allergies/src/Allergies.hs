@@ -14,10 +14,9 @@ data Allergen = Eggs
               | Cats
               deriving (Enum, Eq, Show)
 
-allergies :: Int -> [Allergen]
-allergies score = 
-    filter (flip isAllergicTo score) 
-            [Eggs, 
+
+allergens :: [Allergen]
+allergens = [Eggs, 
              Peanuts,
              Shellfish,
              Strawberries,
@@ -26,6 +25,11 @@ allergies score =
              Pollen,
              Cats]
 
+
+allergies :: Int -> [Allergen]
+allergies = 
+    flip filter allergens . flip isAllergicTo
+
+
 isAllergicTo :: Allergen -> Int -> Bool
-isAllergicTo allergen score = 
-    testBit score (fromEnum allergen)
+isAllergicTo = flip testBit . fromEnum

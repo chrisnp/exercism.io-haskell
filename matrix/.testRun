@@ -17,3 +17,26 @@ flatten
 
 Finished in 0.0010 seconds
 15 examples, 0 failures
+
+
+
+>stack test
+
+extract row from one number matrix
+can extract row
+extract row where numbers have different widths
+can extract row from non-square matrix
+extract column from one number matrix
+can extract column
+can extract column from non-square matrix
+extract column where numbers have different widths
+shape
+rows & cols
+eq
+fromList
+transpose
+reshape
+flatten
+
+Finished in 0.0040 seconds
+15 examples, 0 failures

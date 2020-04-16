@@ -20,7 +20,8 @@ add gradeNum student school =
         Nothing -> 
             (gradeNum, [student]) : school
         Just students -> 
-            (gradeNum, student:students) : remove gradeNum school
+            (gradeNum, student:students) : 
+             remove gradeNum school
 
 
 remove :: Int -> School -> School

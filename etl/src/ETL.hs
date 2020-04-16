@@ -8,5 +8,5 @@ letterScore (score, letters) =
     [(toLower letter, score) | letter <- letters ]
 
 transform :: Map a String -> Map Char a
-transform legacyData = 
-    fromList $ concatMap letterScore $ toList legacyData
+transform = 
+    fromList . concatMap letterScore . toList
