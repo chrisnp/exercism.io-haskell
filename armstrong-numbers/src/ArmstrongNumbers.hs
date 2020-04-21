@@ -9,7 +9,7 @@ digits x
 raised :: Integral a => [a] -> [a]
 raised xs = raise xs (^ (length xs))
     where
-        raise = flip fmap 
+        raise = flip fmap
 
 armstrong :: Integral a => a -> Bool
 armstrong = (==) <*> (sum . raised . digits)
