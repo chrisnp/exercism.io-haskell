@@ -55,3 +55,7 @@ canAttack
 
 Finished in 0.0006 seconds
 11 examples, 0 failures
+
+
+
+>stack test
