@@ -14,11 +14,11 @@ So given a string with embedded newlines like:
 representing this matrix:
 
 ```text
-    0  1  2
+    1  2  3
   |---------
-0 | 9  8  7
-1 | 5  3  2
-2 | 6  6  7
+1 | 9  8  7
+2 | 5  3  2
+3 | 6  6  7
 ```
 
 your code should be able to spit out:
@@ -69,8 +69,8 @@ shape is (rows, cols)
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
