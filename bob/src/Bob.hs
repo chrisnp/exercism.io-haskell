@@ -19,7 +19,7 @@ isShouting xs
             listUpperWords = filter isUpper xs
 
 isSilent :: String -> Bool
-isSilent xs = null (filter (\x -> not $ isSpace x) xs)
+isSilent xs = null . filter (not . isSpace) $ xs
 
 responseFor :: String -> String
 responseFor xs

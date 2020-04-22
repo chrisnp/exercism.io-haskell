@@ -1,3 +1,18 @@
+toRNA
+  Empty RNA sequence
+  RNA complement of cytosine is guanine
+  RNA complement of guanine is cytosine
+  RNA complement of thymine is adenine
+  RNA complement of adenine is uracil
+  RNA complement
+  correctly handles invalid input (RNA instead of DNA)
+  correctly handles completely invalid DNA input
+  correctly handles partially invalid DNA input
+
+Finished in 0.0003 seconds
+9 examples, 0 failures
+
+
 
 toRNA
   Empty RNA sequence
@@ -15,6 +30,7 @@ Finished in 0.0003 seconds
 
 
 
+>stack test
 
 toRNA
   Empty RNA sequence
@@ -27,5 +43,5 @@ toRNA
   correctly handles completely invalid DNA input
   correctly handles partially invalid DNA input
 
-Finished in 0.0003 seconds
+Finished in 0.0032 seconds
 9 examples, 0 failures

@@ -12,47 +12,45 @@ module Matrix
     , transpose
     ) where
 
-import Data.Vector (Vector)
+
+import Control.Monad (liftM2)
+import Data.Vector (Vector, (!))
 import qualified Data.Vector as V
 
+
 data Matrix a = Matrix { 
-                vect :: Vector a,
+                vect  :: Vector a,
                 rows :: Int,
                 cols :: Int
                 } deriving (Show, Eq) 
 
 row :: Int -> Matrix a -> Vector a
 row x matrix = 
-    V.take (cols matrix) 
-    $ snd 
-    $ V.splitAt (x * (cols matrix)) 
-    $ vect matrix
+    V.slice ((*) (cols matrix) (x - 1)) 
+            (cols matrix) 
+            (vect matrix)
 
 column :: Int -> Matrix a -> Vector a
 column x matrix = 
-    V.fromList 
-    $ takeNth (x + 1) 
-    $ V.toList 
-    $ vect matrix
-    where 
-        takeNth n a = 
-            case drop (n - 1) a of 
-                (y:ys) -> 
-                    y : takeNth (cols matrix) ys
-                [] -> 
-                    []      
+    let 
+        vs = vect matrix
+        cs = cols matrix
+    in
+        V.fromList 
+            (map (vs !) 
+            [x - 1, x + cs - 1 .. V.length vs - 1])
 
 flatten :: Matrix a -> Vector a
 flatten = 
-    vect
+        vect
 
 fromList :: [[a]] -> Matrix a
 fromList []  = 
     Matrix V.empty 0 0
-fromList xss = 
-    Matrix (V.fromList $ concat xss) 
-           (length xss) 
-           (length $ head xss) 
+fromList xs = 
+    Matrix { vect = V.fromList (concat xs), 
+             rows = length xs, 
+             cols = length (head xs) }
 
 fromString :: Read a => String -> Matrix a
 fromString = 
@@ -64,12 +62,13 @@ reshape dimensions matrix =
              cols = snd dimensions, 
              vect = vect matrix }
 
-
 shape :: Matrix a -> (Int, Int)
-shape matrix = 
+shape = 
     liftM2 (,) rows cols
 
 transpose :: Matrix a -> Matrix a
 transpose matrix = 
-    fromList 
-    $ [V.toList $ column (c - 1) matrix | c <- [1..(cols matrix)]]
+    Matrix { vect = V.concat (map (flip column matrix) 
+                                  [1 .. (cols matrix)]),
+             rows = cols matrix,
+             cols = rows matrix }
