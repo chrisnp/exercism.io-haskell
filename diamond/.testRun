@@ -8,3 +8,29 @@ diamond
 
 Finished in 0.0000 seconds
 5 examples, 0 failures
+
+
+
+>stack test
+
+diamond
+  should not have a result for a non-alpha character
+    +++ OK, passed 100 tests.
+  should produce a value for an alpha character
+    +++ OK, passed 100 tests.
+  should have an odd number of rows
+    +++ OK, passed 100 tests.
+  should have equal top and bottom
+    +++ OK, passed 100 tests.
+  should have the same width and height
+    +++ OK, passed 100 tests.
+  rows should start and end with the same letter
+    +++ OK, passed 100 tests.
+  Degenerate case with a single 'A' row
+  Degenerate case with no row containing 3 distinct groups of spaces
+  Smallest non-degenerate case with odd diamond side length
+  Smallest non-degenerate case with even diamond side length
+  Largest possible diamond
+
+Finished in 0.0108 seconds
+11 examples, 0 failures
