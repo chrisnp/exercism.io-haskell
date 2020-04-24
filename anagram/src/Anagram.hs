@@ -14,4 +14,5 @@ anagramOf a b =
         lower = map toLower
         sorted = sort . lower    
     in
-        lower a /= lower b && sorted a == sorted b
+        lower a /= lower b   && 
+        sorted a == sorted b
