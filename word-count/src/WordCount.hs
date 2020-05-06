@@ -6,13 +6,12 @@ import Data.List.Split (wordsBy)
 import Data.MultiSet (fromList, toMap)
 
 wordCount :: String -> Map String Int
-wordCount xs = 
+wordCount = 
     let
         normalize ('\'':rest) = map toLower (init rest)
         normalize cleanword   = map toLower cleanword
     in 
-        (toMap . 
-         fromList . 
-         map normalize . 
-         wordsBy (\x -> (not . isAlphaNum) x && x /= '\'')) 
-        xs
+        toMap . 
+        fromList . 
+        map normalize . 
+        wordsBy (\x -> (not . isAlphaNum) x && x /= '\'') 
