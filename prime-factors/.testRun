@@ -10,3 +10,19 @@ primeFactors
 
 Finished in 0.0410 seconds
 7 examples, 0 failures
+
+
+
+>stack test
+
+primeFactors
+  no factors
+  prime number
+  square of a prime
+  cube of a prime
+  product of primes and non-primes
+  product of primes
+  factors include a large prime
+
+Finished in 0.0413 seconds
+7 examples, 0 failures
