@@ -1,7 +1,7 @@
 module Roman (numerals) where
 
 numerals :: Integer -> Maybe String
-numerals n = Just $ roman n
+numerals = Just . roman
 
     
 roman :: Integer -> String
