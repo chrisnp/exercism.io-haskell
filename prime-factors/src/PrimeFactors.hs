@@ -13,7 +13,7 @@ factors n (x:xs)
 
 primeFactors :: Integral a => a -> [a]
 primeFactors = 
-    (<*>) factors ( enumFromTo 2 
-                    . floor 
-                    . sqrt 
-                    . fromIntegral )
+    factors <*> ( enumFromTo 2 
+                  . floor 
+                  . sqrt 
+                  . fromIntegral )
