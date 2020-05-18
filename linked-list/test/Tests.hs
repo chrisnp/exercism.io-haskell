@@ -3,6 +3,7 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Deque (mkDeque, pop, push, shift, unshift)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
