@@ -1,4 +1,7 @@
-module Deque (Deque, mkDeque, pop, push, shift, unshift) where
+module Deque (Deque, 
+              mkDeque, 
+              pop, push, 
+              shift, unshift) where
 
 import Control.Concurrent
 
@@ -7,19 +10,19 @@ data Deque a = Deque { _items :: MVar [a] }
 mkDeque :: IO (Deque a)
 mkDeque = do
     mvar <- newMVar []
-    let deque = Deque mvar 
+    let deque = Deque mvar
     return deque
 
 pop :: Deque a -> IO (Maybe a)
 pop deque = do
     let mvar = _items deque
     items <- takeMVar mvar
-    let 
-        (x, xs) = case items of 
-            [] -> (Nothing, [])
-            item -> (Just $ last item, init item)
-    putMVar mvar xs
-    return x
+    let (x, xs) = 
+        case items of
+            [] -> 
+                (Nothing, [])
+            i  -> 
+                (Just $ last item, init item)
 
 push :: Deque a -> a -> IO ()
 push deque x = do
@@ -41,9 +44,10 @@ shift :: Deque a -> IO (Maybe a)
 shift deque = do
     let mvar = _items deque
     items <- takeMVar mvar
-    let 
-        (x, xs) = case items of 
-            [] -> (Nothing, [])
-            item -> (Just $ head item, tail item)
+    let (x, xs) = case items of 
+            [] -> 
+                (Nothing, [])
+            i  -> 
+                (Just $ head item, tail item)
     putMVar mvar xs
     return x
