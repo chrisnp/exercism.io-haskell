@@ -10,7 +10,11 @@ module LinkedList
     , toList
     ) where
 
-data LinkedList a = Nil | LinkedList { datum :: a, next :: LinkedList a } deriving (Eq, Show)
+data LinkedList a = 
+        Nil 
+        | LinkedList { datum :: a, 
+                       next :: LinkedList a } 
+        deriving (Eq, Show)
 
 
 fromList :: [a] -> LinkedList a
@@ -34,4 +38,3 @@ reverseLinkedList = fromList . reverse . toList
 toList :: LinkedList a -> [a]
 toList Nil = []
 toList (LinkedList x xs) = x : toList xs
-     

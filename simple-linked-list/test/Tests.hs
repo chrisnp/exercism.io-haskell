@@ -18,12 +18,14 @@ import LinkedList
   , LinkedList
   )
 
+
 instance (Arbitrary a) => Arbitrary (LinkedList a) where
   arbitrary = fromList <$> arbitrary
 
 nthDatum :: LinkedList a -> Int -> a
 nthDatum xs 0 = datum xs
 nthDatum xs n = nthDatum (next xs) (pred n)
+
 
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs

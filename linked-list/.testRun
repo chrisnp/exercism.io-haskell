@@ -7,3 +7,16 @@ example
 
 Finished in 0.0010 seconds
 5 examples, 0 failures
+
+
+
+>stack test
+
+push pop
+push shift
+unshift shift
+unshift pop
+example
+
+Finished in 0.0000 seconds
+5 examples, 0 failures
