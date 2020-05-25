@@ -18,3 +18,27 @@ responseFor
 
 Finished in 0.0025 seconds
 15 examples, 0 failures
+
+
+
+>stack test
+
+responseFor
+  first day a partridge in a pear tree
+  second day two turtle doves
+  third day three french hens
+  fourth day four calling birds
+  fifth day five gold rings
+  sixth day six geese-a-laying
+  seventh day seven swans-a-swimming
+  eighth day eight maids-a-milking
+  ninth day nine ladies dancing
+  tenth day ten lords-a-leaping
+  eleventh day eleven pipers piping
+  twelfth day twelve drummers drumming
+  recites first three verses of the song
+  recites three verses from the middle of the song
+  recites the whole song
+
+Finished in 0.0050 seconds
+15 examples, 0 failures
