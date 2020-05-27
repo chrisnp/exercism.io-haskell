@@ -36,3 +36,50 @@ sub
 
 Finished in 0.0000 seconds
 26 examples, 0 failures
+
+
+
+>stack test
+
+real
+  Real part of a purely real number
+  Real part of a purely imaginary number
+  Real part of a number with real and imaginary part
+imaginary
+  Imaginary part of a purely real number
+  Imaginary part of a purely imaginary number
+  Imaginary part of a number with real and imaginary part
+conjugate
+  Conjugate a purely real number
+  Conjugate a purely imaginary number
+  Conjugate a number with real and imaginary part
+abs
+  Absolute value of a positive purely real number
+  Absolute value of a negative purely real number
+  Absolute value of a purely imaginary number with positive imaginary part
+  Absolute value of a purely imaginary number with negative imaginary part
+  Absolute value of a number with real and imaginary part
+exp
+  Euler's identity/formula
+  Exponential of 0
+  Exponential of a purely real number
+  Exponential of a purely real number
+mul
+  Multiply purely real numbers
+  Multiply purely imaginary numbers
+  Multiply numbers with real and imaginary part
+div
+  Divide purely real numbers
+  Divide purely imaginary numbers
+  Divide numbers with real and imaginary part
+add
+  Add purely real numbers
+  Add purely imaginary numbers
+  Add numbers with real and imaginary part
+sub
+  Subtract purely real numbers
+  Subtract purely imaginary numbers
+  Subtract numbers with real and imaginary part
+
+Finished in 0.0000 seconds
+30 examples, 0 failures
