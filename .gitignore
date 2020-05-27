@@ -8,7 +8,7 @@ stack.yaml
 .vscode/
 .ionide/
 cleanup.*
-stack.yaml.lock
+*.yaml.lock
 /../stack.yaml.lock
 .fake
 .ionide
