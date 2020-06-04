@@ -8,6 +8,7 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Series (slices)
 
+
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
