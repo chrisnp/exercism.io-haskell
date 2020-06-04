@@ -8,3 +8,17 @@ slices of zero
 
 Finished in 0.0010 seconds
 6 examples, 0 failures
+
+
+
+>stack test
+
+slices of one
+slices of two
+slices of three
+slices can have duplicates
+slices of a long series
+slices of zero
+
+Finished in 0.0000 seconds
+6 examples, 0 failures
