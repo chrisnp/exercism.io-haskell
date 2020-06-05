@@ -38,6 +38,8 @@ Finished in 0.0010 seconds
 
 
 
+>stack test
+
 encode
   encode yes
   encode no
@@ -55,7 +57,7 @@ decode
   decode with too many spaces
   decode with no spaces
 
-Finished in 0.0004 seconds
+Finished in 0.0000 seconds
 14 examples, 0 failures
 
 
@@ -79,5 +81,5 @@ decode
   decode with too many spaces
   decode with no spaces
 
-Finished in 0.0000 seconds
+Finished in 0.0020 seconds
 14 examples, 0 failures
