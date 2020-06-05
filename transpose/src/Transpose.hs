@@ -1,10 +1,19 @@
 module Transpose (transpose) where
 
-import qualified Data.List (transpose)
+import qualified Data.List as DL
+
 
 transpose :: [String] -> [String]
-transpose lines = 
-    let padded = scanr (\xs ys -> if length ys > length xs 
-                                  then xs ++ (replicate (length ys - length xs) ' ')
-                                  else xs) []
-    in Data.List.transpose $ padded lines
+transpose = 
+    let 
+        padded = 
+            scanr (\xs ys -> 
+                    if length ys <= length xs then 
+                        xs 
+                    else 
+                        xs ++ 
+                        (replicate (length ys - length xs)
+                                   ' ')) 
+                  []
+    in 
+        DL.transpose . padded
