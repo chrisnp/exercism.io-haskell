@@ -21,9 +21,10 @@ chunkify n text =
     let 
         (chunk, rest) = splitAt n text
     in 
-        if null rest 
-        then chunk 
-        else chunk ++ " " ++ chunkify n rest
+        if null rest then 
+            chunk 
+        else 
+            chunk ++ " " ++ chunkify n rest
 
 atbash :: Char -> Char
 atbash x
