@@ -42,3 +42,28 @@ isbn
 
 Finished in 0.0005 seconds
 16 examples, 0 failures
+
+
+
+>stack test
+
+isbn
+  valid isbn number
+  invalid isbn check digit
+  valid isbn number with a check digit of 10
+  check digit is a character other than X
+  invalid character in isbn
+  X is only valid as a check digit
+  valid isbn without separating dashes
+  isbn without separating dashes and X as check digit
+  too long isbn and no dashes
+  too short isbn
+  isbn without check digit
+  check digit of X should not be used for 0
+  empty isbn
+  input is 9 characters
+  invalid characters are not ignored
+  input is too long but contains a valid isbn
+
+Finished in 0.0010 seconds
+16 examples, 0 failures
