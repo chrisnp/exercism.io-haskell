@@ -13,8 +13,8 @@ for A, and so with the others."
 
 Ciphers are very straight-forward algorithms that allow us to render
 text less readable while still allowing easy deciphering. They are
-vulnerable to many forms of cryptoanalysis, but we are lucky that
-generally our little sisters are not cryptoanalysts.
+vulnerable to many forms of cryptanalysis, but we are lucky that
+generally our little sisters are not cryptanalysts.
 
 The Caesar Cipher was used for some messages from Julius Caesar that
 were sent afield. Now Caesar knew that the cipher wasn't very good, but
@@ -61,10 +61,7 @@ substitution cipher a little more fault tolerant by providing a source
 of randomness and ensuring that the key contains only lowercase letters.
 
 If someone doesn't submit a key at all, generate a truly random key of
-at least 100 characters in length.
-
-If the key submitted is not composed only of lowercase letters, your
-solution should handle the error in a language-appropriate way.
+at least 100 alphanumeric characters in length.
 
 ## Extensions
 
@@ -84,8 +81,8 @@ on Wikipedia][dh] for one of the first implementations of this scheme.
 
 ## Getting Started
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/haskell).
+Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
+and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
 
