@@ -8,4 +8,4 @@ keep p (x:xs)
     | otherwise = keep p xs
 
 discard :: (a -> Bool) -> [a] -> [a]
-discard p xs = (keep $ not . p) xs
+discard = keep . (not .)
