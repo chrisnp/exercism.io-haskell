@@ -37,3 +37,25 @@ discard non-strict
 
 Finished in 0.0010 seconds
 14 examples, 0 failures
+
+
+
+>stack test
+
+empty keep
+keep everything
+keep first and last
+keep nothing
+keep neither first nor last
+keep strings
+empty discard
+discard everything
+discard first and last
+discard nothing
+discard neither first nor last
+discard strings
+keep non-strict
+discard non-strict
+
+Finished in 0.0000 seconds
+14 examples, 0 failures
