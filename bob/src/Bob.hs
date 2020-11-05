@@ -10,7 +10,7 @@ isQuestion xs
     | otherwise         = False
 
 isShouting :: String -> Bool
-isShouting xs 
+isShouting xs
     | null listWords || null listUpperWords = False
     | listWords == listUpperWords           = True
     | otherwise                             = False
@@ -19,7 +19,7 @@ isShouting xs
             listUpperWords = filter isUpper xs
 
 isSilent :: String -> Bool
-isSilent xs = null . filter (not . isSpace) $ xs
+isSilent = null . filter (not . isSpace)
 
 responseFor :: String -> String
 responseFor xs
