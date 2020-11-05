@@ -16,5 +16,5 @@ sounds x
     | otherwise = "Error"
 
 noisy :: Integral a => a -> [a]
-noisy n = 
-    filter (\x -> 0 == mod n x) [3, 5, 7]
+noisy = 
+    flip filter [3, 5, 7] . ((0 ==) .) . mod
