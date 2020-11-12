@@ -1,11 +1,12 @@
 module Robot
-    ( Bearing(East,North,South,West)
+    ( Bearing(East,
+              North,
+              South,
+              West)
     , bearing
     , coordinates
     , mkRobot
-    , simulate
-    , turnLeft
-    , turnRight
+    , move
     ) where
 
 data Bearing = North
@@ -16,7 +17,8 @@ data Bearing = North
 
 type Position = (Integer, Integer)
 
-data Robot = Robot Bearing Position deriving (Eq, Show)
+data Robot = Robot Bearing Position 
+             deriving (Eq, Show)
 
 
 bearing :: Robot -> Bearing
@@ -26,25 +28,32 @@ coordinates :: Robot -> Position
 coordinates (Robot dir pos) = pos
 
 mkRobot :: Bearing -> Position -> Robot
-mkRobot direction coordinates = Robot direction coordinates
+mkRobot direction coords = 
+                Robot direction coords
 
-simulate :: Robot -> String -> Robot
-simulate = foldl movement 
+move :: Robot -> String -> Robot
+move = foldl movement 
     where 
-        movement (Robot North (x, y)) 'A' = Robot North (x, y+1)
-        movement (Robot East  (x, y)) 'A' = Robot East  (x+1, y)
-        movement (Robot South (x, y)) 'A' = Robot South (x, y-1)
-        movement (Robot West  (x, y)) 'A' = Robot West  (x-1, y)
-        movement (Robot dir pos) 'R' = Robot (turnRight dir) pos
-        movement (Robot dir pos) 'L' = Robot (turnLeft  dir) pos
+        movement (Robot North (x, y)) 'A' = 
+                Robot North (x, y+1)
+        movement (Robot East  (x, y)) 'A' = 
+                Robot East  (x+1, y)
+        movement (Robot South (x, y)) 'A' = 
+                Robot South (x, y-1)
+        movement (Robot West  (x, y)) 'A' = 
+                Robot West  (x-1, y)
+        movement (Robot dir pos) 'R' = 
+                Robot (turnRight dir) pos
+        movement (Robot dir pos) 'L' = 
+                Robot (turnLeft  dir) pos
 
 
 turnLeft :: Bearing -> Bearing
 turnLeft direction 
         | direction == North = West
-        | otherwise          = pred direction
+        | otherwise = pred direction
 
 turnRight :: Bearing -> Bearing
 turnRight direction 
-        | direction == West  = North
-        | otherwise          = succ direction
+        | direction == West = North
+        | otherwise = succ direction
