@@ -12,3 +12,20 @@ rows
 
 Finished in 0.0015 seconds
 9 examples, 0 failures
+
+
+
+>stack test
+
+rows
+  no rows
+  single row
+  two rows
+  three rows
+  four rows
+  five rows
+  six rows
+  ten rows
+
+Finished in 0.0010 seconds
+8 examples, 0 failures
