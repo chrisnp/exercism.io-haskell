@@ -1,9 +1,1 @@
-{
-  "track": "haskell",
-  "exercise": "run-length-encoding",
-  "id": "efa57e05d7234fbaa2d972e807217db5",
-  "url": "https://exercism.io/tracks/haskell/exercises/run-length-encoding/solutions/efa57e05d7234fbaa2d972e807217db5",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
-}
+{"track":"haskell","exercise":"run-length-encoding","id":"efa57e05d7234fbaa2d972e807217db5","url":"https://exercism.io/my/solutions/efa57e05d7234fbaa2d972e807217db5","handle":"heptalophos","is_requester":true,"auto_approve":false}
