@@ -13,21 +13,20 @@ encode =
 
 decode :: String -> String
 decode = 
-    map atbash 
-    . filter (liftM2 (||) isAlpha isDigit)
+    map atbash . filter (liftM2 (||) isAlpha isDigit)
 
 chunkify :: Int -> String -> String
-chunkify n text = 
+chunkify x text = 
     let 
-        (chunk, rest) = splitAt n text
+        (chunk, rest) = splitAt x text
     in 
         if null rest then 
             chunk 
         else 
-            chunk ++ " " ++ chunkify n rest
+            chunk ++ " " ++ chunkify x rest
 
 atbash :: Char -> Char
 atbash x
-    | isAlpha x = 
-        chr (ord 'a' + ord 'z' - ord (toLower x))
+    -- | isAlpha x = chr (ord 'a' + ord 'z' - ord (toLower x))
+    | isAlpha x = chr . (-) (ord 'a' + ord 'z') . ord . toLower $ x
     | otherwise = x
