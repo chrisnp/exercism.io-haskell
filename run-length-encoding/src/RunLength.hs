@@ -17,8 +17,8 @@ encode :: String -> String
 encode "" = ""
 encode text =
     let 
-        len    = length (takeWhile (char ==) text)
-        char   = head text
+        len = length (takeWhile (char ==) text)
+        char = head text
         lenStr = if len == 1 then "" else show len
     in
         lenStr ++ char : encode (drop len text)
