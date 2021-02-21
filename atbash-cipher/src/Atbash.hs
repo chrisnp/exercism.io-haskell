@@ -27,6 +27,6 @@ chunkify x text =
 
 atbash :: Char -> Char
 atbash x
-    -- | isAlpha x = chr (ord 'a' + ord 'z' - ord (toLower x))
-    | isAlpha x = chr . (-) (ord 'a' + ord 'z') . ord . toLower $ x
+    | isAlpha x = 
+        chr . (-) (ord 'a' + ord 'z') . ord . toLower $ x
     | otherwise = x
