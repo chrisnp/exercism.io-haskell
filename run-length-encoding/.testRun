@@ -42,3 +42,27 @@ both
 
 Finished in 0.0088 seconds
 13 examples, 0 failures
+
+
+
+>stack test
+
+decode
+  decode empty string
+  decode single characters only
+  decode simple
+  decode with single values
+  decode whitespace
+  decode lowercase
+encode
+  encode empty string
+  encode single characters only
+  encode simple
+  encode with single values
+  encode whitespace
+  encode lowercase
+both
+  decode . encode combination
+
+Finished in 0.0010 seconds
+13 examples, 0 failures
