@@ -7,7 +7,8 @@ dependencies:
 library:
   exposed-modules: RunLength
   source-dirs: src
-  ghc-options: -Wall
+  ghc-options: 
+  - -Wall
   # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
