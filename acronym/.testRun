@@ -62,3 +62,22 @@ abbreviate
 
 Finished in 0.0017 seconds
 10 examples, 0 failures
+
+
+
+>stack test
+
+abbreviate
+  basic
+  lowercase words
+  camelcase
+  punctuation
+  all caps word
+  punctuation without whitespace
+  very long abbreviation
+  consecutive delimiters
+  apostrophes
+  underscore emphasis
+
+Finished in 0.0020 seconds
+10 examples, 0 failures
