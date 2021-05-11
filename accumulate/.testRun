@@ -20,3 +20,17 @@ accumulate non-strict
 
 Finished in 0.0004 seconds
 6 examples, 0 failures
+
+
+
+>stack test
+
+empty accumulation
+accumulate squares
+accumulate upcases
+accumulate reversed strings
+accumulate recursively
+accumulate non-strict
+
+Finished in 0.0010 seconds
+6 examples, 0 failures
