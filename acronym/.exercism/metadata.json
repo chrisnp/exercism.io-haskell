@@ -1,9 +1,9 @@
 {
-  "track": "haskell",
-  "exercise": "acronym",
-  "id": "3af283b60e7045779b7c666ed9053fea",
-  "url": "https://exercism.io/tracks/haskell/exercises/acronym/solutions/3af283b60e7045779b7c666ed9053fea",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "haskell",
+    "exercise": "acronym",
+    "id": "3af283b60e7045779b7c666ed9053fea",
+    "url": "https://exercism.io/tracks/haskell/exercises/acronym/solutions/3af283b60e7045779b7c666ed9053fea",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }
