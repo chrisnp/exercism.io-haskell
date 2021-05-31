@@ -1,18 +1,16 @@
 module Sieve (primesUpTo) where
 
+
 primesUpTo :: Integer -> [Integer]
-primesUpTo = 
+primesUpTo n
+  | n < 2 = []
+  | otherwise = 2 : sieve [3,5 .. n]
+
+sieve :: [Integer] -> [Integer]
+sieve [] = []
+sieve (x:xs) = 
     let 
-        primes = 
-            2 : filter isPrime [3, 5..]
-        isPrime p = 
-            all ((/=) 0 . mod p) 
-                (takeWhile (\x ->  x ^ 2 <= p) 
-                           primes)
-    in 
-        flip takeWhile primes . flip (<=)
-
-multiples :: (Num a, Enum a) => a -> a -> [a]
-multiples p upto = [p+p, p+p+p .. upto]
-
-member 
+        isMultiple p q = 
+            (or . map (== q)) [p, p+p .. q] 
+    in
+        x:sieve (filter (not . isMultiple x) xs)
