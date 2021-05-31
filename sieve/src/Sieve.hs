@@ -11,3 +11,8 @@ primesUpTo =
                            primes)
     in 
         flip takeWhile primes . flip (<=)
+
+multiples :: (Num a, Enum a) => a -> a -> [a]
+multiples p upto = [p+p, p+p+p .. upto]
+
+member 
