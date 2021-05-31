@@ -31,12 +31,10 @@ language).
 
 
 ## Getting Started
-
 Please refer to the [installation](https://exercism.io/tracks/haskell/installation)
 and [learning](https://exercism.io/tracks/haskell/learning) help pages.
 
 ## Running the tests
-
 To run the test suite, execute the following command:
 
 ```bash
@@ -44,7 +42,6 @@ stack test
 ```
 
 #### If you get an error message like this...
-
 ```
 No .cabal file found in directory
 ```
@@ -67,7 +64,6 @@ stack setup
 ```
 
 ## Running *GHCi*
-
 If you want to play with your solution in GHCi, just run the command:
 
 ```bash
