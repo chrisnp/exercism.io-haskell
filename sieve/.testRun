@@ -28,7 +28,6 @@ Finished in 0.0009 seconds
 
 >stack test
 
-
 primesUpTo
   no primes under two
   find first prime
@@ -36,5 +35,5 @@ primesUpTo
   limit is prime
   find primes up to 1000
 
-Finished in 0.0010 seconds
+Finished in 0.0070 seconds
 5 examples, 0 failures
