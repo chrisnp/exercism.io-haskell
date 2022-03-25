@@ -35,7 +35,7 @@ primesUpTo
   limit is prime
   find primes up to 1000
 
-Finished in 0.0070 seconds
+Finished in 0.0260 seconds
 5 examples, 0 failures
 
 
@@ -49,5 +49,5 @@ primesUpTo
   limit is prime
   find primes up to 1000
 
-Finished in 0.0260 seconds
+Finished in 0.0070 seconds
 5 examples, 0 failures
