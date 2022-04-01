@@ -36,6 +36,10 @@ Randomized with seed 759317474
 Finished in 0.0005 seconds
 17 examples, 1 failure
 
+
+
+>stack test
+
 encode
   empty plaintext results in an empty ciphertext
     normalizes the input
@@ -66,5 +70,42 @@ encode
     reorders the characters
     groups the output
 
-Finished in 0.0020 seconds
+Finished in 0.0010 seconds
+21 examples, 0 failures
+
+
+
+>stack test
+
+encode
+  empty plaintext results in an empty ciphertext
+    normalizes the input
+    reorders the characters
+    groups the output
+  Lowercase
+    normalizes the input
+    reorders the characters
+    groups the output
+  Remove spaces
+    normalizes the input
+    reorders the characters
+    groups the output
+  Remove punctuation
+    normalizes the input
+    reorders the characters
+    groups the output
+  9 character plaintext results in 3 chunks of 3 characters
+    normalizes the input
+    reorders the characters
+    groups the output
+  8 character plaintext results in 3 chunks, the last one with a trailing space
+    normalizes the input
+    reorders the characters
+    groups the output
+  54 character plaintext results in 7 chunks, the last two padded with spaces
+    normalizes the input
+    reorders the characters
+    groups the output
+
+Finished in 0.0011 seconds
 21 examples, 0 failures
