@@ -8,5 +8,4 @@ letterScore (score, letters) =
     [(toLower letter, score) | letter <- letters ]
 
 transform :: Map a String -> Map Char a
-transform = 
-    fromList . concatMap letterScore . toList
+transform = fromList . concatMap letterScore . toList

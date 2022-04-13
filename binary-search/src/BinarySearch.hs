@@ -1,15 +1,20 @@
 module BinarySearch (find) where
 
-import Data.Array
+import Data.Array hiding ( array )
+import Prelude hiding ( min, max )
+import Data.Bits ( shiftR )
+import Control.Applicative ( (<*>) )
 
 find :: Ord a => Array Int a -> a -> Maybe Int
-find array x = binsearch array (bounds array) x
+find = search <*> bounds
 
-binsearch :: Ord a => Array Int a -> (Int, Int) -> a -> Maybe Int
-binsearch array (min, max) x 
+-- Auxiliary --
+
+search :: Ord a => Array Int a -> (Int, Int) -> a -> Maybe Int
+search array (min, max) x 
     | min > max     = Nothing
-    | x < array!mid = binsearch array (min, mid - 1) x
-    | x > array!mid = binsearch array (mid + 1, max) x
+    | x < array!mid = search array (min, mid - 1) x
+    | x > array!mid = search array (mid + 1, max) x
     | otherwise     = Just mid
     where 
-        mid = (min + max) `div` 2
+        mid = shiftR (min + max) 1 

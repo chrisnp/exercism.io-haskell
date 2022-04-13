@@ -21,7 +21,6 @@ Finished in 0.0005 seconds
 
 
 
-
 transform
   single letter
   single score with multiple letters
@@ -42,4 +41,17 @@ transform
   multiple scores with differing numbers of letters
 
 Finished in 0.0011 seconds
+4 examples, 0 failures
+
+
+
+>stack test
+
+transform
+  single letter
+  single score with multiple letters
+  multiple scores with multiple letters
+  multiple scores with differing numbers of letters
+
+Finished in 0.0016 seconds
 4 examples, 0 failures
