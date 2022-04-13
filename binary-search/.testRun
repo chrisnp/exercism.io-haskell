@@ -14,3 +14,23 @@ find
 
 Finished in 0.0006 seconds
 11 examples, 0 failures
+
+
+
+>stack test
+
+find
+  finds a value in an array with one element (base 0)
+  finds a value in the middle of an array (base 0)
+  finds a value at the beginning of an array (base 0)
+  finds a value at the end of an array (base 0)
+  finds a value in an array of odd length (base 0)
+  finds a value in an array of even length (base 0)
+  identifies that a value is not included in the array (base 0)
+  a value smaller than the array's smallest value is not found (base 0)
+  a value larger than the array's largest value is not found (base 0)
+  nothing is found in an empty array (base 0)
+  nothing is found when the left and right bounds cross (base 0)
+
+Finished in 0.0005 seconds
+11 examples, 0 failures
