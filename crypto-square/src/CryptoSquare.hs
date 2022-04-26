@@ -28,8 +28,7 @@ encode xs =
 -- Auxiliary 
 
 chunksOf :: Int -> [e] -> [[e]]
--- chunksOf = (. (build . splitter)) . map . take
-chunksOf i ls =
+chunksOf i =
     let
         splitter :: [e] -> ([e] -> a -> a) -> a -> a
         splitter [] _ n = n
@@ -37,4 +36,4 @@ chunksOf i ls =
         build :: ((a -> [a] -> [a]) -> [a] -> [a]) -> [a]
         build = flip ($ (:)) ([])
     in
-        map (take i) $ (build . splitter) ls
+        (. (build . splitter)) . map  $ take i
