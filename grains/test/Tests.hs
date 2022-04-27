@@ -6,7 +6,6 @@ import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Grains (square, total)
 
-
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
@@ -40,3 +39,5 @@ squareCases =
 
 totalCase :: (String, Integer)
 totalCase = ("total grains", 18446744073709551615)
+
+-- 7299d84650550c4cbeffd9b9db4bc2f771ef9903
