@@ -7,7 +7,9 @@ dependencies:
 library:
   exposed-modules: Grains
   source-dirs: src
-  ghc-options: -Wall
+  ghc-options: 
+    -Wall 
+    -Wtype-defaults
   # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
