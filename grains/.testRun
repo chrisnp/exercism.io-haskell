@@ -50,3 +50,24 @@ total
 
 Finished in 0.0120 seconds
 11 examples, 0 failures
+
+
+
+>stack test
+
+square
+  square 1
+  square 2
+  square 3
+  square 4
+  square 16
+  square 32
+  square 64
+  square negative
+  square 0
+  square bigger than 64
+total
+  total grains
+
+Finished in 0.0010 seconds
+11 examples, 0 failures
