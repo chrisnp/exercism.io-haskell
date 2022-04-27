@@ -1,10 +1,18 @@
 module Grains (square, total) where
 
-import Data.Maybe
+import Control.Monad ( liftM2 )
+import Control.Applicative ( (<*>) )
 
-square :: Integer -> Maybe Integer
-square n = if 1 <= n && n <= 64 then Just $ (2 ^ (n-1)) else Nothing
--- square = flip (ap (if' . liftM2 (&&) (1 <=) (<= 64)) (Just . (2 ^) . subtract 1)) Nothing
+square :: (Integral a, Num a) => a -> Maybe a
+square = flip 
+    ((if' . liftM2 (&&) (1 <=) (<= 64)) <*> (Just . (2 ^) . subtract 1)) 
+    Nothing
 
-total :: Integer
+total :: (Num a, Integral a) => a
 total = 2^64 - 1
+
+-- Auxiliary --
+
+if' :: Bool -> a -> a -> a
+if' True  x _ = x
+if' False _ y = y
