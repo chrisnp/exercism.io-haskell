@@ -51,3 +51,17 @@ primesUpTo
 
 Finished in 0.0175 seconds
 5 examples, 0 failures
+
+
+
+>stack test
+
+primesUpTo
+  no primes under two
+  find first prime
+  find primes up to 10
+  limit is prime
+  find primes up to 1000
+
+Finished in 0.0153 seconds
+5 examples, 0 failures
