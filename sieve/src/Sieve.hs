@@ -5,7 +5,7 @@ import Control.Applicative ( (<*>) )
 import Data.Bool ( bool )
 
 primesUpTo :: (Ord a, Num a, Enum a) => a -> [a]
-primesUpTo = (flip bool ([]) . (2 :) . sieve . enumFromThenTo 3 5) <*> (< 2)
+primesUpTo = (flip bool ([]) . (2 :) . sieve . enumFromThenTo 3 5) <*> (<= 1)
 
 sieve :: (Eq a, Num a, Enum a) => [a] -> [a]
 sieve [] = []
