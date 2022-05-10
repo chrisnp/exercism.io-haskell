@@ -32,6 +32,7 @@ Finished in 0.0005 seconds
 11 examples, 0 failures
 
 
+
 >stack test
 
 square
@@ -48,7 +49,7 @@ square
 total
   total grains
 
-Finished in 0.0120 seconds
+Finished in 0.0010 seconds
 11 examples, 0 failures
 
 
@@ -69,5 +70,5 @@ square
 total
   total grains
 
-Finished in 0.0010 seconds
+Finished in 0.0007 seconds
 11 examples, 0 failures
