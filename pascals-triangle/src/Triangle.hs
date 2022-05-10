@@ -9,5 +9,4 @@ binomial 0 _ = 0
 binomial n k = binomial (n-1) (k-1) * n `div` k 
 
 triangle :: [[Integer]]
-triangle = [map (binomial (x - 1)) 
-                [0..(x - 1)] | x <- [1..]]
+triangle = [map (binomial (x - 1)) [0..(x - 1)] | x <- [1..]]

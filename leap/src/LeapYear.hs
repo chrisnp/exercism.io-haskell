@@ -1,8 +1,10 @@
 module LeapYear (isLeapYear) where
 
+import Data.Bool ( bool )
+
 isLeapYear :: Integer -> Bool
-isLeapYear year
-    | divby 100 = divby 400
-    | otherwise = divby 4
-    where 
-        divby x = (==) 0 (mod year x)
+isLeapYear year =
+    let 
+        divby = (0 ==) . mod year
+    in 
+        bool (divby 4) (divby 400) (divby 100)

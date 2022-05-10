@@ -2,10 +2,10 @@ module Sieve (primesUpTo) where
 
 import Control.Monad ( liftM2 )
 import Control.Applicative ( (<*>) )
+import Data.Bool ( bool )
 
 primesUpTo :: (Ord a, Num a, Enum a) => a -> [a]
-primesUpTo = 
-    flip if' ([]) . (<= 1) <*> ((2 :) . sieve . enumFromThenTo 3 5)
+primesUpTo = (flip bool ([]) . (2 :) . sieve . enumFromThenTo 3 5) <*> (<= 1)
 
 sieve :: (Eq a, Num a, Enum a) => [a] -> [a]
 sieve [] = []
@@ -17,10 +17,3 @@ sieve (x:xs) =
         productOf = liftM2 any (==) . liftM2 (.) (:) multiples
     in
         x : sieve (filter (not . productOf x) xs)
-
--- Auxiliary --
-
-if' :: Bool -> a -> a -> a
-if' True  x _ = x
-if' False _ y = y
-
