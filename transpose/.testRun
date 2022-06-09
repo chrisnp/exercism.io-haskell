@@ -1,23 +1,3 @@
-
-transpose
-  empty string
-  two characters in a row
-  two characters in a column
-  simple
-  single line
-  first line longer than second line
-  second line longer than first line
-  mixed line length
-  square
-  rectangle
-  triangle
-
-Finished in 0.0005 seconds
-11 examples, 0 failures
-
-
-
-
 transpose
   empty string
   two characters in a row
@@ -52,4 +32,24 @@ transpose
   triangle
 
 Finished in 0.0010 seconds
+11 examples, 0 failures
+
+
+
+>stack test
+
+transpose
+  empty string
+  two characters in a row
+  two characters in a column
+  simple
+  single line
+  first line longer than second line
+  second line longer than first line
+  mixed line length
+  square
+  rectangle
+  triangle
+
+Finished in 0.0006 seconds
 11 examples, 0 failures
