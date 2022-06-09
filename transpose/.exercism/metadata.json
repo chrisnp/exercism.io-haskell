@@ -1,9 +1,1 @@
-{
-  "track": "haskell",
-  "exercise": "transpose",
-  "id": "4c8e2c64f585421784dc855fe5bdafc4",
-  "url": "https://exercism.io/tracks/haskell/exercises/transpose/solutions/4c8e2c64f585421784dc855fe5bdafc4",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
-}
+{"track":"haskell","exercise":"transpose","id":"4c8e2c64f585421784dc855fe5bdafc4","url":"https://exercism.io/my/solutions/4c8e2c64f585421784dc855fe5bdafc4","handle":"heptalophos","is_requester":true,"auto_approve":false}
