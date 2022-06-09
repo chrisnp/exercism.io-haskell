@@ -8,12 +8,11 @@ transpose =
     let 
         padded = 
             scanr (\xs ys -> 
-                    if length ys <= length xs then 
-                        xs 
-                    else 
-                        xs ++ 
-                        (replicate (length ys - length xs)
-                                   ' ')) 
-                  []
+                    let leny = length ys
+                        lenx = length xs
+                    in
+                        if leny <= lenx then xs 
+                        else xs ++ (replicate (leny - lenx) ' ')
+                  ) []
     in 
         DL.transpose . padded
