@@ -2,13 +2,18 @@ module RotationalCipher (rotate) where
 
 convert :: Int -> Char -> Char
 convert key char 
-    | fromEnum 'A' <= i && i <= fromEnum 'Z' = 
-            toEnum $ (i + key - fromEnum 'A') `mod` 26 + fromEnum 'A' :: Char
-    | fromEnum 'a' <= i && i <= fromEnum 'z' = 
-            toEnum $ (i + key - fromEnum 'a') `mod` 26 + fromEnum 'a' :: Char
+    | au <= c && c <= zu = 
+            toEnum $ (c + key - au) `mod` 26 + au :: Char
+    | al <= c && c <= zl = 
+            toEnum $ (c + key - al) `mod` 26 + al :: Char
     | otherwise = char
-    where i = fromEnum char
+    where 
+        c  = fromEnum char
+        au = fromEnum 'A'
+        zu = fromEnum 'Z'
+        al = fromEnum 'a'
+        zl = fromEnum 'z'
 
 
 rotate :: Int -> String -> String
-rotate key = map $ convert key
+rotate = map . convert
