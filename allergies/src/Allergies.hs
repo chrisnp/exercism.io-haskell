@@ -27,11 +27,8 @@ allergens = [Eggs,
 
 
 allergies :: Int -> [Allergen]
-allergies = 
-    flip filter allergens 
-    . flip isAllergicTo
+allergies = flip filter allergens . flip isAllergicTo
 
 
 isAllergicTo :: Allergen -> Int -> Bool
-isAllergicTo = 
-    flip testBit . fromEnum
+isAllergicTo = flip testBit . fromEnum
