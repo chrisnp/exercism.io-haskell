@@ -21,5 +21,6 @@ encode text =
         char = head text
         lenStr = if len == 1 then "" else show len
     in
-        lenStr ++ char : encode (drop len text)
+        lenStr ++ 
+        char : encode (drop len text)
         
