@@ -64,5 +64,5 @@ encode
 both
   decode . encode combination
 
-Finished in 0.0010 seconds
+Finished in 0.0023 seconds
 13 examples, 0 failures
