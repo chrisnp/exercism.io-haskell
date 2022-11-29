@@ -10,8 +10,7 @@ decode encoded =
         num = takeWhile isDigit encoded
         char = head (filter (not . isDigit) encoded)
     in
-        replicate count char ++ 
-        decode (drop (1 + length num) encoded)
+        replicate count char ++ decode (drop (1 + length num) encoded)
 
 encode :: String -> String
 encode "" = ""
