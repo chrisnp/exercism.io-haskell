@@ -1,9 +1,1 @@
-# resolver: lts-16.21
-resolver: lts-12.14
-
-extra-deps:
-  - QuickCheck-2.11.3@sha256:5e8e84718b2a47ba2986732adf9fd8888f2bef965854ed3a0beb14e8da938389,5499
-  - hspec-core-2.5.5@sha256:0eeabdeacd8448b5ca247705e429b4d684e0635e12672ec25bad242f59137dee,4556
-  - hspec-discover-2.5.5@sha256:9fe08300140653ab0dfcf7892bac8eafc5a03980e41148c16fde374cf7cbd8fa,2187
-  - random-1.1@sha256:7b67624fd76ddf97c206de0801dc7e888097e9d572974be9b9ea6551d76965df,1777
-  - splitmix-0.1.0.4@sha256:714a55fd28d3e2533bd5b49e74f604ef8e5d7b06f249c8816f6c54aed431dcf1,6483
+resolver: lts-16.21
