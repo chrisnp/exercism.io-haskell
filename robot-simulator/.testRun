@@ -80,3 +80,58 @@ Follow series of instructions
 
 Finished in 0.0000 seconds
 30 examples, 0 failures
+
+
+
+>stack test
+
+mkRobot
+  Create robot at origin facing north
+  Create robot at negative position facing south
+Rotating clockwise
+  from North
+    should change direction
+    shouldn't change position
+  from East
+    should change direction
+    shouldn't change position
+  from South
+    should change direction
+    shouldn't change position
+  from West
+    should change direction
+    shouldn't change position
+Rotating counter-clockwise
+  from North
+    should change direction
+    shouldn't change position
+  from West
+    should change direction
+    shouldn't change position
+  from South
+    should change direction
+    shouldn't change position
+  from East
+    should change direction
+    shouldn't change position
+Moving forward one
+  North from (0,1)
+    shouldn't change direction
+    facing north increments Y
+  South from (0,-1)
+    shouldn't change direction
+    facing south decrements Y
+  East from (1,0)
+    shouldn't change direction
+    facing east increments X
+  West from (-1,0)
+    shouldn't change direction
+    facing west decrements X
+Follow series of instructions
+  moving east and north from README
+  moving west and north
+  moving west and south
+  moving east and north
+
+Finished in 0.0016 seconds
+30 examples, 0 failures
