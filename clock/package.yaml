@@ -8,10 +8,6 @@ library:
   exposed-modules: Clock
   source-dirs: src
   ghc-options: -Wall
-  # - -Wmissing-methods
-  # - -Wunused-top-binds
-  # - -Wname-shadowing
-  # - -Wunused-matches
   # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.

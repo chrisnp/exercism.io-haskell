@@ -15,7 +15,6 @@ specs = do
   describe "add"    $ for_ addCases    addTest
   describe "sub"    $ for_ subCases    subTest
   describe "equal"  $ for_ equalCases  equalTest
-
   where
 
     createTest (l, h, m, e) = it l assertion
