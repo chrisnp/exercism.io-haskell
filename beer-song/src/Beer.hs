@@ -8,11 +8,12 @@ bottles n
     | otherwise = show n ++ " bottles"
 
 
-
 verse :: Int -> String
 verse n
-    | n == 0    = "No more bottles of beer on the wall, no more bottles of beer.\n\
-                  \Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+    | n == 0    = "No more bottles of beer on the wall," ++ 
+                  "no more bottles of beer.\n" ++
+                  "\Go to the store and buy some more," ++ 
+                  "99 bottles of beer on the wall.\n"
     | otherwise = bottles n ++ 
                   " of beer on the wall, " ++
                   bottles n ++ 
@@ -27,7 +28,6 @@ verse n
         down x 
             | x == 1    = "it"
             | otherwise = "one"
-
 
 song :: String
 song = foldl (\acc x -> verse x ++ acc) "" [0..99]
