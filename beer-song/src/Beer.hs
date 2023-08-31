@@ -11,8 +11,10 @@ bottles n
 
 verse :: Int -> String
 verse n
-    | n == 0    = "No more bottles of beer on the wall, no more bottles of beer.\n\
-                  \Go to the store and buy some more, 99 bottles of beer on the wall.\n"
+    | n == 0    = "No more bottles of beer on the wall, " ++
+                  "no more bottles of beer.\n" ++
+                  "Go to the store and buy some more, " ++
+                  "99 bottles of beer on the wall.\n"
     | otherwise = bottles n ++ 
                   " of beer on the wall, " ++
                   bottles n ++ 
