@@ -183,133 +183,87 @@ equal
   clocks with negative hours and minutes that wrap
   full clock and zeroed clock
 
-Finished in 0.0010 seconds
-52 examples, 0 failures
-
-
-
->stack test
-
-create
-  on the hour
-  past the hour
-  midnight is zero hours
-  hour rolls over
-  hour rolls over continuously
-  sixty minutes is next hour
-  minutes roll over
-  minutes roll over continuously
-  hour and minutes roll over
-  hour and minutes roll over continuously
-  hour and minutes roll over to exactly midnight
-  negative hour
-  negative hour rolls over
-  negative hour rolls over continuously
-  negative minutes
-  negative minutes roll over
-  negative minutes roll over continuously
-  negative sixty minutes is previous hour
-  negative hour and minutes both roll over
-  negative hour and minutes both roll over continuously
-add
-  add minutes
-  add no minutes
-  add to next hour
-  add more than one hour
-  add more than two hours with carry
-  add across midnight
-  add more than one day (1500 min = 25 hrs)
-  add more than two days
-sub
-  subtract minutes
-  subtract to previous hour
-  subtract more than an hour
-  subtract across midnight
-  subtract more than two hours
-  subtract more than two hours with borrow
-  subtract more than one day (1500 min = 25 hrs)
-  subtract more than two days
-equal
-  clocks with same time
-  clocks a minute apart
-  clocks an hour apart
-  clocks with hour overflow
-  clocks with hour overflow by several days
-  clocks with negative hour
-  clocks with negative hour that wraps
-  clocks with negative hour that wraps multiple times
-  clocks with minute overflow
-  clocks with minute overflow by several days
-  clocks with negative minute
-  clocks with negative minute that wraps
-  clocks with negative minute that wraps multiple times
-  clocks with negative hours and minutes
-  clocks with negative hours and minutes that wrap
-  full clock and zeroed clock
-
-Finished in 0.0010 seconds
-52 examples, 0 failures
-
-
-
->stack test
-
-create
-  on the hour
-  past the hour
-  midnight is zero hours
-  hour rolls over
-  hour rolls over continuously
-  sixty minutes is next hour
-  minutes roll over
-  minutes roll over continuously
-  hour and minutes roll over
-  hour and minutes roll over continuously
-  hour and minutes roll over to exactly midnight
-  negative hour
-  negative hour rolls over
-  negative hour rolls over continuously
-  negative minutes
-  negative minutes roll over
-  negative minutes roll over continuously
-  negative sixty minutes is previous hour
-  negative hour and minutes both roll over
-  negative hour and minutes both roll over continuously
-add
-  add minutes
-  add no minutes
-  add to next hour
-  add more than one hour
-  add more than two hours with carry
-  add across midnight
-  add more than one day (1500 min = 25 hrs)
-  add more than two days
-sub
-  subtract minutes
-  subtract to previous hour
-  subtract more than an hour
-  subtract across midnight
-  subtract more than two hours
-  subtract more than two hours with borrow
-  subtract more than one day (1500 min = 25 hrs)
-  subtract more than two days
-equal
-  clocks with same time
-  clocks a minute apart
-  clocks an hour apart
-  clocks with hour overflow
-  clocks with hour overflow by several days
-  clocks with negative hour
-  clocks with negative hour that wraps
-  clocks with negative hour that wraps multiple times
-  clocks with minute overflow
-  clocks with minute overflow by several days
-  clocks with negative minute
-  clocks with negative minute that wraps
-  clocks with negative minute that wraps multiple times
-  clocks with negative hours and minutes
-  clocks with negative hours and minutes that wrap
-  full clock and zeroed clock
-
 Finished in 0.0016 seconds
 52 examples, 0 failures
+
+
+
+>stack test
+
+exercism-clock-2.4.0.10: unregistering (local file changes: src\Clock.hs)
+exercism-clock> build (lib + test)
+Preprocessing library for exercism-clock-2.4.0.10..
+Building library for exercism-clock-2.4.0.10..
+[2 of 2] Compiling Clock
+Preprocessing test suite 'test' for exercism-clock-2.4.0.10..
+Building test suite 'test' for exercism-clock-2.4.0.10..
+[1 of 2] Compiling Main [Clock changed]
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+exercism-clock> copy/register
+Installing library in ~\exercism\haskell\clock\.stack-work\install\...\exercism-clock-2.4.0.10-KRx8Pz2e56m7Cna5Yvy5yu
+Registering library for exercism-clock-2.4.0.10..
+exercism-clock> test (suite: test)
+
+create
+  on the hour [v]
+  past the hour [v]
+  midnight is zero hours [v]
+  hour rolls over [v]
+  hour rolls over continuously [v]
+  sixty minutes is next hour [v]
+  minutes roll over [v]
+  minutes roll over continuously [v]
+  hour and minutes roll over [v]
+  hour and minutes roll over continuously [v]
+  hour and minutes roll over to exactly midnight [v]
+  negative hour [v]
+  negative hour rolls over [v]
+  negative hour rolls over continuously [v]
+  negative minutes [v]
+  negative minutes roll over [v]
+  negative minutes roll over continuously [v]
+  negative sixty minutes is previous hour [v]
+  negative hour and minutes both roll over [v]
+  negative hour and minutes both roll over continuously [v]
+add
+  add minutes [v]
+  add no minutes [v]
+  add to next hour [v]
+  add more than one hour [v]
+  add more than two hours with carry [v]
+  add across midnight [v]
+  add more than one day (1500 min = 25 hrs) [v]
+  add more than two days [v]
+sub
+  subtract minutes [v]
+  subtract to previous hour [v]
+  subtract more than an hour [v]
+  subtract across midnight [v]
+  subtract more than two hours [v]
+  subtract more than two hours with borrow [v]
+  subtract more than one day (1500 min = 25 hrs) [v]
+  subtract more than two days [v]
+equal
+  clocks with same time [v]
+  clocks a minute apart [v]
+  clocks an hour apart [v]
+  clocks with hour overflow [v]
+  clocks with hour overflow by several days [v]
+  clocks with negative hour [v]
+  clocks with negative hour that wraps [v]
+  clocks with negative hour that wraps multiple times [v]
+  clocks with minute overflow [v]
+  clocks with minute overflow by several days [v]
+  clocks with negative minute [v]
+  clocks with negative minute that wraps [v]
+  clocks with negative minute that wraps multiple times [v]
+  clocks with negative hours and minutes [v]
+  clocks with negative hours and minutes that wrap [v]
+  full clock and zeroed clock [v]
+
+Finished in 0.0042 seconds
+52 examples, 0 failures
+
+exercism-clock> Test suite test passed
+Completed 2 action(s).
+

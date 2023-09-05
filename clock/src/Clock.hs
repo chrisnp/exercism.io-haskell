@@ -1,12 +1,9 @@
 module Clock (addDelta, fromHourMin, toString) where
 
 instance Num Clock where
-    (Clock h1 m1) + (Clock h2 m2) = 
-            fromHourMin ( h1 + h2 ) ( m1 + m2 )
-    (Clock h1 m1) - (Clock h2 m2) = 
-            fromHourMin ( h1 - h2 ) ( m1 - m2 )
-    fromInteger = 
-            fromHourMin 0 . fromIntegral 
+    (Clock h1 m1) + (Clock h2 m2) = fromHourMin ( h1 + h2 ) ( m1 + m2 )
+    (Clock h1 m1) - (Clock h2 m2) = fromHourMin ( h1 - h2 ) ( m1 - m2 )
+    fromInteger = fromHourMin 0 . fromIntegral 
     _ * _    = undefined
     abs _    = undefined
     signum _ = undefined
@@ -25,11 +22,11 @@ clockMin Clock { h = _, m = minutes } = minutes
 fromHourMin :: Int -> Int -> Clock
 fromHourMin hour minute = 
     let
-        hour' = (hour + dh) `mod` 24
-        min'  = minute `mod` 60
-        dh    = minute `div` 60
+        dh = minute `div` 60
+        hs = (hour + dh) `mod` 24
+        ms = minute `mod` 60
     in 
-        Clock { h = hour', m = min' } 
+        Clock { h = hs, m = ms } 
 
 toString :: Clock -> String
 toString clock = 

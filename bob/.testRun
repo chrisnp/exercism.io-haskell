@@ -61,39 +61,59 @@ responseFor
   other whitespace
   non-question ending with whitespace
 
-Finished in 0.0016 seconds
+Finished in 0.0010 seconds
 25 examples, 0 failures
 
 
 
 >stack test
 
-responseFor
-  stating something
-  shouting
-  shouting gibberish
-  asking a question
-  asking a numeric question
-  asking gibberish
-  talking forcefully
-  using acronyms in regular speech
-  forceful question
-  shouting numbers
-  only numbers
-  question with only numbers
-  shouting with special characters
-  shouting with no exclamation mark
-  statement containing question mark
-  non-letters with question
-  prattling on
-  silence
-  prolonged silence
-  alternate silence
-  multiple line question
-  starting with whitespace
-  ending with whitespace
-  other whitespace
-  non-question ending with whitespace
+bob> configure (lib + test)
+Configuring bob-1.4.0.10...
+bob> build (lib + test)
+Preprocessing library for bob-1.4.0.10..
+Building library for bob-1.4.0.10..
+[1 of 2] Compiling Bob
+[2 of 2] Compiling Paths_bob
+Preprocessing test suite 'test' for bob-1.4.0.10..
+Building test suite 'test' for bob-1.4.0.10..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_bob
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+bob> copy/register
+Installing library in ~\exercism\haskell\bob\.stack-work\install\...\bob-1.4.0.10-HTJVG5IFE9CFz4xyH0m9iD
+Registering library for bob-1.4.0.10..
+bob> test (suite: test)
 
-Finished in 0.0010 seconds
+responseFor
+  stating something [v]
+  shouting [v]
+  shouting gibberish [v]
+  asking a question [v]
+  asking a numeric question [v]
+  asking gibberish [v]
+  talking forcefully [v]
+  using acronyms in regular speech [v]
+  forceful question [v]
+  shouting numbers [v]
+  only numbers [v]
+  question with only numbers [v]
+  shouting with special characters [v]
+  shouting with no exclamation mark [v]
+  statement containing question mark [v]
+  non-letters with question [v]
+  prattling on [v]
+  silence [v]
+  prolonged silence [v]
+  alternate silence [v]
+  multiple line question [v]
+  starting with whitespace [v]
+  ending with whitespace [v]
+  other whitespace [v]
+  non-question ending with whitespace [v]
+
+Finished in 0.0053 seconds
 25 examples, 0 failures
+
+bob> Test suite test passed
+Completed 2 action(s).
