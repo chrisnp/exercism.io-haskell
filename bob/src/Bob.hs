@@ -4,19 +4,19 @@ import Data.Char (isUpper, isAlpha, isSpace)
 
 isQuestion :: String -> Bool
 isQuestion xs
-    | null xs           = False
-    | last xs == '?'    = True
-    | isSpace $ last xs = isQuestion $ init xs
-    | otherwise         = False
+    | null xs             = False
+    | last xs == '?'      = True
+    | (isSpace . last) xs = (isQuestion . init) xs
+    | otherwise           = False
 
 isShouting :: String -> Bool
 isShouting xs
     | null listWords || null listUpperWords = False
     | listWords == listUpperWords           = True
     | otherwise                             = False
-        where
-            listWords = filter isAlpha xs
-            listUpperWords = filter isUpper xs
+    where
+        listWords = filter isAlpha xs
+        listUpperWords = filter isUpper xs
 
 isSilent :: String -> Bool
 isSilent = null . filter (not . isSpace)
@@ -28,7 +28,7 @@ responseFor xs
     | shout             = "Whoa, chill out!"
     | question          = "Sure."
     | otherwise         = "Whatever."
-        where 
-            silent   = isSilent xs
-            shout    = isShouting xs
-            question = isQuestion xs
+    where 
+        silent   = isSilent xs
+        shout    = isShouting xs
+        question = isQuestion xs
