@@ -16,6 +16,6 @@ tests:
   test:
     main: Tests.hs
     source-dirs: test
-    dependencies:
-      - bob
-      - hspec
+    dependencies: 
+    - bob
+    - hspec
