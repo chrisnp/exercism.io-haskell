@@ -52,3 +52,35 @@ Integral tests
 
 Finished in 0.0006 seconds
 15 examples, 0 failures
+
+
+
+>stack test
+
+difference-of-squares> test (suite: test)
+squareOfSum
+  square of sum 1 [v]
+  square of sum 5 [v]
+  square of sum 100 [v]
+sumOfSquares
+  sum of squares 1 [v]
+  sum of squares 5 [v]
+  sum of squares 100 [v]
+differenceOfSquares
+  difference of squares 1 [v]
+  difference of squares 5 [v]
+  difference of squares 100 [v]
+Integral tests
+  squareOfSum
+    squareOfSum (6 :: Int) [v]
+    squareOfSum (7 :: Integer) [v]
+  sumOfSquares
+    sumOfSquares (8 :: Int) [v]
+    sumOfSquares (9 :: Integer) [v]
+  difference
+    difference (11 :: Int) [v]
+    difference (12 :: Integer) [v]
+
+Finished in 0.0022 seconds
+15 examples, 0 failures
+difference-of-squares> Test suite test passed
