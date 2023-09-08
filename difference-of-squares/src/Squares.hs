@@ -1,7 +1,10 @@
 module Squares (difference, squareOfSum, sumOfSquares) where
 
+import Control.Monad ( liftM2 )
+
 difference :: Integral a => a -> a
-difference n = squareOfSum n - sumOfSquares n
+difference = 
+    liftM2 (-) squareOfSum sumOfSquares
 
 squareOfSum :: Integral a => a -> a
 squareOfSum = 
