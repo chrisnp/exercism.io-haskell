@@ -38,3 +38,68 @@ concat
 
 Finished in 1.2224 seconds
 28 examples, 0 failures
+
+
+
+>stack test
+list-ops> configure (lib + test)
+Configuring list-ops-2.4.0.9...
+list-ops> build (lib + test)
+Preprocessing library for list-ops-2.4.0.9..
+Building library for list-ops-2.4.0.9..
+[1 of 2] Compiling ListOps
+[2 of 2] Compiling Paths_list_ops
+Preprocessing test suite 'test' for list-ops-2.4.0.9..
+Building test suite 'test' for list-ops-2.4.0.9..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_list_ops
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+list-ops> copy/register
+Installing library in ~\exercism\haskell\list-ops\.stack-work\install\...
+Registering library for list-ops-2.4.0.9..
+list-ops> test (suite: test)
+
+length
+  of empty list [v]
+  of non-empty list [v]
+  of large list [v]
+reverse
+  of empty list [v]
+  of non-empty list [v]
+  of nested lists [v]
+map
+  of empty list [v]
+  of non-empty list [v]
+filter
+  of empty list [v]
+  of normal list [v]
+foldl'
+  of empty list [v]
+  of non-empty list [v]
+  of huge list [v]
+  with non-commutative function [v]
+  is not just foldr . flip [v]
+  is accumulator-strict (use seq or BangPatterns) [v]
+foldr
+  of empty list [v]
+  of non-empty list [v]
+  with non-commutative function [v]
+  as id [v]
+  as append [v]
+++
+  of empty lists [v]
+  of empty and non-empty lists [v]
+  of non-empty and empty lists [v]
+  of non-empty lists [v]
+  of large lists [v]
+concat
+  of no lists [v]
+  of list of lists [v]
+  of list of nested lists [v]
+  of large list of small lists [v]
+
+Finished in 0.0440 seconds
+30 examples, 0 failures
+
+list-ops> Test suite test passed
+Completed 2 action(s).
