@@ -9,3 +9,21 @@ recite
 
 Finished in 0.0004 seconds
 6 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Nov 15 07:23:01 GTBST 2023
+-----------------------------------------------
+>stack test
+
+recite
+  zero pieces [v]
+  one piece [v]
+  two pieces [v]
+  three pieces [v]
+  full proverb [v]
+  four pieces modernized [v]
+
+Finished in 0.0026 seconds
+6 examples, 0 failures
