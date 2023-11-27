@@ -1,16 +1,8 @@
 {-# LANGUAGE DeriveFoldable #-}
-
 module BST
-    ( BST
-    , bstLeft
-    , bstRight
-    , bstValue
-    , empty
-    , fromList
-    , insert
-    , singleton
-    , toList
-    ) where
+    ( BST, bstLeft, bstRight, bstValue, 
+      empty, fromList, insert, singleton, toList ) 
+    where
 
 import Data.Foldable ( Foldable, foldl' )
 
@@ -42,30 +34,26 @@ bstValue tree =
 empty :: BST a
 empty = Empty
 
-
 fromList :: Ord a => [a] -> BST a
-fromList = foldl' (flip insert) empty
+fromList xs = foldl' (flip insert) empty xs
 
 insert :: Ord a => a -> BST a -> BST a
 insert x Empty = singleton x
-insert x tree =
-    let 
+insert x tree 
+    | x <= val  = 
+        BST (insert x left) val right
+    | otherwise =
+        BST left val (insert x right)    
+    where 
         (BST left val right) = tree
-    in 
-        if x <= val 
-        then BST (insert x left) val right
-        else BST left val (insert x right)        
 
 singleton :: a -> BST a
-singleton = flip (BST Empty) Empty
+singleton x = BST Empty x Empty
 
 toList :: BST a -> [a]
-toList Empty = 
-    []
+toList Empty = []
 toList tree = 
     let 
         (BST left val right) = tree
     in 
-        (toList left) ++ 
-        [val] ++ 
-        (toList right)
+        (toList left) ++ [val] ++ (toList right)
