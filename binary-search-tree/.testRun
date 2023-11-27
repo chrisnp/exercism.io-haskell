@@ -63,7 +63,7 @@ Finished in 0.0005 seconds
 
 
 -----------------------------------------------
-Mon Nov 27 03:16:42 GTBST 2023
+Mon Nov 27 04:05:34 GTBST 2023
 -----------------------------------------------
 >stack test
 
@@ -83,5 +83,5 @@ iterating over equal element [v]
 iterating over larger element [v]
 iterating over complex tree [v]
 
-Finished in 0.0020 seconds
+Finished in 0.0014 seconds
 15 examples, 0 failures
