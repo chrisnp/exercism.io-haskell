@@ -59,3 +59,29 @@ iterating over complex tree
 
 Finished in 0.0005 seconds
 14 examples, 0 failures
+
+
+
+-----------------------------------------------
+Mon Nov 27 03:16:42 GTBST 2023
+-----------------------------------------------
+>stack test
+
+data is retained [v]
+inserting less [v]
+inserting same [v]
+inserting right [v]
+retrieves branches even when they are empty [v]
+empty list to tree [v]
+empty list has no value [v]
+inserting into empty [v]
+complex tree [v]
+empty tree to list [v]
+iterating one element [v]
+iterating over smaller element [v]
+iterating over equal element [v]
+iterating over larger element [v]
+iterating over complex tree [v]
+
+Finished in 0.0020 seconds
+15 examples, 0 failures
