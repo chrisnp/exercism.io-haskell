@@ -9,6 +9,7 @@ library:
   source-dirs: src
   ghc-options: -Wall
   # dependencies:
+  # - mtl
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
 
