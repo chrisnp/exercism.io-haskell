@@ -14,3 +14,4 @@ cleanup.*
 .ionide
 /*/examples/*/*
 HELP.md
+*.ps1
