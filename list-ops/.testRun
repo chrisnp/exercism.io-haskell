@@ -1,4 +1,3 @@
-
 length
   of empty list
   of non-empty list
@@ -103,3 +102,51 @@ Finished in 0.0440 seconds
 
 list-ops> Test suite test passed
 Completed 2 action(s).
+
+
+-----------------------------------------------
+Mon Nov 27 04:08:47 GTBST 2023
+-----------------------------------------------
+>stack test
+
+length
+  of empty list [v]
+  of non-empty list [v]
+  of large list [v]
+reverse
+  of empty list [v]
+  of non-empty list [v]
+  of nested lists [v]
+map
+  of empty list [v]
+  of non-empty list [v]
+filter
+  of empty list [v]
+  of normal list [v]
+foldl'
+  of empty list [v]
+  of non-empty list [v]
+  of huge list [v]
+  with non-commutative function [v]
+  is not just foldr . flip [v]
+  is accumulator-strict (use seq or BangPatterns) [v]
+foldr
+  of empty list [v]
+  of non-empty list [v]
+  with non-commutative function [v]
+  as id [v]
+  as append [v]
+++
+  of empty lists [v]
+  of empty and non-empty lists [v]
+  of non-empty and empty lists [v]
+  of non-empty lists [v]
+  of large lists [v]
+concat
+  of no lists [v]
+  of list of lists [v]
+  of list of nested lists [v]
+  of large list of small lists [v]
+
+Finished in 0.0480 seconds
+30 examples, 0 failures
