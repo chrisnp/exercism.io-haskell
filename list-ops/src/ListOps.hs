@@ -15,8 +15,7 @@ import Prelude hiding
 foldl' :: (b -> a -> b) -> b -> [a] -> b
 foldl' f z xs = case xs of 
   []   -> z
-  y:ys -> z `seq` foldl' f ( f z y) ys
-
+  y:ys -> seq z foldl' f ( f z y) ys
 
 foldr :: (a -> b -> b) -> b -> [a] -> b
 foldr f z xs = case xs of
@@ -33,7 +32,12 @@ map :: (a -> b) -> [a] -> [b]
 map = flip foldr ([]) . ((:) .)
 
 filter :: (a -> Bool) -> [a] -> [a]
-filter p xs = foldr (\x zs -> if p x then x:zs else zs ) [] xs
+filter = 
+  let 
+    if' True  x _ = x
+    if' False _ y = y
+  in 
+    flip foldr ([]) . flip flip id . (<*> (:)) . (if' .)
 
 (++) :: [a] -> [a] -> [a]
 xs ++ ys = foldr (:) ys xs

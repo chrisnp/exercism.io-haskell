@@ -1,21 +1,12 @@
 {-# LANGUAGE DeriveFoldable #-}
-
 module BST
-    ( BST
-    , bstLeft
-    , bstRight
-    , bstValue
-    , empty
-    , fromList
-    , insert
-    , singleton
-    , toList
-    ) where
+    ( BST, bstLeft, bstRight, bstValue, 
+      empty, fromList, insert, singleton, toList ) 
+    where
 
-import Data.Foldable ( Foldable, foldl' )
+import Data.Foldable ( foldl' )
 
-data BST a = Empty | BST (BST a) a (BST a) 
-             deriving (Eq, Show, Foldable)
+data BST a = Empty | BST (BST a) a (BST a) deriving (Eq, Show, Foldable)
 
 bstLeft :: BST a -> Maybe (BST a)
 bstLeft tree = 
@@ -42,7 +33,6 @@ bstValue tree =
 empty :: BST a
 empty = Empty
 
-
 fromList :: Ord a => [a] -> BST a
 fromList = foldl' (flip insert) empty
 
@@ -52,20 +42,16 @@ insert x tree =
     let 
         (BST left val right) = tree
     in 
-        if x <= val 
-        then BST (insert x left) val right
-        else BST left val (insert x right)        
+        if x <= val then BST (insert x left) val right
+        else BST left val (insert x right)  
 
 singleton :: a -> BST a
 singleton = flip (BST Empty) Empty
 
 toList :: BST a -> [a]
-toList Empty = 
-    []
+toList Empty = []
 toList tree = 
     let 
         (BST left val right) = tree
     in 
-        (toList left) ++ 
-        [val] ++ 
-        (toList right)
+        (toList left) ++ [val] ++ (toList right)
