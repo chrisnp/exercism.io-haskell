@@ -14,26 +14,30 @@ classify
   Zero is rejected (not a natural number)
   Negative integer is rejected (not a natural number)
 
-Finished in 0.8753 seconds
+Finished in 0.4920 seconds
 13 examples, 0 failures
 
 
 
+-----------------------------------------------
+Wed Nov 29 04:55:55 GTBST 2023
+-----------------------------------------------
+>stack test
 
 classify
-  Smallest perfect number is classified correctly
-  Medium perfect number is classified correctly
-  Large perfect number is classified correctly
-  Smallest abundant number is classified correctly
-  Medium abundant number is classified correctly
-  Large abundant number is classified correctly
-  Smallest prime deficient number is classified correctly
-  Smallest non-prime deficient number is classified correctly
-  Medium deficient number is classified correctly
-  Large deficient number is classified correctly
-  Edge case (no factors other than itself) is classified correctly
-  Zero is rejected (not a natural number)
-  Negative integer is rejected (not a natural number)
+  Smallest perfect number is classified correctly [v]
+  Medium perfect number is classified correctly [v]
+  Large perfect number is classified correctly [v]
+  Smallest abundant number is classified correctly [v]
+  Medium abundant number is classified correctly [v]
+  Large abundant number is classified correctly [v]
+  Smallest prime deficient number is classified correctly [v]
+  Smallest non-prime deficient number is classified correctly [v]
+  Medium deficient number is classified correctly [v]
+  Large deficient number is classified correctly [v]
+  Edge case (no factors other than itself) is classified correctly [v]
+  Zero is rejected (not a natural number) [v]
+  Negative integer is rejected (not a natural number) [v]
 
-Finished in 0.4920 seconds
+Finished in 0.4268 seconds
 13 examples, 0 failures
