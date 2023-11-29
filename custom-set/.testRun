@@ -1,4 +1,3 @@
-
 standard tests
   null
     sets with no elements are empty
@@ -66,7 +65,6 @@ Finished in 0.0010 seconds
 
 
 
-
 standard tests
   null
     sets with no elements are empty
@@ -130,4 +128,76 @@ track-specific tests
     a set doesn't keep repeated elements
 
 Finished in 0.0000 seconds
+47 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Nov 29 04:35:31 GTBST 2023
+-----------------------------------------------
+>stack test
+
+standard tests
+  null
+    sets with no elements are empty [v]
+    sets with elements are not empty [v]
+  member
+    nothing is contained in an empty set [v]
+    when the element is in the set [v]
+    when the element is not in the set [v]
+  isSubsetOf
+    empty set is a subset of another empty set [v]
+    empty set is a subset of non-empty set [v]
+    non-empty set is not a subset of empty set [v]
+    set is a subset of set with exact same elements [v]
+    set is a subset of larger set with same elements [v]
+    set is not a subset of set that does not contain its elements [v]
+  isDisjointFrom
+    the empty set is disjoint with itself [v]
+    empty set is disjoint with non-empty set [v]
+    non-empty set is disjoint with empty set [v]
+    sets are not disjoint if they share an element [v]
+    sets are disjoint if they share no elements [v]
+  Eq
+    empty sets are equal [v]
+    empty set is not equal to non-empty set [v]
+    non-empty set is not equal to empty set [v]
+    sets with the same elements are equal [v]
+    sets with different elements are not equal [v]
+    set is not equal to larger set with same elements [v]
+  insert
+    add to empty set [v]
+    add to non-empty set [v]
+    adding an existing element does not change the set [v]
+  intersection
+    intersection of two empty sets is an empty set [v]
+    intersection of an empty set and non-empty set is an empty set [v]
+    intersection of a non-empty set and an empty set is an empty set [v]
+    intersection of two sets with no shared elements is an empty set [v]
+    intersection of two sets with shared elements is a set of the shared elements [v]
+  difference
+    difference of two empty sets is an empty set [v]
+    difference of empty set and non-empty set is an empty set [v]
+    difference of a non-empty set and an empty set is the non-empty set [v]
+    difference of two non-empty sets is a set of elements that are only in the first set [v]
+  union
+    union of empty sets is an empty set [v]
+    union of an empty set and non-empty set is the non-empty set [v]
+    union of a non-empty set and empty set is the non-empty set [v]
+    union of non-empty sets contains all unique elements [v]
+track-specific tests
+  delete
+    delete existing element [v]
+  size
+    size of an empty set is zero [v]
+    size is the number of elements [v]
+    size doesn't count repetition in `fromList` [v]
+    size does count inserted element [v]
+    size doesn't count element removed by `delete` [v]
+  toList
+    an empty set has an empty list of elements [v]
+    a set has the list of its elements [v]
+    a set doesn't keep repeated elements [v]
+
+Finished in 0.0049 seconds
 47 examples, 0 failures
