@@ -1,39 +1,23 @@
 module CryptoSquare (encode) where
 
-import Data.Char ( isAlphaNum, toLower )
-import Data.List ( transpose )
-import Control.Monad ( liftM2 )
+import Data.Char (toLower, isAlphaNum)
+import Data.List (transpose, unfoldr, intercalate )
 
 encode :: String -> String
-encode xs = 
+encode = 
     let 
-        normalized :: [Char] -> [Char]
+        normalized :: String -> String
         normalized = filter isAlphaNum . map toLower
-        squareSide :: [Char] -> Int
-        squareSide ys = 
-            let
-                apprRoot = 
-                    (floor . sqrt . (fromIntegral :: Int -> Double)) len
-                len = 
-                    length $ normalized ys
-            in 
-                if (apprRoot ^ 2) == len 
-                then apprRoot 
-                else apprRoot + 1
-        segments :: [Char] -> [[Char]]
-        segments = liftM2 chunksOf squareSide normalized
+        rectangleSide :: (Integral b, Foldable t) => t a -> b
+        rectangleSide = ceiling . (sqrt :: Double -> Double) 
+                        . fromIntegral . length
+        splitRows :: [Char] -> [[Char]]
+        splitRows = takeWhile (not . null) 
+                    . (unfoldr =<< (Just .) . splitAt . rectangleSide)
+        pad :: [[Char]] -> [[Char]]
+        pad = map =<< (. (++ " ")) . take . length . head
+        joinChunks :: [[Char]] -> String
+        joinChunks = intercalate " "
     in
-        concat [ x ++ " " | x <- ((transpose . segments) xs) ]
+        joinChunks . pad . transpose . splitRows . normalized
 
--- Auxiliary 
-
-chunksOf :: Int -> [e] -> [[e]]
-chunksOf i =
-    let
-        splitter :: [e] -> ([e] -> a -> a) -> a -> a
-        splitter [] _ n = n
-        splitter l c n  = l `c` splitter (drop i l) c n
-        build :: ((a -> [a] -> [a]) -> [a] -> [a]) -> [a]
-        build = flip ($ (:)) ([])
-    in
-        (. (build . splitter)) . map  $ take i

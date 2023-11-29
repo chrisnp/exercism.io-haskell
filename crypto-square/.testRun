@@ -1,4 +1,3 @@
-
 encode
   empty plaintext results in an empty ciphertext
     normalizes the input
@@ -108,4 +107,44 @@ encode
     groups the output
 
 Finished in 0.0060 seconds
+21 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Nov 29 00:38:32 GTBST 2023
+-----------------------------------------------
+>stack test
+
+encode
+  empty plaintext results in an empty ciphertext
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  Lowercase
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  Remove spaces
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  Remove punctuation
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  9 character plaintext results in 3 chunks of 3 characters
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  8 character plaintext results in 3 chunks, the last one with a trailing space
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+  54 character plaintext results in 7 chunks, the last two padded with spaces
+    normalizes the input [v]
+    reorders the characters [v]
+    groups the output [v]
+
+Finished in 0.0030 seconds
 21 examples, 0 failures

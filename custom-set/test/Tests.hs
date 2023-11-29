@@ -2,7 +2,7 @@
 
 import Data.List         (sort)
 import Test.Hspec        (Spec, describe, it, shouldBe)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner (configFailFast, defaultConfig, hspecWith)
 
 import Prelude hiding (null)
 
@@ -22,7 +22,7 @@ import CustomSet
   )
 
 main :: IO ()
-main = hspecWith defaultConfig {configFastFail = True} specs
+main = hspecWith defaultConfig {configFailFast = True} specs
 
 specs :: Spec
 specs = do
@@ -197,3 +197,5 @@ specs = do
 
         it "a set doesn't keep repeated elements" $
           (sort . toList . fromList) [3, 1, 2, 1] `shouldBe `[1, 2, 3]
+
+-- 54d64bc5e2ff20c76b6c16138ed8ce97cf6f9981
