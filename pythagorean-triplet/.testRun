@@ -32,3 +32,22 @@ pythagoreanTriplets
 
 Finished in 3.8128 seconds
 7 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Nov 29 05:05:04 GTBST 2023
+-----------------------------------------------
+>stack test
+
+pythagoreanTriplets
+  triplets whose sum is 12 [v]
+  triplets whose sum is 108 [v]
+  triplets whose sum is 1000 [v]
+  no matching triplets for 1001 [v]
+  returns all matching triplets [v]
+  several matching triplets [v]
+  triplets for large number [v]
+
+Finished in 67.1964 seconds
+7 examples, 0 failures
