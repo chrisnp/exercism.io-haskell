@@ -7,3 +7,23 @@ value
 
 Finished in 0.0003 seconds
 4 examples, 0 failures
+
+
+
+-----------------------------------------------
+Mon Dec 11 23:51:57 GTBST 2023
+-----------------------------------------------
+>stack test
+
+value
+  equality tests
+    (Brown,Black) - Brown and black [v]
+    (Blue,Grey) - Blue and grey [v]
+    (Yellow,Violet) - Yellow and violet [v]
+    (Orange,Orange) - Orange and orange [v]
+  property tests
+    all values starting with Black are single digit [v]
+      +++ OK, passed 100 tests.
+
+Finished in 0.0018 seconds
+5 examples, 0 failures
