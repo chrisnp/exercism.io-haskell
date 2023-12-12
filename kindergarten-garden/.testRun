@@ -6,3 +6,18 @@ full garden
 
 Finished in 0.0010 seconds
 4 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Dec 12 17:33:59 GTBST 2023
+-----------------------------------------------
+>stack test
+
+garden with single student [v]
+garden with two students [v]
+garden with three students [v]
+full garden [v]
+
+Finished in 0.0010 seconds
+4 examples, 0 failures

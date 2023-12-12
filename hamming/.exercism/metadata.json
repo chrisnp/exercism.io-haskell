@@ -1,9 +1,9 @@
 {
-  "track": "haskell",
-  "exercise": "hamming",
-  "id": "3794fff3085d49738b92fe125247ae8b",
-  "url": "https://exercism.io/tracks/haskell/exercises/hamming/solutions/3794fff3085d49738b92fe125247ae8b",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "haskell",
+    "exercise": "hamming",
+    "id": "3794fff3085d49738b92fe125247ae8b",
+    "url": "https://exercism.org/tracks/haskell/exercises/hamming/solutions/3794fff3085d49738b92fe125247ae8b",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }

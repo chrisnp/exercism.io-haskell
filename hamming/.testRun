@@ -1,4 +1,3 @@
-
 distance
   empty strands
   identical strands
@@ -21,7 +20,6 @@ Finished in 0.0010 seconds
 
 
 
-
 distance
   empty strands
   single letter identical strands
@@ -34,4 +32,25 @@ distance
   disallow right empty strand
 
 Finished in 0.0005 seconds
+9 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Dec 12 17:21:03 GTBST 2023
+-----------------------------------------------
+>stack test
+
+distance
+  empty strands [v]
+  single letter identical strands [v]
+  single letter different strands [v]
+  long identical strands [v]
+  long different strands [v]
+  disallow first strand longer [v]
+  disallow second strand longer [v]
+  disallow left empty strand [v]
+  disallow right empty strand [v]
+
+Finished in 0.0013 seconds
 9 examples, 0 failures
