@@ -8,6 +8,7 @@ import Data.MultiSet (fromList, toMap)
 wordCount :: String -> Map String Int
 wordCount = 
     let
+        normalize :: String -> String
         normalize ('\'':rest) = map toLower (init rest)
         normalize cleanword   = map toLower cleanword
     in 

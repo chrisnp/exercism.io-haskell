@@ -10,8 +10,8 @@ library:
   ghc-options: -Wall
   dependencies:
   - containers
-  - multiset
   - split
+  - multiset
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
 
