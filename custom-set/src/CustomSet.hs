@@ -23,12 +23,11 @@ instance (Show a, Ord a) => Show (CustomSet a)
   where 
     show = ("fromList " ++) . show . elements
 
+toList :: (Eq a) => CustomSet a -> [a]
+toList = elements
 
 fromList :: (Ord a, Eq a) => [a] -> CustomSet a
 fromList = CustomSet . sort . nub
-
-toList :: (Eq a) => CustomSet a -> [a]
-toList = elements
 
 empty :: CustomSet a
 empty = CustomSet []
@@ -49,7 +48,7 @@ size ::(Eq a) => CustomSet a -> Int
 size = length . elements 
 
 difference :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
-difference setA setB = fromList $ (toList setA) \\ (toList setB)
+difference setA setB = fromList $ (\\) (toList setA) (toList setB)
 
 isDisjointFrom :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> Bool
 isDisjointFrom setA setB = empty == intersection setA setB 
