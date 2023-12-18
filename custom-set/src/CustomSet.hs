@@ -24,27 +24,32 @@ instance (Show a, Ord a) => Show (CustomSet a)
     show = ("fromList " ++) . show . elements
 
 
-delete :: (Ord a, Eq a) => a -> CustomSet a -> CustomSet a
-delete x = fromList . deleteBy (==) x . elements
+fromList :: (Ord a, Eq a) => [a] -> CustomSet a
+fromList = CustomSet . sort . nub
 
-difference :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
-difference setA setB = fromList $ (toList setA) \\ (toList setB)
+toList :: (Eq a) => CustomSet a -> [a]
+toList = elements
 
 empty :: CustomSet a
 empty = CustomSet []
 
-fromList :: (Ord a, Eq a) => [a] -> CustomSet a
-fromList = CustomSet . sort . nub
+null :: (Eq a) => CustomSet a -> Bool
+null = (empty ==)
+
+delete :: (Ord a, Eq a) => a -> CustomSet a -> CustomSet a
+delete x = fromList . deleteBy (==) x . elements
 
 insert :: (Ord a) => a -> CustomSet a -> CustomSet a
 insert x = fromList . (:) x . elements
 
-intersection :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
-intersection setA setB = 
-    let 
-      bs = toList setB
-    in
-      fromList $ [b | b <- bs, member b setA]
+member :: (Eq a) => a -> CustomSet a -> Bool
+member x = elem x . elements
+
+size ::(Eq a) => CustomSet a -> Int
+size = length . elements 
+
+difference :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
+difference setA setB = fromList $ (toList setA) \\ (toList setB)
 
 isDisjointFrom :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> Bool
 isDisjointFrom setA setB = empty == intersection setA setB 
@@ -52,17 +57,12 @@ isDisjointFrom setA setB = empty == intersection setA setB
 isSubsetOf :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> Bool
 isSubsetOf setA setB = setB == union setA setB
 
-member :: (Eq a) => a -> CustomSet a -> Bool
-member x = elem x . elements
-
-null :: (Eq a) => CustomSet a -> Bool
-null = (empty ==)
-
-size ::(Eq a) => CustomSet a -> Int
-size = length . elements 
-
-toList :: (Eq a) => CustomSet a -> [a]
-toList = elements
+intersection :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
+intersection setA setB = 
+    let 
+      bs = toList setB
+    in
+      fromList $ [b | b <- bs, member b setA]
 
 union :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
 union setA setB = 
