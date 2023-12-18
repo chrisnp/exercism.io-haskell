@@ -1,57 +1,59 @@
-module CustomSet 
-    ( 
-    delete
-    , difference
-    , empty
-    , fromList
-    , insert
-    , intersection
-    , isDisjointFrom
-    , isSubsetOf
-    , member
-    , null
-    , size
-    , toList
-    , union
-    ) 
-    where
+module CustomSet
+  ( delete
+  , difference
+  , empty
+  , fromList
+  , insert
+  , intersection
+  , isDisjointFrom
+  , isSubsetOf
+  , member
+  , null
+  , size
+  , toList
+  , union
+  ) where
 
-import Prelude hiding ( null )
-import qualified Data.List as List
-import Data.List ( (\\), sort, nub )
+import Prelude hiding (null)
+import Data.List ( (\\), sort, nub, deleteBy )
 
 data CustomSet a = CustomSet { elements :: [a] } deriving (Eq)
 
-instance (Show a, Ord a) => Show (CustomSet a) where 
-    show set = "fromList " ++ show (elements set)
+instance (Show a, Ord a) => Show (CustomSet a) 
+  where 
+    show = ("fromList " ++) . show . elements
 
 
-delete :: (Eq a) => a -> CustomSet a -> CustomSet a
-delete = (CustomSet .) . (. elements) . List.delete
+delete :: (Ord a, Eq a) => a -> CustomSet a -> CustomSet a
+delete x = fromList . deleteBy (==) x . elements
 
-difference :: (Eq a) => CustomSet a -> CustomSet a -> CustomSet a
-difference = (CustomSet .) . (. toList) . (\\) . toList
+difference :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
+difference setA setB = fromList $ (toList setA) \\ (toList setB)
 
 empty :: CustomSet a
-empty = CustomSet ([])
+empty = CustomSet []
 
-fromList :: (Eq a, Ord a) => [a] -> CustomSet a
+fromList :: (Ord a, Eq a) => [a] -> CustomSet a
 fromList = CustomSet . sort . nub
 
 insert :: (Ord a) => a -> CustomSet a -> CustomSet a
-insert = (fromList .) . (. elements) . (:)
+insert x = fromList . (:) x . elements
 
-intersection :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> CustomSet a
-intersection = (fromList .) . (. elements) . List.intersect . elements
+intersection :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
+intersection setA setB = 
+    let 
+      bs = toList setB
+    in
+      fromList $ [b | b <- bs, member b setA]
 
-isDisjointFrom :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> Bool
-isDisjointFrom = ((empty ==) .) . intersection
+isDisjointFrom :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> Bool
+isDisjointFrom setA setB = empty == intersection setA setB 
 
-isSubsetOf :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> Bool
-isSubsetOf = (<*>) (==) . union
+isSubsetOf :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> Bool
+isSubsetOf setA setB = setB == union setA setB
 
 member :: (Eq a) => a -> CustomSet a -> Bool
-member = (. elements) . elem
+member x = elem x . elements
 
 null :: (Eq a) => CustomSet a -> Bool
 null = (empty ==)
@@ -62,9 +64,10 @@ size = length . elements
 toList :: (Eq a) => CustomSet a -> [a]
 toList = elements
 
-union :: (Eq a, Ord a) => CustomSet a -> CustomSet a -> CustomSet a
-union setX setY = 
+union :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
+union setA setB = 
     let 
-        y:setYs = toList setY
+      as = toList setA
+      bs = toList setB
     in
-        if setY == empty then setX else union (insert y setX) (fromList setYs)
+      fromList $ as ++ [b | b <- bs, not (member b setA)]
