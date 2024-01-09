@@ -1,4 +1,3 @@
-
 diamond
   Degenerate case with a single 'A' row
   Degenerate case with no row containing 3 distinct groups of spaces
@@ -33,4 +32,33 @@ diamond
   Largest possible diamond
 
 Finished in 0.0108 seconds
+11 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Jan  9 20:36:12 GTBST 2024
+-----------------------------------------------
+>stack test
+
+diamond
+  should not have a result for a non-alpha character [v]
+    +++ OK, passed 100 tests.
+  should produce a value for an alpha character [v]
+    +++ OK, passed 100 tests.
+  should have an odd number of rows [v]
+    +++ OK, passed 100 tests.
+  should have equal top and bottom [v]
+    +++ OK, passed 100 tests.
+  should have the same width and height [v]
+    +++ OK, passed 100 tests.
+  rows should start and end with the same letter [v]
+    +++ OK, passed 100 tests.
+  Degenerate case with a single 'A' row [v]
+  Degenerate case with no row containing 3 distinct groups of spaces [v]
+  Smallest non-degenerate case with odd diamond side length [v]
+  Smallest non-degenerate case with even diamond side length [v]
+  Largest possible diamond [v]
+
+Finished in 0.0143 seconds
 11 examples, 0 failures
