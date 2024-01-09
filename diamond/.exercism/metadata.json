@@ -1,9 +1,1 @@
-{
-  "track": "haskell",
-  "exercise": "diamond",
-  "id": "60e2bf7aea164cfd8ad8b556a2105776",
-  "url": "https://exercism.io/tracks/haskell/exercises/diamond/solutions/60e2bf7aea164cfd8ad8b556a2105776",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
-}
+{"track":"haskell","exercise":"diamond","id":"60e2bf7aea164cfd8ad8b556a2105776","url":"https://exercism.org/tracks/haskell/exercises/diamond","handle":"heptalophos","is_requester":true,"auto_approve":false}
