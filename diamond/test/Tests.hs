@@ -8,7 +8,7 @@ import Data.List               (isSuffixOf)
 import Data.Maybe              (isJust, isNothing)
 import Data.String.Conversions (convertString)
 import Test.Hspec              (Spec, describe, it, shouldBe)
-import Test.Hspec.Runner       (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner       (configFailFast, defaultConfig, hspecWith)
 import Test.QuickCheck         (arbitraryASCIIChar, conjoin, counterexample,
                                 discard, elements, forAll, forAllShrink, Gen,
                                 Property, suchThat, Testable, (===))
@@ -16,7 +16,7 @@ import Test.QuickCheck         (arbitraryASCIIChar, conjoin, counterexample,
 import Diamond (diamond)
 
 main :: IO ()
-main = hspecWith defaultConfig {configFastFail = True} specs
+main = hspecWith defaultConfig {configFailFast = True} specs
 
 specs :: Spec
 specs = describe "diamond" $ do
@@ -166,3 +166,5 @@ shrinkNonAlphaChar c =
   else printableChars
   where
     printableChars = filter isPrint ['\0' .. '\127']
+
+-- 7c70bd3c2ee9e206bf541a947d93cd663a7a9124
