@@ -1,7 +1,14 @@
-module LuciansLusciousLasagna (elapsedTimeInMinutes, expectedMinutesInOven, preparationTimeInMinutes) where
+module LuciansLusciousLasagna 
+    ( elapsedTimeInMinutes
+    , expectedMinutesInOven
+    , preparationTimeInMinutes
+    ) where
 
--- TODO: define the expectedMinutesInOven constant
+expectedMinutesInOven :: Num a => a
+expectedMinutesInOven = 40
 
--- TODO: define the preparationTimeInMinutes function
+preparationTimeInMinutes :: Num a => a -> a
+preparationTimeInMinutes = (*) 2 
 
--- TODO: define the elapsedTimeInMinutes function
+elapsedTimeInMinutes :: Num a => a -> a -> a
+elapsedTimeInMinutes = (+) . (*) 2 
