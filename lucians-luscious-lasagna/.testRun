@@ -1,0 +1,11 @@
+-----------------------------------------------
+Mon Jan 15 20:26:54 GTBST 2024
+-----------------------------------------------
+>stack test
+
+expectedMinutesInOven [v]
+preparationTimeInMinutes [v]
+elapsedTimeInMinutes [v]
+
+Finished in 0.0007 seconds
+3 examples, 0 failures
