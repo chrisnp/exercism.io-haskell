@@ -13,3 +13,28 @@ valid
 
 Finished in 0.0005 seconds
 10 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Jan 17 21:36:55 GTBST 2024
+-----------------------------------------------
+>stack test
+
+valid
+  single digit strings can not be valid [v]
+  a single zero is invalid [v]
+  a simple valid SIN that remains valid if reversed [v]
+  a simple valid SIN that becomes invalid if reversed [v]
+  a valid Canadian SIN [v]
+  invalid Canadian SIN [v]
+  invalid credit card [v]
+  invalid long number with an even remainder [v]
+  valid number with an even number of digits [v]
+  valid number with an odd number of spaces [v]
+  single zero with space is invalid [v]
+  more than a single zero is valid [v]
+  input digit 9 is correctly converted to output digit 9 [v]
+
+Finished in 0.0021 seconds
+13 examples, 0 failures
