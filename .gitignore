@@ -12,6 +12,8 @@ cleanup.*
 /../stack.yaml.lock
 .fake
 .ionide
+.clj-kondo
+.lsp
 /*/examples/*/*
 HELP.md
 HINTS.md
