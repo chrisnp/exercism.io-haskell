@@ -41,3 +41,28 @@ classify
 
 Finished in 0.4268 seconds
 13 examples, 0 failures
+
+
+
+-----------------------------------------------
+Thu Jan 18 20:08:28 GTBST 2024
+-----------------------------------------------
+>stack test
+
+classify
+  Smallest perfect number is classified correctly [v]
+  Medium perfect number is classified correctly [v]
+  Large perfect number is classified correctly [v]
+  Smallest abundant number is classified correctly [v]
+  Medium abundant number is classified correctly [v]
+  Large abundant number is classified correctly [v]
+  Smallest prime deficient number is classified correctly [v]
+  Smallest non-prime deficient number is classified correctly [v]
+  Medium deficient number is classified correctly [v]
+  Large deficient number is classified correctly [v]
+  Edge case (no factors other than itself) is classified correctly [v]
+  Zero is rejected (not a natural number) [v]
+  Negative integer is rejected (not a natural number) [v]
+
+Finished in 0.5850 seconds
+13 examples, 0 failures
