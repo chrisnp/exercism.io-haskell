@@ -1,43 +1,42 @@
 module ProteinTranslation(proteins) where
 
-import Data.List
-
 splitEvery :: Int -> [a] -> [[a]]
 splitEvery _ [] = []
-splitEvery n xs = as : splitEvery n bs 
-  where (as, bs) = splitAt n xs
+splitEvery n xs = 
+    let 
+        (as, bs) = splitAt n xs
+    in 
+        as : splitEvery n bs
 
 codons :: [String]
-codons =  ["AUG","UUU",
-           "UUC","UUA",
-           "UUG","UCU",
-           "UCC","UCA",
-           "UCG", "UAU",
-           "UAC","UGU",
-           "UGC","UGG",
-           "UAA","UAG",
-           "UGA"]
+codons =  [ "AUG"
+          , "UGG"
+          , "UUU", "UUC"
+          , "UUA", "UUG"
+          , "UAU", "UAC"
+          , "UGU", "UGC"
+          , "UCU", "UCC", "UCA", "UCG"
+          , "UAA", "UAG" , "UGA"]
 
 validRnaSeq :: String -> Bool
-validRnaSeq seq = 
-    length seq `mod` 3 == 0 && 
-    all (`elem`codons) (splitEvery 3 seq)
+validRnaSeq = 
+    ((&&) . (0 ==) . (`mod` 3) . length) <*> 
+    (all (`elem` codons) . splitEvery 3)
 
 amino :: String -> String
-amino c
-    | c == "AUG" = "Methionine"
-    | c == "UGG" = "Tryptophan"
-    | c `elem` ["UUU", "UUC"] = "Phenylalanine"
-    | c `elem` ["UUA", "UUG"] = "Leucine"
-    | c `elem` ["UAU", "UAC"] = "Tyrosine"
-    | c `elem` ["UGU", "UGC"] = "Cysteine"
-    | c `elem` ["UCU", "UCC", 
-                "UCA", "UCG"] = "Serine"
-    -- | c `elem` ["UAA", "UAG", "UGA"] = "STOP"
+amino cod
+    | cod == "AUG" = "Methionine"
+    | cod == "UGG" = "Tryptophan"
+    | cod `elem` ["UUU", "UUC"] = "Phenylalanine"
+    | cod `elem` ["UUA", "UUG"] = "Leucine"
+    | cod `elem` ["UAU", "UAC"] = "Tyrosine"
+    | cod `elem` ["UGU", "UGC"] = "Cysteine"
+    | cod `elem` ["UCU", "UCC", "UCA", "UCG"] = "Serine"
+    -- | cod `elem` ["UAA", "UAG", "UGA"] = "STOP"
     | otherwise = ""
 
 proteins :: String -> Maybe [String]
-proteins rna 
-    | validRnaSeq rna = Just (takeWhile (/= "") 
-                             (map amino (splitEvery 3 rna)))
-    | otherwise = Nothing
+proteins rna =
+    case validRnaSeq rna of
+        True -> Just (takeWhile (/= "") (map amino (splitEvery 3 rna)))
+        _    -> Nothing
