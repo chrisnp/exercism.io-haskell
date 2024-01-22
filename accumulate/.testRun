@@ -1,4 +1,3 @@
-
 empty accumulation
 accumulate squares
 accumulate upcases
@@ -7,18 +6,6 @@ accumulate recursively
 accumulate non-strict
 
 Finished in 0.0000 seconds
-6 examples, 0 failures
-
-
-
-empty accumulation
-accumulate squares
-accumulate upcases
-accumulate reversed strings
-accumulate recursively
-accumulate non-strict
-
-Finished in 0.0004 seconds
 6 examples, 0 failures
 
 
@@ -33,4 +20,21 @@ accumulate recursively
 accumulate non-strict
 
 Finished in 0.0010 seconds
+6 examples, 0 failures
+
+
+
+-----------------------------------------------
+Fri Jan 19 04:07:00 GTBST 2024
+-----------------------------------------------
+>stack test
+
+empty accumulation [v]
+accumulate squares [v]
+accumulate upcases [v]
+accumulate reversed strings [v]
+accumulate recursively [v]
+accumulate non-strict [v]
+
+Finished in 0.0013 seconds
 6 examples, 0 failures
