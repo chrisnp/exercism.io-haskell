@@ -3,13 +3,16 @@ module Acronym (abbreviate) where
 import Data.Char 
 import Data.Maybe 
 
-
-isFirst :: (Char, Char) -> Maybe Char
-isFirst (x, y)
-    | x == '\'' = Nothing
-    | (not . isLetter) x && isLetter y = Just $ toUpper y
-    | (not . isUpper) x  && isUpper y = Just y
-    | otherwise = Nothing
-
 abbreviate :: String -> String
 abbreviate = mapMaybe isFirst . (zip =<< (' ' :))
+
+isFirst :: (Char, Char) -> Maybe Char
+isFirst (x, y) =
+    if x == '\'' then 
+        Nothing
+    else if (not . isLetter) x && isLetter y then 
+        Just $ toUpper y
+    else if (not . isUpper) x  && isUpper y  then 
+        Just y
+    else 
+        Nothing

@@ -10,41 +10,6 @@ Finished in 0.0000 seconds
 6 examples, 0 failures
 
 
-abbreviate
-  basic
-  lowercase words
-  camelcase
-  punctuation
-  all caps word
-  punctuation without whitespace
-  very long abbreviation
-  consecutive delimiters
-  apostrophes
-  underscore emphasis
-
-Finished in 0.0004 seconds
-10 examples, 0 failures
-
-
-
->stack test
-
-abbreviate
-  basic
-  lowercase words
-  camelcase
-  punctuation
-  all caps word
-  punctuation without whitespace
-  very long abbreviation
-  consecutive delimiters
-  apostrophes
-  underscore emphasis
-
-Finished in 0.0019 seconds
-10 examples, 0 failures
-
-
 
 >stack test
 
@@ -80,4 +45,26 @@ abbreviate
   underscore emphasis
 
 Finished in 0.0020 seconds
+10 examples, 0 failures
+
+
+
+-----------------------------------------------
+Fri Jan 19 04:13:16 GTBST 2024
+-----------------------------------------------
+>stack test
+
+abbreviate
+  basic [v]
+  lowercase words [v]
+  camelcase [v]
+  punctuation [v]
+  all caps word [v]
+  punctuation without whitespace [v]
+  very long abbreviation [v]
+  consecutive delimiters [v]
+  apostrophes [v]
+  underscore emphasis [v]
+
+Finished in 0.0019 seconds
 10 examples, 0 failures
