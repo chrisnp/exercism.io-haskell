@@ -1,32 +1,3 @@
-
-rebase
-  single bit one to decimal
-  binary to single decimal
-  single decimal to binary
-  binary to multiple decimal
-  decimal to binary
-  trinary to hexadecimal
-  hexadecimal to trinary
-  15-bit integer
-  empty list
-  single zero
-  multiple zeros
-  leading zeros
-  input base is one
-  input base is zero
-  input base is negative
-  negative digit
-  invalid positive digit
-  output base is one
-  output base is zero
-  output base is negative
-  both bases are negative
-
-Finished in 0.0010 seconds
-21 examples, 0 failures
-
-
-
 > stack test
 
 rebase
@@ -53,4 +24,37 @@ rebase
   both bases are negative
 
 Finished in 0.0006 seconds
+21 examples, 0 failures
+
+
+
+-----------------------------------------------
+Fri Jan 19 04:23:36 GTBST 2024
+-----------------------------------------------
+>stack test
+
+rebase
+  single bit one to decimal [v]
+  binary to single decimal [v]
+  single decimal to binary [v]
+  binary to multiple decimal [v]
+  decimal to binary [v]
+  trinary to hexadecimal [v]
+  hexadecimal to trinary [v]
+  15-bit integer [v]
+  empty list [v]
+  single zero [v]
+  multiple zeros [v]
+  leading zeros [v]
+  input base is one [v]
+  input base is zero [v]
+  input base is negative [v]
+  negative digit [v]
+  invalid positive digit [v]
+  output base is one [v]
+  output base is zero [v]
+  output base is negative [v]
+  both bases are negative [v]
+
+Finished in 0.0021 seconds
 21 examples, 0 failures
