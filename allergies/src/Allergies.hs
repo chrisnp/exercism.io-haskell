@@ -16,14 +16,15 @@ data Allergen = Eggs
 
 
 allergens :: [Allergen]
-allergens = [Eggs, 
-             Peanuts,
-             Shellfish,
-             Strawberries,
-             Tomatoes,
-             Chocolate,
-             Pollen,
-             Cats]
+allergens = [ Eggs
+            , Peanuts
+            , Shellfish
+            , Strawberries
+            , Tomatoes
+            , Chocolate
+            , Pollen
+            , Cats
+            ]
 
 
 allergies :: Int -> [Allergen]
