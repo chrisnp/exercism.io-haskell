@@ -11,6 +11,7 @@ raised =
         raise <*> (flip (^) . length)
 
 digits :: Integral a => a -> [a]
-digits x 
-    | x < 1     = []
-    | otherwise = digits (x `div` 10) ++ [x `mod` 10]
+digits x = 
+    case x < 1 of
+    True -> []
+    _    -> digits (x `div` 10) ++ [x `mod` 10] 

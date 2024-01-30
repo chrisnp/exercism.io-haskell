@@ -20,3 +20,19 @@ example
 
 Finished in 0.0000 seconds
 5 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Jan 30 23:18:18 GTBST 2024
+-----------------------------------------------
+>stack test
+
+push pop [v]
+push shift [v]
+unshift shift [v]
+unshift pop [v]
+example [v]
+
+Finished in 0.0012 seconds
+5 examples, 0 failures
