@@ -11,6 +11,6 @@ isValid n =
         luhn (x0:x1:xs) = x0 + 2 * x1 - (if x1 >= 5 then 9 else 0) + (luhn xs)
     in
         case filter (/= ' ') n of
-            ""  -> False
+            []  -> False
             [_] -> False
             x   -> checksum x == 0
