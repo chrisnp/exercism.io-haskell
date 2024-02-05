@@ -5,13 +5,14 @@ module Cipher (caesarDecode,
 import System.Random
 
 shift :: (Int, Char) -> Char
-shift (k, v) = 
-    toEnum $ (fromEnum 'a') + 
-    mod (fromEnum v + k - (fromEnum 'a')) 26
+shift = uncurry (((toEnum . (fromEnum 'a' +)) .) . 
+        flip flip 26 . (mod .) . 
+        flip flip (fromEnum 'a') . ((-) .) . 
+        (. fromEnum) . (+))
 
 caesar :: (Int -> Int -> Int) -> String -> String -> String
-caesar f = (map shift .) . zip . cycle . 
-            map (f (fromEnum 'a') . fromEnum)
+caesar = ((zipWith (curry shift) . cycle) .) . 
+         map . (. fromEnum) . ($ fromEnum 'a')
 
 caesarEncode :: String -> String -> String
 caesarEncode = caesar subtract
@@ -22,6 +23,7 @@ caesarDecode = caesar (-)
 caesarEncodeRandom :: String -> IO (String, String)
 caesarEncodeRandom text = 
     sequence [randomRIO('a', 'z') | _ <- text] >>= \ key -> 
-    let cipherText = caesarEncode key text
+    let 
+        cipherText = caesarEncode key text
     in 
         return (key, cipherText)
