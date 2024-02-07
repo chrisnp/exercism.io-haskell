@@ -61,7 +61,7 @@ intersection setA setB =
     let 
       bs = toList setB
     in
-      fromList $ [b | b <- bs, member b setA]
+      CustomSet [b | b <- bs, member b setA]
 
 union :: (Ord a, Eq a) => CustomSet a -> CustomSet a -> CustomSet a
 union setA setB = 

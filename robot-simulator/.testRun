@@ -83,55 +83,58 @@ Finished in 0.0000 seconds
 
 
 
+-----------------------------------------------
+Wed Feb  7 13:43:02 GTBST 2024
+-----------------------------------------------
 >stack test
 
 mkRobot
-  Create robot at origin facing north
-  Create robot at negative position facing south
+  Create robot at origin facing north [v]
+  Create robot at negative position facing south [v]
 Rotating clockwise
   from North
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from East
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from South
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from West
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
 Rotating counter-clockwise
   from North
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from West
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from South
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
   from East
-    should change direction
-    shouldn't change position
+    should change direction [v]
+    shouldn't change position [v]
 Moving forward one
   North from (0,1)
-    shouldn't change direction
-    facing north increments Y
+    shouldn't change direction [v]
+    facing north increments Y [v]
   South from (0,-1)
-    shouldn't change direction
-    facing south decrements Y
+    shouldn't change direction [v]
+    facing south decrements Y [v]
   East from (1,0)
-    shouldn't change direction
-    facing east increments X
+    shouldn't change direction [v]
+    facing east increments X [v]
   West from (-1,0)
-    shouldn't change direction
-    facing west decrements X
+    shouldn't change direction [v]
+    facing west decrements X [v]
 Follow series of instructions
-  moving east and north from README
-  moving west and north
-  moving west and south
-  moving east and north
+  moving east and north from README [v]
+  moving west and north [v]
+  moving west and south [v]
+  moving east and north [v]
 
-Finished in 0.0016 seconds
+Finished in 0.0049 seconds
 30 examples, 0 failures
