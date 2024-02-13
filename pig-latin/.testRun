@@ -32,3 +32,44 @@ translate
 
 Finished in 0.0010 seconds
 23 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Feb 13 20:05:29 GTBST 2024
+-----------------------------------------------
+>stack test
+
+translate
+  ay is added to words that start with vowels
+    word beginning with a [v]
+    word beginning with e [v]
+    word beginning with i [v]
+    word beginning with o [v]
+    word beginning with u [v]
+  first letter and ay are moved to the end of words that start with consonants
+    word beginning with p [v]
+    word beginning with k [v]
+    word beginning with y [v]
+    word beginning with x [v]
+    word beginning with q without a following u [v]
+  some letter clusters are treated like a single consonant
+    word beginning with ch [v]
+    word beginning with qu [v]
+    word beginning with qu and a preceding consonant [v]
+    ... but not words beginning with a vowel then qu [v]
+    word beginning with th [v]
+    word beginning with thr [v]
+    word beginning with sch [v]
+  some letter clusters are treated like a single vowel
+    word beginning with yt [v]
+    word beginning with xr [v]
+  position of y in a word determines if it is a consonant or a vowel
+    y is treated like a consonant at the beginning of a word [v]
+    y is treated like a vowel at the end of a consonant cluster [v]
+    y as second letter in two letter word [v]
+  phrases are translated
+    a whole phrase [v]
+
+Finished in 0.0027 seconds
+23 examples, 0 failures
