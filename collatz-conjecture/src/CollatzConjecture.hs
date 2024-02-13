@@ -1,18 +1,18 @@
 module CollatzConjecture (collatz) where
 
-import Data.List 
+import Data.List
+import Control.Monad ( liftM2 )
 
 collatzStep :: Integer -> Integer
-collatzStep num 
-    | even num  = 
-        num `quot` 2 
-    | otherwise = 
-        (3 * num ) + 1
+collatzStep = (<*>) (liftM2 if' even (`quot` 2)) ((1 +) . (3 *))
 
 collatz :: Integer -> Maybe Integer
-collatz num  
-    | num > 0 = 
-        toInteger <$> 
-        ( elemIndex 1 $ iterate collatzStep num ) 
-    | otherwise = 
-        Nothing 
+collatz = flip (liftM2 if' (> 0) 
+                    ((toInteger <$>) . elemIndex 1 . iterate collatzStep))
+                    Nothing
+
+-- Auxiliary
+
+if' :: Bool -> p -> p -> p
+if' True  x _ = x
+if' False _ y = y
