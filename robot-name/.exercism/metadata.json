@@ -1,9 +1,1 @@
-{
-    "track": "haskell",
-    "exercise": "robot-name",
-    "id": "e68091ab1d2249c4b2af7e7176028d55",
-    "url": "https://exercism.io/tracks/haskell/exercises/robot-name/solutions/e68091ab1d2249c4b2af7e7176028d55",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"haskell","exercise":"robot-name","id":"e68091ab1d2249c4b2af7e7176028d55","url":"https://exercism.org/tracks/haskell/exercises/robot-name","handle":"heptalophos","is_requester":true,"auto_approve":false}
