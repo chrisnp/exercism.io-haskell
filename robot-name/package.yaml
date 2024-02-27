@@ -9,7 +9,10 @@ library:
   exposed-modules: Robot
   source-dirs: src
   ghc-options: -Wall
-  # dependencies:
+  dependencies:
+  - containers
+  - random
+  - stm
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
 
