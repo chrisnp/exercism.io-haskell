@@ -4,6 +4,7 @@ version: 0.1.0.4
 dependencies:
   - base
   - mtl
+  - random
 
 library:
   exposed-modules: Robot
@@ -11,7 +12,6 @@ library:
   ghc-options: -Wall
   dependencies:
   - containers
-  - random
   - stm
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
