@@ -1,18 +1,14 @@
-name: robot-name
-version: 0.1.0.4
+name: reverse-string
+version: 0.1.0.0
 
 dependencies:
   - base
-  - mtl
-  - random
 
 library:
-  exposed-modules: Robot
+  exposed-modules: ReverseString
   source-dirs: src
   ghc-options: -Wall
-  dependencies:
-  - containers
-  - stm
+  # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
 
@@ -21,5 +17,5 @@ tests:
     main: Tests.hs
     source-dirs: test
     dependencies:
-      - robot-name
+      - reverse-string
       - hspec

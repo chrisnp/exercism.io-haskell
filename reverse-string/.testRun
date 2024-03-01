@@ -1,0 +1,15 @@
+-----------------------------------------------
+Fri Mar  1 21:41:54 GTBST 2024
+-----------------------------------------------
+>stack test
+
+reverseString
+  "" - empty string [v]
+  "robot" - a word [v]
+  "Ramen" - a capitalized word [v]
+  "I am hungry!" - a sentence with punctuation [v]
+  "racecar" - a palindrome [v]
+  "drawer" - an even-sized word [v]
+
+Finished in 0.0010 seconds
+6 examples, 0 failures
