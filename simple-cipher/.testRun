@@ -13,21 +13,6 @@ Finished in 0.0030 seconds
 
 
 
->stack test
-
-no-op encode
-no-op decode
-reversible
-known cipher
-double shift
-shift cipher
-random tests
-
-Finished in 0.0050 seconds
-7 examples, 0 failures
-
-
-
 -----------------------------------------------
 Mon Feb  5 18:24:41 GTBST 2024
 -----------------------------------------------
@@ -42,4 +27,22 @@ shift cipher [v]
 random tests [v]
 
 Finished in 0.0032 seconds
+7 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Apr  9 16:56:07 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+no-op encode [v]
+no-op decode [v]
+reversible [v]
+known cipher [v]
+double shift [v]
+shift cipher [v]
+random tests [v]
+
+Finished in 0.0029 seconds
 7 examples, 0 failures
