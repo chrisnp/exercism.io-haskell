@@ -22,8 +22,6 @@ caesarDecode = caesar (-)
 
 caesarEncodeRandom :: String -> IO (String, String)
 caesarEncodeRandom text = 
-    sequence [randomRIO('a', 'z') | _ <- text] >>= \ key -> 
-    let 
-        cipherText = caesarEncode key text
-    in 
-        return (key, cipherText)
+    sequence [randomRIO('a', 'z') | _ <- text] 
+    >>= \ key -> let cipherText = caesarEncode key text
+                 in  return (key, cipherText)
