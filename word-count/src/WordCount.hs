@@ -12,7 +12,5 @@ wordCount =
         normalize ('\'':rest) = map toLower (init rest)
         normalize cleanword   = map toLower cleanword
     in 
-        toMap . 
-        fromList . 
-        map normalize . 
+        toMap . fromList . map normalize . 
         wordsBy (\x -> (not . isAlphaNum) x && x /= '\'') 

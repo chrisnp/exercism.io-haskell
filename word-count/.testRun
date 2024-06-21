@@ -59,3 +59,28 @@ wordCount
 
 Finished in 0.0024 seconds
 13 examples, 0 failures
+
+
+
+-----------------------------------------------
+Fri Jun 21 15:05:13 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+wordCount
+  count one word [v]
+  count one of each word [v]
+  multiple occurrences of a word [v]
+  handles cramped lists [v]
+  handles expanded lists [v]
+  ignore punctuation [v]
+  include numbers [v]
+  normalize case [v]
+  with apostrophes [v]
+  with quotations [v]
+  substrings from the beginning [v]
+  multiple spaces not detected as a word [v]
+  alternating word separators not detected as a word [v]
+
+Finished in 0.0020 seconds
+13 examples, 0 failures
