@@ -1,9 +1,1 @@
-{
-  "track": "haskell",
-  "exercise": "roman-numerals",
-  "id": "326ceea1495f4ffa82c7cf83ce6df364",
-  "url": "https://exercism.io/tracks/haskell/exercises/roman-numerals/solutions/326ceea1495f4ffa82c7cf83ce6df364",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
-}
+{"track":"haskell","exercise":"roman-numerals","id":"326ceea1495f4ffa82c7cf83ce6df364","url":"https://exercism.org/tracks/haskell/exercises/roman-numerals","handle":"heptalophos","is_requester":true,"auto_approve":false}
