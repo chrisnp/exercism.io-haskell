@@ -22,30 +22,6 @@ Finished in 0.0007 seconds
 
 
 
->stack test
-
-largestProduct
-  finds the largest product if span equals length
-  can find the largest product of 2 with numbers in order
-  can find the largest product of 2
-  can find the largest product of 3 with numbers in order
-  can find the largest product of 3
-  can find the largest product of 5 with numbers in order
-  can get the largest product of a big number
-  reports zero if the only digits are zero
-  reports zero if all spans include zero
-  rejects span longer than string length
-  reports 1 for empty string and empty product (0 span)
-  reports 1 for nonempty string and empty product (0 span)
-  rejects empty string and nonzero span
-  rejects invalid character in digits
-  rejects negative span
-
-Finished in 0.0000 seconds
-15 examples, 0 failures
-
-
-
 -----------------------------------------------
 Wed Feb  7 13:34:59 GTBST 2024
 -----------------------------------------------
@@ -67,4 +43,29 @@ largestProduct
   rejects negative span [v]
 
 Finished in 0.0015 seconds
+13 examples, 0 failures
+
+
+
+-----------------------------------------------
+Mon Jun 24 16:52:16 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+largestProduct
+  finds the largest product if span equals length [v]
+  can find the largest product of 2 with numbers in order [v]
+  can find the largest product of 2 [v]
+  can find the largest product of 3 with numbers in order [v]
+  can find the largest product of 3 [v]
+  can find the largest product of 5 with numbers in order [v]
+  can get the largest product of a big number [v]
+  reports zero if the only digits are zero [v]
+  reports zero if all spans include zero [v]
+  rejects span longer than string length [v]
+  rejects empty string and nonzero span [v]
+  rejects invalid character in digits [v]
+  rejects negative span [v]
+
+Finished in 0.0019 seconds
 13 examples, 0 failures
