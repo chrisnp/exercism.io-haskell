@@ -1,0 +1,22 @@
+-----------------------------------------------
+Thu Jul 18 22:00:03 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+darts
+  Missed target [v]
+  On the outer circle [v]
+  On the middle circle [v]
+  On the inner circle [v]
+  Exactly on center [v]
+  Near the center [v]
+  Just within the inner circle [v]
+  Just outside the inner circle [v]
+  Just within the middle circle [v]
+  Just outside the middle circle [v]
+  Just within the outer circle [v]
+  Just outside the outer circle [v]
+  Asymmetric position between the inner and middle circles [v]
+
+Finished in 0.0015 seconds
+13 examples, 0 failures
