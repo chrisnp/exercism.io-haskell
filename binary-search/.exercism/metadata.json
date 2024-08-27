@@ -1,9 +1,1 @@
-{
-    "track": "haskell",
-    "exercise": "binary-search",
-    "id": "72d6e77de1ec4bee9bce2da428912685",
-    "url": "https://exercism.org/tracks/haskell/exercises/binary-search/solutions/72d6e77de1ec4bee9bce2da428912685",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"haskell","exercise":"binary-search","id":"72d6e77de1ec4bee9bce2da428912685","url":"https://exercism.org/tracks/haskell/exercises/binary-search","handle":"heptalophos","is_requester":true,"auto_approve":false}
