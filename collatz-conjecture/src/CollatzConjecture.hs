@@ -4,12 +4,16 @@ import Data.List
 import Control.Monad ( liftM2 )
 
 collatzStep :: Integer -> Integer
-collatzStep = (liftM2 if' even (`quot` 2)) <*> ((1 +) . (3 *))
+collatzStep = 
+    (liftM2 if' even (`quot` 2)) 
+    <*> 
+    ((1 +) . (3 *))
 
 collatz :: Integer -> Maybe Integer
-collatz = flip (liftM2 if' (> 0) 
-                    ((toInteger <$>) . elemIndex 1 . iterate collatzStep))
-                    Nothing
+collatz = 
+    flip 
+    (liftM2 if' (> 0) ((toInteger <$>) . elemIndex 1 . iterate collatzStep))
+    Nothing
 
 -- Auxiliary
 
