@@ -1,16 +1,3 @@
-collatz
-  zero steps for one
-  divide if even
-  even and odd steps
-  Large number of even and odd steps
-  zero is an error
-  negative value is an error
-
-Finished in 0.0010 seconds
-6 examples, 0 failures
-
-
-
 >stack test
 
 collatz
@@ -40,4 +27,22 @@ collatz
   negative value is an error [v]
 
 Finished in 0.0012 seconds
+6 examples, 0 failures
+
+
+
+-----------------------------------------------
+Tue Aug 27 23:27:53 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+collatz
+  zero steps for one [v]
+  divide if even [v]
+  even and odd steps [v]
+  large number of even and odd steps [v]
+  zero is an error [v]
+  negative value is an error [v]
+
+Finished in 0.0011 seconds
 6 examples, 0 failures
