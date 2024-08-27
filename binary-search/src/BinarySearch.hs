@@ -3,7 +3,7 @@ module BinarySearch (find) where
 import Data.Array hiding ( array )
 import Prelude hiding ( min, max )
 import Data.Bits ( shiftR )
-import Control.Applicative ( (<*>) )
+
 
 find :: Ord a => Array Int a -> a -> Maybe Int
 find = search <*> bounds
