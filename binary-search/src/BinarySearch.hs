@@ -11,11 +11,12 @@ find = search <*> bounds
 -- Auxiliary --
 
 search :: Ord a => Array Int a -> (Int, Int) -> a -> Maybe Int
-search array (min, max) x
- 
-    -- | min > max     = Nothing
-    -- | x < array!mid = search array (min, mid - 1) x
-    -- | x > array!mid = search array (mid + 1, max) x
-    -- | otherwise     = Just mid
-    -- where 
-    --     mid = shiftR (min + max) 1 
+search array (min, max) x =
+    let 
+        mid = shiftR (min + max) 1
+        found | min > max     = Nothing
+              | x < array!mid = search array (min, mid - 1) x
+              | x > array!mid = search array (mid + 1, max) x
+              | otherwise     = Just mid
+    in
+        found 
