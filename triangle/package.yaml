@@ -7,7 +7,10 @@ dependencies:
 library:
   exposed-modules: Triangle
   source-dirs: src
-  ghc-options: -Wall
+  ghc-options: 
+    -Wall 
+    -Wincomplete-uni-patterns 
+    -Wname-shadowing
   # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
