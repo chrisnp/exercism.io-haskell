@@ -9,10 +9,13 @@ data TriangleType = Equilateral
                   deriving (Eq, Show)
 
 triangleType :: (Num a, Eq a, Ord a) => a -> a -> a -> TriangleType
-triangleType a b c 
-    | x + y <= z || x <= 0 = Illegal
-    | x == z               = Equilateral
-    | x == y || y == z     = Isosceles
-    | otherwise            = Scalene
-    where 
+triangleType a b c =
+    let 
         (x:y:z:_) = sort [a, b, c]
+        triangleType | x + y <= z || x <= 0 = Illegal
+                     | x == z               = Equilateral
+                     | x == y || y == z     = Isosceles
+                     | otherwise            = Scalene
+    in
+        triangleType
+        
