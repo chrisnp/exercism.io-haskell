@@ -1,1 +1,9 @@
-{"track":"haskell","exercise":"pythagorean-triplet","id":"3cb2079f8cb84174afac4d84a6c10842","url":"https://exercism.org/tracks/haskell/exercises/pythagorean-triplet","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "haskell",
+    "exercise": "pythagorean-triplet",
+    "id": "3cb2079f8cb84174afac4d84a6c10842",
+    "url": "https://exercism.org/tracks/haskell/exercises/pythagorean-triplet/solutions/3cb2079f8cb84174afac4d84a6c10842",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
