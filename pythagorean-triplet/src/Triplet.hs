@@ -2,6 +2,7 @@ module Triplet (tripletsWithSum) where
 
 import Data.List (sortBy)
 
+
 isPythagorean :: (Integral a) => (a, a, a) -> Bool
 isPythagorean (x, y, z) = 
     let 
@@ -10,8 +11,10 @@ isPythagorean (x, y, z) =
     in 
         sum squared == 2 * (head squared)
 
+
 mkTriplet :: (Integral a) => a -> a -> a -> (a, a, a)
 mkTriplet = (,,)
+
 
 pythagoreanTriplets :: (Integral a) => a -> a -> [(a, a, a)]
 pythagoreanTriplets minFactor maxFactor = 
@@ -22,6 +25,7 @@ pythagoreanTriplets minFactor maxFactor =
                     c <- [b .. maxFactor]]
     in 
         filter isPythagorean triplets
+
 
 tripletsWithSum :: (Integral a) =>  a -> [(a, a, a)]
 tripletsWithSum s = 
