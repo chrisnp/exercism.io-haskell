@@ -7,9 +7,15 @@ dependencies:
 library:
   exposed-modules: Garden
   source-dirs: src
-  ghc-options: -Wall
+  ghc-options: 
+    -Wincomplete-patterns
+    -Wincomplete-uni-patterns
+    -Wunused-local-binds
+    -Wname-shadowing
   dependencies:
-  - containers
+    - containers
+  # - foo       # List here the packages you
+  # - bar       # want to use in your solution.
 
 tests:
   test:

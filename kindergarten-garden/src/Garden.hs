@@ -4,8 +4,8 @@ module Garden
     , lookupPlants
     ) where
 
-import Data.Map
 import Data.List
+import Data.Map ( Map, fromList, (!) )
 
 data Plant = Clover
            | Grass
@@ -16,6 +16,7 @@ data Plant = Clover
 type Child = String
 type Garden = Map Child [Plant]
 
+
 toPlant :: Char -> Plant
 toPlant p
     | p == 'C' = Clover
@@ -23,16 +24,17 @@ toPlant p
     | p == 'R' = Radishes
     | p == 'V' = Violets
 
+
 garden :: [Child] -> String -> Garden
-garden students plants =
-    let
+garden students plants = 
+    let 
         (splt, x:line) = span (/= '\n') plants
         childPlantsMap _ ([], []) = []
         childPlantsMap (c:cs) (a:b:line1, d:e:line2) = 
-            (c, [toPlant a, toPlant b, toPlant d, toPlant e]) 
-            : childPlantsMap cs (line1, line2)
-    in
+            (c, [toPlant a, toPlant b, toPlant d, toPlant e]) : 
+            childPlantsMap cs (line1, line2)
+    in 
         fromList $ childPlantsMap (sort students) (splt, line)
 
 lookupPlants :: String -> Garden -> [Plant]
-lookupPlants = flip (!)
+lookupPlants student garden = flip (!) student garden
