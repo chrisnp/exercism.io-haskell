@@ -1,8 +1,12 @@
+-----------------------------------------------
+Tue Dec 12 17:33:59 GTBST 2023
+-----------------------------------------------
+>stack test
 
-garden with single student
-garden with two students
-garden with three students
-full garden
+garden with single student [v]
+garden with two students [v]
+garden with three students [v]
+full garden [v]
 
 Finished in 0.0010 seconds
 4 examples, 0 failures
@@ -10,7 +14,7 @@ Finished in 0.0010 seconds
 
 
 -----------------------------------------------
-Tue Dec 12 17:33:59 GTBST 2023
+Tue Oct  1 12:07:45 GTBDT 2024
 -----------------------------------------------
 >stack test
 
