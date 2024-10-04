@@ -16,25 +16,28 @@ data Plant = Clover
 type Child = String
 type Garden = Map Child [Plant]
 
-
-toPlant :: Char -> Plant
-toPlant p
-    | p == 'C' = Clover
-    | p == 'G' = Grass
-    | p == 'R' = Radishes
-    | p == 'V' = Violets
-
-
 garden :: [Child] -> String -> Garden
 garden students plants = 
     let 
-        (splt, x:line) = span (/= '\n') plants
+        (split, x:line) = span (/= '\n') plants
         childPlantsMap _ ([], []) = []
         childPlantsMap (c:cs) (a:b:line1, d:e:line2) = 
             (c, [toPlant a, toPlant b, toPlant d, toPlant e]) : 
             childPlantsMap cs (line1, line2)
     in 
-        fromList $ childPlantsMap (sort students) (splt, line)
+        fromList $ childPlantsMap (sort students) (split, line)
 
 lookupPlants :: String -> Garden -> [Plant]
 lookupPlants student garden = flip (!) student garden
+
+-- Auxiliary
+
+toPlant :: Char -> Plant
+toPlant p =
+    let 
+        plant | p == 'C' = Clover
+              | p == 'G' = Grass
+              | p == 'R' = Radishes
+              | p == 'V' = Violets
+    in 
+        plant
