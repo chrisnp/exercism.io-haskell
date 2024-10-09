@@ -55,3 +55,37 @@ numerals
 
 Finished in 0.0028 seconds
 22 examples, 0 failures
+
+
+
+-----------------------------------------------
+Wed Oct  2 16:41:13 GTBDT 2024
+-----------------------------------------------
+>stack test
+
+numerals
+  1: 1 is a single I [v]
+  2: 2 is two I's [v]
+  3: 3 is three I's [v]
+  4: 4, being 5 - 1, is IV [v]
+  5: 5 is a single V [v]
+  6: 6, being 5 + 1, is VI [v]
+  9: 9, being 10 - 1, is IX [v]
+  27: 20 is two X's [v]
+  48: 48 is not 50 - 2 but rather 40 + 8 [v]
+  49: 49 is not 40 + 5 + 4 but rather 50 - 10 + 10 - 1 [v]
+  59: 50 is a single L [v]
+  93: 90, being 100 - 10, is XC [v]
+  141: 100 is a single C [v]
+  163: 60, being 50 + 10, is LX [v]
+  402: 400, being 500 - 100, is CD [v]
+  575: 500 is a single D [v]
+  911: 900, being 1000 - 100, is CM [v]
+  1024: 1000 is a single M [v]
+  3000: 3000 is three M's [v]
+  4000: 4000 cannot be represented [v]
+  0: 0 cannot be represented [v]
+  -1: -1 cannot be represented [v]
+
+Finished in 0.0032 seconds
+22 examples, 0 failures
