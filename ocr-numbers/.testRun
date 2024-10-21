@@ -65,3 +65,50 @@ Finished in 0.0024 seconds
 
 ocr-numbers> Test suite test passed
 Completed 2 action(s).
+
+
+
+-----------------------------------------------
+Tue Oct  8 17:22:37 GTBDT 2024
+-----------------------------------------------
+>stack test
+ocr-numbers> configure (lib + test)
+Configuring ocr-numbers-1.2.0.6...
+ocr-numbers> build (lib + test)
+Preprocessing library for ocr-numbers-1.2.0.6..
+Building library for ocr-numbers-1.2.0.6..
+[1 of 2] Compiling OCR
+[2 of 2] Compiling Paths_ocr_numbers
+Preprocessing test suite 'test' for ocr-numbers-1.2.0.6..
+Building test suite 'test' for ocr-numbers-1.2.0.6..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_ocr_numbers
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+ocr-numbers> copy/register
+Installing library in ~\exercism\haskell\ocr-numbers\.stack-work\install\18e3ee52\lib\x86_64-windows-ghc-9.2.7\ocr-numbers-1.2.0.6-FXWAACIqGKEK5vdydwCJEG
+Registering library for ocr-numbers-1.2.0.6..
+ocr-numbers> test (suite: test)
+
+
+convert
+  Recognizes 0 [v]
+  Recognizes 1 [v]
+  Unreadable but correctly sized inputs return ? [v]
+  Recognizes 110101100 [v]
+  Garbled numbers in a string are replaced with ? [v]
+  Recognizes 2 [v]
+  Recognizes 3 [v]
+  Recognizes 4 [v]
+  Recognizes 5 [v]
+  Recognizes 6 [v]
+  Recognizes 7 [v]
+  Recognizes 8 [v]
+  Recognizes 9 [v]
+  Recognizes string of decimal numbers [v]
+  Numbers separated by empty lines are recognized. Lines are joined by commas. [v]
+
+Finished in 0.0022 seconds
+15 examples, 0 failures
+
+ocr-numbers> Test suite test passed
+Completed 2 action(s).

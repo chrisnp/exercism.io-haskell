@@ -1,3 +1,5 @@
+{-# LANGUAGE LambdaCase #-}
+
 module OCR (convert) where
 
 import Data.List (elemIndex, transpose, intercalate)
@@ -19,9 +21,9 @@ convertLine = concat
 
 convertDigit :: [String] -> String
 convertDigit digit = 
-    case elemIndex digit ocrDigits of
-      Just n  -> show n
-      Nothing -> "?"
+    elemIndex digit ocrDigits |> 
+    \case Just n -> show n 
+          Nothing -> "?"
 
 ocrDigits :: [[String]]
 ocrDigits = [
@@ -61,3 +63,6 @@ ocrDigits = [
                , " _|"
                , "   "]
   ]
+
+(|>) ::  b -> (b -> c) -> c
+(|>) = flip ($)
