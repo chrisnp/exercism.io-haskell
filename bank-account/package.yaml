@@ -8,8 +8,7 @@ library:
   exposed-modules: BankAccount
   source-dirs: src
   ghc-options: -Wall
-  dependencies:
-  - deepseq
+  # dependencies:
   # - foo       # List here the packages you
   # - bar       # want to use in your solution.
 
