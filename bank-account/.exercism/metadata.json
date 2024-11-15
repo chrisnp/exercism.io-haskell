@@ -1,1 +1,9 @@
-{"track":"haskell","exercise":"bank-account","id":"b2eec8cc734748788704f7ea693f10f3","url":"https://exercism.org/tracks/haskell/exercises/bank-account","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "haskell",
+    "exercise": "bank-account",
+    "id": "b2eec8cc734748788704f7ea693f10f3",
+    "url": "https://exercism.org/tracks/haskell/exercises/bank-account/solutions/b2eec8cc734748788704f7ea693f10f3",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
