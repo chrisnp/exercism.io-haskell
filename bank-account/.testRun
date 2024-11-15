@@ -19,3 +19,39 @@ checks that a closed account holds nothing
 
 Finished in 0.0017 seconds
 5 examples, 0 failures
+
+
+
+-----------------------------------------------
+Fri Nov 15 22:27:53 GTBST 2024
+-----------------------------------------------
+>stack test
+bank-account> configure (lib + test)
+Configuring bank-account-0.1.0.4...
+bank-account> build (lib + test)
+Preprocessing library for bank-account-0.1.0.4..
+Building library for bank-account-0.1.0.4..
+[1 of 2] Compiling BankAccount
+[2 of 2] Compiling Paths_bank_account
+Preprocessing test suite 'test' for bank-account-0.1.0.4..
+Building test suite 'test' for bank-account-0.1.0.4..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_bank_account
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+bank-account> copy/register
+Installing library in ~\exercism\haskell\bank-account\.stack-work\install\18e3ee52\lib\x86_64-windows-ghc-9.2.7\bank-account-0.1.0.4-E9SGnoQ9XIj72jrCX7Qn9F
+Registering library for bank-account-0.1.0.4..
+bank-account> test (suite: test)
+
+
+checks that a new account is initialized to 0 [v]
+sequentially increments an account then checks the balance [v]
+concurrently increments an account then checks the balance [v]
+concurrently increments an account AND checks the balance [v]
+checks that a closed account holds nothing [v]
+
+Finished in 0.0067 seconds
+5 examples, 0 failures
+
+bank-account> Test suite test passed
+Completed 2 action(s).
