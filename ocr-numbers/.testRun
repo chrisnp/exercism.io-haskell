@@ -112,3 +112,33 @@ Finished in 0.0022 seconds
 
 ocr-numbers> Test suite test passed
 Completed 2 action(s).
+
+
+
+-----------------------------------------------
+Fri Nov 15 22:25:37 GTBST 2024
+-----------------------------------------------
+>stack test
+ocr-numbers> test (suite: test)
+
+convert
+  Recognizes 0 [v]
+  Recognizes 1 [v]
+  Unreadable but correctly sized inputs return ? [v]
+  Recognizes 110101100 [v]
+  Garbled numbers in a string are replaced with ? [v]
+  Recognizes 2 [v]
+  Recognizes 3 [v]
+  Recognizes 4 [v]
+  Recognizes 5 [v]
+  Recognizes 6 [v]
+  Recognizes 7 [v]
+  Recognizes 8 [v]
+  Recognizes 9 [v]
+  Recognizes string of decimal numbers [v]
+  Numbers separated by empty lines are recognized. Lines are joined by commas. [v]
+
+Finished in 0.0021 seconds
+15 examples, 0 failures
+
+ocr-numbers> Test suite test passed
