@@ -6,8 +6,8 @@ module BankAccount
     , openAccount
     ) where
 
-import Control.Concurrent
-import Control.DeepSeq
+import Control.Concurrent.MVar
+import Control.DeepSeq (($!!))
 
 data BankAccount = BankAccount { _balance :: MVar (Maybe Integer) }
 
