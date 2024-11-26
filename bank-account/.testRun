@@ -55,3 +55,23 @@ Finished in 0.0067 seconds
 
 bank-account> Test suite test passed
 Completed 2 action(s).
+
+
+
+-----------------------------------------------
+Mon Nov 18 02:24:54 GTBST 2024
+-----------------------------------------------
+>stack test
+bank-account> test (suite: test)
+
+
+checks that a new account is initialized to 0 [v]
+sequentially increments an account then checks the balance [v]
+concurrently increments an account then checks the balance [v]
+concurrently increments an account AND checks the balance [v]
+checks that a closed account holds nothing [v]
+
+Finished in 0.0024 seconds
+5 examples, 0 failures
+
+bank-account> Test suite test passed
