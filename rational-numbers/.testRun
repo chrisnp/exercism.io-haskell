@@ -1,0 +1,89 @@
+-----------------------------------------------
+Tue Jan 14 19:14:19 GTBST 2025
+-----------------------------------------------
+>stack test
+rational-numbers> configure (lib + test)
+Configuring rational-numbers-1.0.0.0...
+rational-numbers> build (lib + test)
+Preprocessing library for rational-numbers-1.0.0.0..
+Building library for rational-numbers-1.0.0.0..
+[1 of 2] Compiling Paths_rational_numbers
+[2 of 2] Compiling RationalNumbers
+Preprocessing test suite 'test' for rational-numbers-1.0.0.0..
+Building test suite 'test' for rational-numbers-1.0.0.0..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_rational_numbers
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+rational-numbers> copy/register
+Installing library in ~\exercism\haskell\rational-numbers\.stack-work\install\18e3ee52\lib\x86_64-windows-ghc-9.2.7\rational-numbers-1.0.0.0-8pjHWLK3zwYNOkFPW4ATo
+Registering library for rational-numbers-1.0.0.0..
+rational-numbers> test (suite: test)
+
+
+rational
+  Reduce a positive rational number to lowest terms [v]
+  Reduce places the minus sign on the numerator [v]
+  Reduce a negative rational number to lowest terms [v]
+  Reduce a rational number with a negative denominator to lowest terms [v]
+  Reduce zero to lowest terms [v]
+  Reduce an integer to lowest terms [v]
+  Reduce one to lowest terms [v]
+numerator
+  Numerator of a reduced rational number [v]
+denominator
+  Denominator of a reduced rational number [v]
+abs
+  Absolute value of a positive rational number [v]
+  Absolute value of a positive rational number with negative numerator and denominator [v]
+  Absolute value of a negative rational number [v]
+  Absolute value of a negative rational number with negative denominator [v]
+  Absolute value of zero [v]
+  Absolute value of a rational number is reduced to lowest terms [v]
+add
+  Add two positive rational numbers [v]
+  Add a positive rational number and a negative rational number [v]
+  Add two negative rational numbers [v]
+  Add a rational number to its additive inverse [v]
+sub
+  Subtract two positive rational numbers [v]
+  Subtract a positive rational number and a negative rational number [v]
+  Subtract two negative rational numbers [v]
+  Subtract a rational number from itself [v]
+mul
+  Multiply two positive rational numbers [v]
+  Multiply a negative rational number by a positive rational number [v]
+  Multiply two negative rational numbers [v]
+  Multiply a rational number by its reciprocal [v]
+  Multiply a rational number by 1 [v]
+  Multiply a rational number by 0 [v]
+div
+  Divide two positive rational numbers [v]
+  Divide a positive rational number by a negative rational number [v]
+  Divide two negative rational numbers [v]
+  Divide a rational number by 1 [v]
+pow
+  Raise a positive rational number to a positive integer power [v]
+  Raise a negative rational number to a positive integer power [v]
+  Raise a positive rational number to a negative integer power [v]
+  Raise a negative rational number to an even negative integer power [v]
+  Raise a negative rational number to an odd negative integer power [v]
+  Raise zero to an integer power [v]
+  Raise one to an integer power [v]
+  Raise a positive rational number to the power of zero [v]
+  Raise a negative rational number to the power of zero [v]
+expRational
+  Raise a rational number to a positive real number bigger than 1 [v]
+  Raise a rational number to a positive real number smaller than 1 [v]
+  Raise a rational number to a negative real number bigger than 1 [v]
+  Raise a rational number to a negative real number smaller than 1 [v]
+  Raise a rational number to a zero real number [v]
+expReal
+  Raise a real number to a positive rational number [v]
+  Raise a real number to a negative rational number [v]
+  Raise a real number to a zero rational number [v]
+
+Finished in 0.0838 seconds
+50 examples, 0 failures
+
+rational-numbers> Test suite test passed
+Completed 2 action(s).
