@@ -12,27 +12,6 @@ anagramsFor
   detects anagrams using case-insensitive possible matches
   does not detect a anagram if the original word is repeated
   anagrams must use all letters exactly once
-  capital word is not own anagram
-
-Finished in 0.0010 seconds
-12 examples, 0 failures
-
-
-
->stack test
-
-anagramsFor
-  no matches
-  detects two anagrams
-  does not detect anagram subsets
-  detects anagram
-  detects three anagrams
-  does not detect non-anagrams with identical checksum
-  detects anagrams case-insensitively
-  detects anagrams using case-insensitive subject
-  detects anagrams using case-insensitive possible matches
-  does not detect a anagram if the original word is repeated
-  anagrams must use all letters exactly once
   words are not anagrams of themselves (case-insensitive)
 
 Finished in 0.0006 seconds
@@ -40,42 +19,27 @@ Finished in 0.0006 seconds
 
 
 
+-----------------------------------------------
+Wed Feb 19 17:44:45 GTBST 2025
+-----------------------------------------------
 >stack test
+anagram> test (suite: test)
 
 anagramsFor
-  no matches
-  detects two anagrams
-  does not detect anagram subsets
-  detects anagram
-  detects three anagrams
-  does not detect non-anagrams with identical checksum
-  detects anagrams case-insensitively
-  detects anagrams using case-insensitive subject
-  detects anagrams using case-insensitive possible matches
-  does not detect a anagram if the original word is repeated
-  anagrams must use all letters exactly once
-  words are not anagrams of themselves (case-insensitive)
+  no matches [v]
+  detects two anagrams [v]
+  does not detect anagram subsets [v]
+  detects anagram [v]
+  detects three anagrams [v]
+  does not detect non-anagrams with identical checksum [v]
+  detects anagrams case-insensitively [v]
+  detects anagrams using case-insensitive subject [v]
+  detects anagrams using case-insensitive possible matches [v]
+  does not detect a anagram if the original word is repeated [v]
+  anagrams must use all letters exactly once [v]
+  words are not anagrams of themselves (case-insensitive) [v]
 
-Finished in 0.0154 seconds
+Finished in 0.0018 seconds
 12 examples, 0 failures
 
-
-
->stack test
-
-anagramsFor
-  no matches
-  detects two anagrams
-  does not detect anagram subsets
-  detects anagram
-  detects three anagrams
-  does not detect non-anagrams with identical checksum
-  detects anagrams case-insensitively
-  detects anagrams using case-insensitive subject
-  detects anagrams using case-insensitive possible matches
-  does not detect a anagram if the original word is repeated
-  anagrams must use all letters exactly once
-  words are not anagrams of themselves (case-insensitive)
-
-Finished in 0.0007 seconds
-12 examples, 0 failures
+anagram> Test suite test passed
