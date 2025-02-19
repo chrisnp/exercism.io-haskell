@@ -7,11 +7,14 @@ anagramsFor :: String -> [String] -> [String]
 anagramsFor = filter . anagramOf
 
 anagramOf :: String -> String -> Bool
-anagramOf a b =
+anagramOf =
     let 
         lower = map toLower
         sorted = sort . lower    
     in
-        lower a /= lower b   && 
-        sorted a == sorted b
-        -- ((<*>) . ((&&) .) . (. lower) . (/=) . lower) <*> ((. sorted) . (==) . sorted)
+        ((<*>) . ((&&) .) . (. lower) . (/=) . lower) 
+        <*> 
+        ((. sorted) . (==) . sorted)
+        {- i.e. (for arguments \x and \y)
+           lower x /= lower y && sorted x == sorted y
+        -}
