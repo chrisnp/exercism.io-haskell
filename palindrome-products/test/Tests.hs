@@ -3,12 +3,12 @@
 import Data.Foldable     (for_)
 import Data.List         (nub, sort)
 import Test.Hspec        (Spec, describe, it, shouldBe)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner (configFailFast, defaultConfig, hspecWith)
 
 import Palindromes (largestPalindrome, smallestPalindrome)
 
 main :: IO ()
-main = hspecWith defaultConfig {configFastFail = True} specs
+main = hspecWith defaultConfig {configFailFast = True} specs
 
 specs :: Spec
 specs = for_ cases test
@@ -38,5 +38,3 @@ specs = for_ cases test
             , ("palindromes from four digit factors"  ,  1000,  9999,   Just (1002001, [( 1001,  1001)],   99000099, [( 9901,  9999)]))
             , ("no available palindrome"              ,  1002,  1003,                                                          Nothing)
             , ("invalid range"                        , 10000,     1,                                                          Nothing) ]
-
--- a51ae20be99f0c9f170c286a851df8924cadff60
