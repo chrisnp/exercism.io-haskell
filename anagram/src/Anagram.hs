@@ -15,6 +15,7 @@ anagramOf =
         ((<*>) . ((&&) .) . (. lower) . (/=) . lower) 
         <*> 
         ((. sorted) . (==) . sorted)
-        {- i.e. (for arguments \x and \y)
-           lower x /= lower y && sorted x == sorted y
-        -}
+    {-  
+        i.e. (for arguments \x and \y)
+        x anagramOf y iff lower x /= lower y && sorted x == sorted y
+    -}
