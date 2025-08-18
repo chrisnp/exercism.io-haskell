@@ -73,3 +73,56 @@ palindromes from four digit factors
 
 Finished in 381.1156 seconds
 16 examples, 0 failures
+
+
+
+-----------------------------------------------
+Mon Aug 18 18:31:00 GTBDT 2025
+-----------------------------------------------
+>stack test
+palindrome-products> test (suite: test)
+
+
+palindromes from single digit factors
+  smallestPalindrome
+    value [v]
+    factors [v]
+  largestPalindrome
+    value [v]
+    factors [v]
+palindromes from double digit factors
+  smallestPalindrome
+    value [v]
+    factors [v]
+  largestPalindrome
+    value [v]
+    factors [v]
+palindromes from triple digit factors
+  smallestPalindrome
+    value [v]
+    factors [v]
+  largestPalindrome
+    value [v]
+    factors [v]
+palindromes from four digit factors
+  smallestPalindrome
+    value [v]
+    factors [v]
+  largestPalindrome
+    value [v]
+    factors [v]
+no available palindrome
+  smallestPalindrome
+    result [v]
+  largestPalindrome
+    result [v]
+invalid range
+  smallestPalindrome
+    result [v]
+  largestPalindrome
+    result [v]
+
+Finished in 58.4237 seconds
+20 examples, 0 failures
+
+palindrome-products> Test suite test passed
