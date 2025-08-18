@@ -1,47 +1,70 @@
-module Palindromes (largestPalindrome, smallestPalindrome) where
+module Palindromes (
+                     largestPalindrome
+                   , smallestPalindrome
+                   ) 
+where
 
-largestPalindrome :: Integer -> Integer -> Maybe (Integer, [(Integer, Integer)])
--- largestPalindrome minFactor maxFactor = error "You need to implement this function."
-largestPalindrome minFactor maxFactor =  
-    Just (largest, findFactors largest minFactor maxFactor)
-    where
-        factors = [ x * y |
-                    x <- [minFactor .. maxFactor],
-                    y <- [x .. maxFactor] ]
-        largest = maximum $ filter isPalindrome factors
+import Data.List (unfoldr)
 
+type ProductOfFactors = (Integer, [(Integer, Integer)])
 
-smallestPalindrome :: Integer -> Integer -> Maybe (Integer, [(Integer, Integer)])
--- smallestPalindrome minFactor maxFactor = error "You need to implement this function."
+largestPalindrome :: Integer -> Integer -> Maybe ProductOfFactors
+largestPalindrome minFactor maxFactor = 
+    let 
+        products = generateProducts minFactor maxFactor
+        palindromes = filter isPalindrome products
+    in
+        if minFactor > maxFactor then Nothing
+        else if null palindromes then Nothing
+        else 
+            let 
+                largest = maximum palindromes
+             in 
+                Just (largest, findFactors largest minFactor maxFactor)
+
+smallestPalindrome :: Integer -> Integer -> Maybe ProductOfFactors
 smallestPalindrome minFactor maxFactor = 
-    Just (smallest, findFactors smallest minFactor maxFactor)
-    where 
-        factors = [ x * y | 
-                    x <- [minFactor .. maxFactor],
-                    y <- [x .. maxFactor] ]
-        smallest = minimum $ filter isPalindrome factors
+    let 
+        products = generateProducts minFactor maxFactor
+        palindromes = filter isPalindrome products
+    in
+        if minFactor > maxFactor then Nothing
+        else if null palindromes then Nothing
+        else 
+            let 
+                smallest = minimum palindromes
+             in 
+                Just (smallest, findFactors smallest minFactor maxFactor)
 
 -- Auxiliary 
 
-reversed :: Integer -> Integer
-reversed num = foldl (\acc x -> 10 * acc + x) 0 (digits num) 
-    where
-        digits 0 = []
-        digits n = remainder : digits quotient 
-            where 
-                (quotient, remainder) = n `quotRem` 10
+generateProducts :: Integer -> Integer -> [Integer]
+generateProducts minF maxF = 
+    concatMap (flip map [minF..maxF] . (*)) [minF..maxF]
 
 isPalindrome :: Integer -> Bool
-isPalindrome number = number == reversed number
+isPalindrome = (==) <*> reversed
 
-palindromeProduct :: (Integer, Integer) -> Bool
-palindromeProduct = isPalindrome . uncurry (*)
+reversed :: Integer -> Integer
+reversed = 
+    let
+        digitExtractor 0 = Nothing
+        digitExtractor n = Just (swap (quotRem n 10))
+        swap (a, b) = (b, a)
+    in
+        foldl ((+) . (* 10)) 0 . unfoldr digitExtractor
 
-findFactors :: Integer  -> Integer  -> Integer  -> [(Integer , Integer )]
-findFactors number minFactor maxFactor = 
-    [ (x, div number x) | x <- smallest, maxFactor >= div number x]
-    where
-        limit = 
-            min maxFactor (floor $ (sqrt :: Double -> Double) $ fromIntegral number)
-        smallest = 
-            [y | y <- [ minFactor .. limit ], 0 == mod number y]
+findFactors :: Integer -> Integer -> Integer -> [(Integer, Integer)]
+findFactors number minF maxF = 
+    let 
+        limit = (min maxF . floor . sqrt . fromIntegral) number
+        inRange = enumFromTo minF limit
+        isDivisor = ((== 0) . mod number)
+        hasValidPair x = 
+            let 
+                y = div number x
+            in 
+                y >= minF && y <= maxF && x <= y
+        makePair = (,) <*> div number
+    in 
+        (map makePair . filter hasValidPair . filter isDivisor) inRange
