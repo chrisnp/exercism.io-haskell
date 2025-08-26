@@ -70,3 +70,54 @@ pythagoreanTriplets
 
 Finished in 62.8318 seconds
 7 examples, 0 failures
+
+
+
+-----------------------------------------------
+Mon Aug 25 23:47:12 GTBDT 2025
+-----------------------------------------------
+>stack test
+pythagorean-triplet> configure (lib + test)
+Configuring pythagorean-triplet-1.0.0.4...
+pythagorean-triplet> build (lib + test)
+Preprocessing library for pythagorean-triplet-1.0.0.4..
+Building library for pythagorean-triplet-1.0.0.4..
+[1 of 2] Compiling Paths_pythagorean_triplet
+[2 of 2] Compiling Triplet
+
+src\Triplet.hs:10:18: warning: [-Wtype-defaults]
+    * Defaulting the following constraints to type `Integer'
+        (Integral a0) arising from a use of `^' at src\Triplet.hs:10:18
+        (Num a0) arising from the literal `2' at src\Triplet.hs:10:20
+    * In the expression: (^)
+      In the first argument of `map', namely `(^ 2)'
+      In the first argument of `($)', namely `map (^ 2)'
+   |
+10 |             map (^ 2) $ sortBy (\a b -> compare b a) [x, y, z]
+
+   |                  ^
+Preprocessing test suite 'test' for pythagorean-triplet-1.0.0.4..
+Building test suite 'test' for pythagorean-triplet-1.0.0.4..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_pythagorean_triplet
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+pythagorean-triplet> copy/register
+Installing library in ~\exercism\haskell\pythagorean-triplet\.stack-work\install\18e3ee52\lib\x86_64-windows-ghc-9.2.7\pythagorean-triplet-1.0.0.4-8zaYveHW3iV67XArugygM5
+Registering library for pythagorean-triplet-1.0.0.4..
+pythagorean-triplet> test (suite: test)
+
+
+pythagoreanTriplets
+  triplets whose sum is 12 [v]
+  triplets whose sum is 108 [v]
+  triplets whose sum is 1000 [v]
+  no matching triplets for 1001 [v]
+  returns all matching triplets [v]
+  several matching triplets [v]
+  triplets for large number [v]
+
+Finished in 74.2204 seconds
+7 examples, 0 failures
+
+pythagorean-triplet> Test suite test passed
+Completed 2 action(s).

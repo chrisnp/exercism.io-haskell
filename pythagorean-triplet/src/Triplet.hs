@@ -12,19 +12,19 @@ isPythagorean (x, y, z) =
         sum squared == 2 * (head squared)
 
 
-mkTriplet :: (Integral a) => a -> a -> a -> (a, a, a)
-mkTriplet = (,,)
+-- mkTriplet :: (Integral a) => a -> a -> a -> (a, a, a)
+-- mkTriplet = (,,)
 
 
-pythagoreanTriplets :: (Integral a) => a -> a -> [(a, a, a)]
-pythagoreanTriplets minFactor maxFactor = 
-    let 
-        triplets =  [mkTriplet a b c | 
-                    a <- [minFactor .. maxFactor], 
-                    b <- [a .. maxFactor], 
-                    c <- [b .. maxFactor]]
-    in 
-        filter isPythagorean triplets
+-- pythagoreanTriplets :: (Integral a) => a -> a -> [(a, a, a)]
+-- pythagoreanTriplets minFactor maxFactor = 
+--     let 
+--         triplets =  [mkTriplet a b c | 
+--                     a <- [minFactor .. maxFactor], 
+--                     b <- [a .. maxFactor], 
+--                     c <- [b .. maxFactor]]
+--     in 
+--         filter isPythagorean triplets
 
 
 tripletsWithSum :: (Integral a) =>  a -> [(a, a, a)]

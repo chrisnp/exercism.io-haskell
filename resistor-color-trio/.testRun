@@ -1,0 +1,50 @@
+-----------------------------------------------
+Tue Aug 26 13:12:27 GTBDT 2025
+-----------------------------------------------
+>stack test
+resistor-color-trio-1.0.0.0: unregistering (local file changes: src\ResistorColors.hs)
+resistor-color-trio> build (lib + test)
+Preprocessing library for resistor-color-trio-1.0.0.0..
+Building library for resistor-color-trio-1.0.0.0..
+[2 of 2] Compiling ResistorColors
+Preprocessing test suite 'test' for resistor-color-trio-1.0.0.0..
+Building test suite 'test' for resistor-color-trio-1.0.0.0..
+Linking .stack-work\dist\8a54c84f\build\test\test.exe ...
+resistor-color-trio> copy/register
+Installing library in C:\Users\Chris\exercism\haskell\resistor-color-trio\.stack-work\install\18e3ee52\lib\x86_64-windows-ghc-9.2.7\resistor-color-trio-1.0.0.0-HgQLoVV6ao7T8XmYP1QYG
+Registering library for resistor-color-trio-1.0.0.0..
+resistor-color-trio> test (suite: test)
+
+
+label
+  (Black,Black,Black) should give 0 ohms [v]
+  (Black,Yellow,Black) should give 4 ohms [v]
+  (Grey,Orange,Black) should give 83 ohms [v]
+  (Blue,Grey,Brown) should give 680 ohms [v]
+  (Red,Black,Red) should give 2 kiloohms [v]
+  (Green,Brown,Orange) should give 51 kiloohms [v]
+  (White,Violet,Yellow) should give 970 kiloohms [v]
+  (White,Black,Green) should give 9 megaohms [v]
+  (Brown,Grey,Blue) should give 18 megaohms [v]
+  (Red,Violet,Violet) should give 270 megaohms [v]
+  (Yellow,Black,Grey) should give 4 gigaohms [v]
+  (Orange,Blue,White) should give 36 gigaohms [v]
+ohms
+  (Black,Black,Black) should give 0 [v]
+  (Black,Yellow,Black) should give 4 [v]
+  (Grey,Orange,Black) should give 83 [v]
+  (Blue,Grey,Brown) should give 680 [v]
+  (Red,Black,Red) should give 2000 [v]
+  (Green,Brown,Orange) should give 51000 [v]
+  (White,Violet,Yellow) should give 970000 [v]
+  (White,Black,Green) should give 9000000 [v]
+  (Brown,Grey,Blue) should give 18000000 [v]
+  (Red,Violet,Violet) should give 270000000 [v]
+  (Yellow,Black,Grey) should give 4000000000 [v]
+  (Orange,Blue,White) should give 36000000000 [v]
+
+Finished in 0.0025 seconds
+24 examples, 0 failures
+
+resistor-color-trio> Test suite test passed
+Completed 2 action(s).
