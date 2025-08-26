@@ -1,4 +1,11 @@
-module ResistorColors (Color(..), Resistor(..), label, ohms) where
+module ResistorColors (
+                      Color(..), 
+                      Resistor(..), 
+                      label, 
+                      ohms
+                      ) where
+
+-- API 
 
 data Color =
     Black
@@ -16,8 +23,38 @@ data Color =
 newtype Resistor = Resistor { bands :: (Color, Color, Color) }
   deriving Show
 
-label :: Resistor -> String
-label resistor = error "You need to implement this function."
+colorValue :: Color -> Int
+colorValue = fromEnum
 
 ohms :: Resistor -> Int
-ohms resistor = error "You need to implement this function."
+ohms (Resistor (c1, c2, c3)) = 
+  let 
+    baseValue = colorValue c1 * 10 + colorValue c2
+    multiplier = 10 ^ colorValue c3
+  in 
+    baseValue * multiplier
+
+-- Auxiliary fcns
+
+label :: Resistor -> String
+label = formatOhms . ohms
+
+formatOhms :: Int -> String
+formatOhms = 
+    let  
+      divisibleBy :: Int -> Int -> Bool
+      divisibleBy = 
+        flip flip 0 . ((==) .) . flip mod
+      formatWithUnit :: Int -> String -> Int -> String
+      formatWithUnit = 
+        (. (' ' :)) . flip . (((++) . show) .) . flip div
+    in 
+      \value -> case () of
+        _ | value >= 1000000000 && divisibleBy 1000000000 value -> 
+              formatWithUnit 1000000000 "gigaohms" value
+          | value >= 1000000 && divisibleBy 1000000 value -> 
+              formatWithUnit 1000000 "megaohms" value
+          | value >= 1000 && divisibleBy 1000 value -> 
+              formatWithUnit 1000 "kiloohms" value
+          | otherwise -> 
+              formatWithUnit 1 "ohms" value
